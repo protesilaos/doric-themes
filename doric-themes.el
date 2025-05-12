@@ -998,8 +998,8 @@
             `(dired-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
             `(dired-flagged ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
 
-            `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-shadow-intense)))
-            `(font-lock-comment-face ((t :inherit italic :foreground ,fg-shadow-intense)))
+            `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
+            `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-warning-face ((t :inherit warning)))
 
             `(isearch ((t :inherit nil :slant normal :underline nil :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
