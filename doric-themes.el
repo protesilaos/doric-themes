@@ -284,7 +284,6 @@
     epa-validity-high
     hexl-address-region
     log-view-message
-    magit-branch-current
     magit-hash
     marginalia-file-priv-exec
     org-imminent-deadline
@@ -664,6 +663,7 @@
     gnus-group-news-low-empty
     help-argument-name
     holiday
+    magit-branch-current
     markdown-inline-code-face
     message-cited-text-1
     message-cited-text-2
