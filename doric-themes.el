@@ -26,7 +26,9 @@
 
 ;;; Commentary:
 ;;
-;; [...]
+;; A collection of highly legible, minimalist themes.  If you want
+;; something more colourful, use my `ef-themes'.  For a "good default"
+;; theme, try my `modus-themes'.
 ;;
 ;; The backronym of the `doric-themes' is: Doric Only Really
 ;; Intensifies Conservatively ... themes.
