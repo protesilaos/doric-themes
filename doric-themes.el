@@ -292,7 +292,6 @@
   '(change-log-acknowledgment
     dired-directory
     epa-validity-high
-    git-commit-summary
     hexl-address-region
     log-view-message
     magit-hash
@@ -367,10 +366,10 @@
     help-for-help-header
     homoglyph
     icon
+    log-edit-header
     kmacro-menu-flagged
     kmacro-menu-mark
     kmacro-menu-marked
-    log-edit-summary
     log-edit-unknown-header
     log-view-commit-body
     magit-cherry-equivalent
@@ -487,6 +486,7 @@
     git-commit-comment-action
     git-commit-comment-branch-local
     git-commit-comment-heading
+    git-commit-summary
     gnus-emphasis-bold
     gnus-group-mail-1
     gnus-group-mail-2
@@ -513,7 +513,7 @@
     info-title-3
     info-title-4
     keycast-command
-    log-edit-header
+    log-edit-summary
     magit-branch-local
     magit-branch-remote
     magit-branch-remote-head
@@ -611,7 +611,6 @@
     gnus-emphasis-bold-italic
     help-key-binding
     info-header-xref
-    log-edit-headers-separator
     magit-branch-warning
     magit-diff-lines-heading
     marginalia-file-priv-dir
@@ -820,6 +819,7 @@
     lin-yellow
     lin-yellow-override-fg
     line-number-current-line
+    log-edit-headers-separator
     magit-section-highlight
     org-block
     org-block-begin-line
