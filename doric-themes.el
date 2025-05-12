@@ -284,6 +284,7 @@
     epa-validity-high
     hexl-address-region
     log-view-message
+    magit-branch-current
     magit-hash
     marginalia-file-priv-exec
     org-imminent-deadline
@@ -496,7 +497,6 @@
     info-title-4
     keycast-command
     log-edit-header
-    magit-branch-current
     magit-branch-local
     magit-branch-remote
     magit-branch-remote-head
