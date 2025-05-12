@@ -170,6 +170,7 @@
     denote-faces-time-delimiter
     diff-context
     dired-ignored
+    elfeed-search-title-face
     epa-validity-disabled
     font-lock-string-face
     glyphless-char
