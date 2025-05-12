@@ -28,7 +28,9 @@
 ;;
 ;; [...]
 ;;
-;; The backronym of the `doric-themes' is: [...]
+;; The backronym of the `doric-themes' is: Doric Only Really
+;; Intensifies Conservatively ... themes.
+
 ;;; Code:
 
 (defvar doric-themes-selection-faces
