@@ -89,7 +89,6 @@
     marginalia-date
     org-agenda-calendar-daterange
     org-agenda-column-dateline
-    org-agenda-date-today
     org-date
     org-sexp-date))
 
@@ -388,6 +387,8 @@
     nobreak-hyphen
     nobreak-space
     org-agenda-current-time
+    org-agenda-date
+    org-agenda-date-weekend
     org-agenda-diary
     org-agenda-filter-category
     org-agenda-filter-effort
@@ -535,8 +536,7 @@
     minibuffer-prompt
     mode-line-buffer-id
     mode-line-emphasis
-    org-agenda-date
-    org-agenda-date-weekend
+    org-agenda-date-today
     org-agenda-date-weekend-today
     org-agenda-structure
     org-checkbox-statistics-done
