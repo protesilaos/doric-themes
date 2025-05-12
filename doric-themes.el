@@ -84,6 +84,8 @@
     epa-field-body
     epa-field-name
     file-name-shadow
+    magit-log-author
+    magit-log-date
     marginalia-date
     org-agenda-calendar-daterange
     org-agenda-column-dateline
@@ -185,6 +187,7 @@
     hexl-ascii-region
     line-number
     magit-diff-context
+    magit-log-graph
     marginalia-documentation
     marginalia-file-name
     marginalia-file-priv-no
@@ -364,7 +367,9 @@
     log-edit-summary
     log-edit-unknown-header
     log-view-commit-body
+    magit-cherry-equivalent
     magit-diff-context-highlight
+    magit-diff-lines-boundary
     marginalia-archive
     marginalia-char
     marginalia-file-owner
@@ -509,6 +514,7 @@
     magit-branch-upstream
     magit-diff-conflict-heading
     magit-diff-hunk-heading-highlight
+    magit-mode-line-process
     magit-section-heading
     magit-tag
     markdown-header-face-1
@@ -602,6 +608,7 @@
     info-header-xref
     log-edit-headers-separator
     magit-branch-warning
+    magit-diff-lines-heading
     marginalia-file-priv-dir
     marginalia-key
     message-mml
@@ -671,7 +678,9 @@
     help-argument-name
     holiday
     magit-branch-current
+    magit-cherry-unmatched
     magit-diff-hunk-heading
+    magit-mode-line-process-error
     markdown-inline-code-face
     message-cited-text-1
     message-cited-text-2
