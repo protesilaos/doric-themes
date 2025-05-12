@@ -894,32 +894,34 @@
     magit-diff-removed-highlight
     smerge-refined-removed))
 
-(defun doric-themes--combine-all-our-face-groups ()
-  "Combine all Doric face groups into a list of faces."
-  (let ((faces nil))
-    (mapatoms
-     (lambda (symbol)
-       (let ((name (symbol-name symbol)))
-         (when (and (not (functionp symbol))
-                    (not (commandp symbol))
-                    (not (keywordp symbol))
-                    (and (not (string-match-p "--" name))
-                         (string-match-p "\\`doric-themes.*faces\\'" name)))
-           (push (symbol-value symbol) faces)))))
-    (apply 'append faces)))
-
-(defvar doric-themes--combined-faces
-  (doric-themes--combine-all-our-face-groups))
-  
-(defun doric-themes--get-faces ()
-  "Return `face-list' without private symbols."
-  (seq-remove
-   (lambda (face)
-     (or (string-match-p "--" (symbol-name face))
-         (face-background face)
-         (not (eq (face-attribute face :box) 'unspecified))
-         (memq face doric-themes--combined-faces)))
-   (face-list)))
+;; NOTE 2025-05-12: This is for testing purposes.
+;;
+;; (defun doric-themes--combine-all-our-face-groups ()
+;;   "Combine all Doric face groups into a list of faces."
+;;   (let ((faces nil))
+;;     (mapatoms
+;;      (lambda (symbol)
+;;        (let ((name (symbol-name symbol)))
+;;          (when (and (not (functionp symbol))
+;;                     (not (commandp symbol))
+;;                     (not (keywordp symbol))
+;;                     (and (not (string-match-p "--" name))
+;;                          (string-match-p "\\`doric-themes.*faces\\'" name)))
+;;            (push (symbol-value symbol) faces)))))
+;;     (apply 'append faces)))
+;;
+;; (defvar doric-themes--combined-faces
+;;   (doric-themes--combine-all-our-face-groups))
+;;
+;; (defun doric-themes--get-faces ()
+;;   "Return `face-list' without private symbols."
+;;   (seq-remove
+;;    (lambda (face)
+;;      (or (string-match-p "--" (symbol-name face))
+;;          (face-background face)
+;;          (not (eq (face-attribute face :box) 'unspecified))
+;;          (memq face doric-themes--combined-faces)))
+;;    (face-list)))
 
 (defun doric-themes-prepare-faces (&rest faces-and-attributes)
   "Set faces to their respective attributes in FACES-AND-ATTRIBUTES."
