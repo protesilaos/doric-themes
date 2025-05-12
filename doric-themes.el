@@ -104,6 +104,8 @@
     match
     mode-line-inactive
     org-agenda-clocking
+    org-agenda-restriction-lock
+    org-clock-overlay
     secondary-selection
     show-paren-match-expression
     tab-bar
@@ -250,6 +252,8 @@
     nerd-icons-yellow
     org-agenda-dimmed-todo-face
     org-agenda-done
+    org-column
+    org-column-title
     org-document-info-keyword
     org-done
     org-drawer
@@ -260,6 +264,7 @@
     org-scheduled-today
     org-special-keyword
     org-table
+    org-table-header
     org-table-row
     org-time-grid
     org-upcoming-deadline
@@ -613,6 +618,7 @@
     marginalia-key
     message-mml
     message-separator
+    org-mode-line-clock-overrun
     package-status-avail-obso
     package-status-disabled
     package-status-held
@@ -701,6 +707,8 @@
     org-agenda-calendar-event
     org-agenda-calendar-sexp
     org-code
+    org-inline-src-block
+    org-latex-and-related
     org-macro
     org-priority
     org-tag
@@ -1006,6 +1014,7 @@
             `(org-block ((t :background ,bg-shadow-subtle :extend t)))
             `(org-block-begin-line ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-intense :extend t)))
             `(org-block-end-line ((t :inherit org-block-begin-line)))
+            `(org-hide ((t :background ,bg-main)))
             
             `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))))
