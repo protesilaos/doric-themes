@@ -57,7 +57,6 @@
     read-multiple-choice-face
     rectangle-preview
     tab-bar-tab-highlight
-    tooltip
     vertico-current))
 
 (defvar doric-themes-intense-shadow-faces
@@ -847,6 +846,7 @@
     spacious-padding-subtle-mode-line-active
     spacious-padding-subtle-mode-line-inactive
     success
+    tooltip
     treesit-explorer-anonymous-node
     treesit-explorer-field-name
     underline
@@ -960,6 +960,7 @@
             `(internal-border ((t :foreground ,bg-shadow-subtle)))
             `(vertical-border ((t :foreground ,bg-shadow-subtle)))
             `(separator-line ((t :underline ,fg-shadow-subtle)))
+            `(tooltip ((t :background ,bg-accent :foreground ,fg-accent)))
 
             `(ansi-color-bright-black ((t :background "gray30" :foreground "gray30")))
             `(ansi-color-black ((t :background "black" :foreground "black")))
