@@ -251,6 +251,7 @@
     nerd-icons-yellow
     org-agenda-dimmed-todo-face
     org-agenda-done
+    org-agenda-structure-secondary
     org-column
     org-column-title
     org-document-info-keyword
@@ -395,7 +396,6 @@
     org-agenda-filter-regexp
     org-agenda-filter-tags
     org-agenda-structure-filter
-    org-agenda-structure-secondary
     org-archived
     org-checkbox
     org-default
