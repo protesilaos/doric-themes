@@ -65,6 +65,7 @@
     mode-line-active
     region
     show-paren-match
+    substitute-match
     tab-bar-tab))
 
 (defvar doric-themes-intense-shadow-foreground-only-faces
