@@ -21,7 +21,7 @@
       (fg-accent "#dfc880")
 
       (fg-faint-red "#d09090")
-      (fg-faint-green "#85b897")
+      (fg-faint-green "#85c397")
       (fg-faint-yellow "#bfa392")
       (fg-faint-blue "#95afd2")
       (fg-faint-magenta "#c5a3b2")
