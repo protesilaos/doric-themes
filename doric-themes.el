@@ -292,6 +292,7 @@
   '(change-log-acknowledgment
     dired-directory
     epa-validity-high
+    git-commit-summary
     hexl-address-region
     log-view-message
     magit-hash
@@ -486,7 +487,6 @@
     git-commit-comment-action
     git-commit-comment-branch-local
     git-commit-comment-heading
-    git-commit-summary
     gnus-emphasis-bold
     gnus-group-mail-1
     gnus-group-mail-2
