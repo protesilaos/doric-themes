@@ -49,6 +49,7 @@
     highlight
     hl-line
     keycast-key
+    magit-diff-file-heading-selection
     mode-line-highlight
     next-error
     org-date-selected
@@ -63,6 +64,7 @@
     corfu-current
     custom-button
     gnus-summary-cancelled
+    magit-diff-lines-boundary
     mode-line
     mode-line-active
     region
@@ -376,7 +378,6 @@
     log-view-commit-body
     magit-cherry-equivalent
     magit-diff-context-highlight
-    magit-diff-lines-boundary
     marginalia-archive
     marginalia-char
     marginalia-file-owner
@@ -614,6 +615,7 @@
     help-key-binding
     info-header-xref
     magit-branch-warning
+    magit-diff-file-heading-highlight
     magit-diff-lines-heading
     marginalia-file-priv-dir
     marginalia-key
@@ -687,6 +689,7 @@
     magit-branch-current
     magit-cherry-unmatched
     magit-diff-hunk-heading
+    magit-diff-file-heading
     magit-mode-line-process-error
     markdown-inline-code-face
     message-cited-text-1
