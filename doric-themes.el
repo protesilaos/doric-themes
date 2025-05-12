@@ -47,7 +47,6 @@
     custom-button-unraised
     header-line-highlight
     highlight
-    highlight
     hl-line
     keycast-key
     mode-line-highlight
