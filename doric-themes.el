@@ -363,6 +363,7 @@
     log-edit-summary
     log-edit-unknown-header
     log-view-commit-body
+    magit-diff-context-highlight
     marginalia-archive
     marginalia-char
     marginalia-file-owner
@@ -502,7 +503,6 @@
     magit-branch-remote-head
     magit-branch-upstream
     magit-diff-conflict-heading
-    magit-diff-hunk-heading
     magit-diff-hunk-heading-highlight
     magit-section-heading
     magit-tag
@@ -665,6 +665,7 @@
     help-argument-name
     holiday
     magit-branch-current
+    magit-diff-hunk-heading
     markdown-inline-code-face
     message-cited-text-1
     message-cited-text-2
@@ -796,7 +797,6 @@
     lin-yellow
     lin-yellow-override-fg
     line-number-current-line
-    magit-diff-context-highlight
     magit-section-highlight
     org-block
     org-block-begin-line
