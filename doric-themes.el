@@ -79,6 +79,7 @@
     denote-faces-time
     denote-faces-year
     elfeed-search-date-face
+    elfeed-search-feed-face
     epa-field-body
     epa-field-name
     file-name-shadow
