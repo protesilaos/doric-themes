@@ -587,6 +587,7 @@
     css-selector
     custom-changed
     custom-invalid
+    diff-error
     diff-file-header
     diff-hunk-header
     dired-warning
