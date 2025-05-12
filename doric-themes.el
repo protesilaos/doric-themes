@@ -460,6 +460,10 @@
     diff-nonexistent
     dired-header
     edmacro-label
+    elfeed-log-debug-level-face
+    elfeed-log-error-level-face
+    elfeed-log-info-level-face
+    elfeed-log-warn-level-face
     elfeed-search-unread-title-face
     erc-prompt-face
     eshell-prompt
