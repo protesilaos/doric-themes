@@ -669,6 +669,7 @@
 
 (defvar doric-themes-bold-italic-faces
   '(appt-notification
+    aw-key-face
     change-log-conditionals
     comint-highlight-input
     compilation-error
@@ -720,6 +721,7 @@
 
 (defvar doric-themes-italic-faces
   '(Info-quoted
+    aw-minibuffer-leading-char-face
     completions-annotations
     corfu-annotations
     custom-comment
@@ -824,6 +826,7 @@
     avy-lead-face-0
     avy-lead-face-1
     avy-lead-face-2
+    aw-leading-char-face
     completions-common-part
     completions-first-difference
     consult-preview-match
