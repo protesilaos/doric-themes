@@ -44,7 +44,7 @@
   (defvar doric-fire-palette
     '((cursor "#fe7062")
       (bg-main "#2a281d")
-      (fg-main "#ffffff")
+      (fg-main "#f0e5e0")
 
       (bg-shadow-subtle "#45372f")
       (fg-shadow-subtle "#b0a8a0")
