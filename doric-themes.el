@@ -100,7 +100,8 @@
     org-agenda-calendar-daterange
     org-agenda-column-dateline
     org-date
-    org-sexp-date))
+    org-sexp-date
+    ztreep-diff-header-small-face))
 
 (defvar doric-themes-subtle-shadow-faces
   '(consult-preview-line
@@ -314,7 +315,8 @@
     window-divider
     window-divider-first-pixel
     window-divider-last-pixel
-    xref-line-number))
+    xref-line-number
+    ztreep-expand-sign-face))
 
 (defvar doric-themes-accent-foreground-only-faces
   '(change-log-acknowledgment
@@ -340,7 +342,8 @@
     transient-value
     which-key-command-description-face
     widget-button
-    widget-button-pressed))
+    widget-button-pressed
+    ztreep-node-face))
 
 (defvar doric-themes-main-foreground-only-faces
   '(border
@@ -495,7 +498,8 @@
     vc-up-to-date-state
     vtable
     which-key-highlighted-command-face
-    which-key-note-face which-key-separator-face))
+    which-key-note-face which-key-separator-face
+    ztreep-leaf-face))
 
 (defvar doric-themes-bold-faces
   '(abbrev-table-name
@@ -658,7 +662,9 @@
     vc-removed-state
     which-func
     world-clock-label
-    xref-file-header))
+    xref-file-header
+    ztreep-diff-header-face
+    ztreep-header-face))
 
 (defvar doric-themes-bold-italic-faces
   '(appt-notification
@@ -808,7 +814,8 @@
     vc-git-log-edit-summary-target-warning
     which-key-docstring-face
     which-key-group-description-face
-    which-key-local-map-description-face))
+    which-key-local-map-description-face
+    ztreep-node-count-children-face))
 
 (defvar doric-themes-underline-emphasis-faces
   '(completions-common-part
@@ -854,7 +861,8 @@
     diff-indicator-added
     magit-diff-added
     magit-diffstat-added
-    smerge-lower))
+    smerge-lower
+    ztreep-diff-model-add-face))
 
 (defvar doric-themes-diff-added-refine-faces
   '(diff-refine-added
@@ -879,7 +887,8 @@
     diff-indicator-removed
     magit-diff-removed
     magit-diffstat-removed
-    smerge-upper))
+    smerge-upper
+    ztreep-diff-model-diff-face))
 
 (defvar doric-themes-diff-removed-refine-faces
   '(diff-refine-removed
