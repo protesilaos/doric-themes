@@ -44,13 +44,13 @@
   (defvar doric-wind-palette
     '((cursor "#000077")
       (bg-main "#e8f0e9")
-      (fg-main "#000000")
+      (fg-main "#000f0f")
       
       (bg-shadow-subtle "#d3dbd9")
       (fg-shadow-subtle "#40484f")
 
       (bg-shadow-intense "#8fbbbe")
-      (fg-shadow-intense "#0f1f30")
+      (fg-shadow-intense "#0f3337")
 
       (bg-accent "#bad0f4")
       (fg-accent "#0f2381")
