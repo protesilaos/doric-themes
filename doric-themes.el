@@ -176,6 +176,7 @@
     all-the-icons-red-alt
     all-the-icons-silver
     all-the-icons-yellow
+    avy-background-face
     breadcrumb-face
     calendar-weekend-header
     change-log-email
@@ -818,7 +819,12 @@
     ztreep-node-count-children-face))
 
 (defvar doric-themes-underline-emphasis-faces
-  '(completions-common-part
+  '(avy-goto-char-timer-face
+    avy-lead-face
+    avy-lead-face-0
+    avy-lead-face-1
+    avy-lead-face-2
+    completions-common-part
     completions-first-difference
     consult-preview-match
     custom-visibility
