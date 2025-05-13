@@ -970,7 +970,19 @@
             `(org-hide ((t :background ,bg-main)))
 
             `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
-            `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))))
+            `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
+
+            `(whitespace-big-indent ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-empty ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-hspace ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-indentation ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-line ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-missing-newline-at-eof ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-newline ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-space ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-space-after-tab ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-space-before-tab ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-tab ((t :foreground ,bg-shadow-intense)))))
          (custom-theme-set-variables
           ',name
           '(frame-background-mode ',background-mode)
