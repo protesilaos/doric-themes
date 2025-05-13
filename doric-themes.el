@@ -1179,7 +1179,7 @@ the list becomes the last.  Do not modify THEMES in the process."
             ;; overriding the background.  Such an override really
             ;; defeats the purpose of setting those highlights.
             '(hi-aquamarine
-              ((default  :inverse-video t)
+              ((default :inverse-video t)
                (((class color) (min-colors 88) (background light))
                 :background "#ffffff" :foreground "#227f8f")
                (((class color) (min-colors 88) (background dark))
