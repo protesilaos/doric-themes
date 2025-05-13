@@ -938,6 +938,10 @@
             `(ansi-color-bright-cyan ((t :background ,fg-faint-cyan :foreground ,fg-faint-cyan)))
             `(ansi-color-cyan ((t :background ,fg-faint-cyan :foreground ,fg-faint-cyan)))
 
+            `(dired-broken-symlink ((t :inherit (underline error))))
+            `(dired-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
+            `(dired-flagged ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
+
             ,@(doric-themes-prepare-faces doric-themes-intense-shadow-faces :background 'bg-shadow-intense :foreground 'fg-shadow-intense)
             ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-faces :background 'bg-shadow-subtle :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-intense-shadow-foreground-only-faces :foreground 'fg-shadow-intense)
@@ -959,10 +963,6 @@
             ,@(doric-themes-prepare-faces doric-themes-diff-changed-refine-faces :inherit ''bold :foreground 'fg-faint-yellow)
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces :foreground 'fg-faint-red)
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :foreground 'fg-faint-red)
-
-            `(dired-broken-symlink ((t :inherit (underline error))))
-            `(dired-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
-            `(dired-flagged ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
 
             `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
