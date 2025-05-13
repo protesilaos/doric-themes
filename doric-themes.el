@@ -66,6 +66,8 @@
   '(blink-matching-paren-offscreen
     corfu-current
     custom-button
+    eww-form-file
+    eww-form-submit
     gnus-summary-cancelled
     magit-diff-lines-boundary
     mode-line
@@ -105,6 +107,10 @@
     corfu-default
     corfu-popupinfo
     diff-header
+    eww-form-checkbox
+    eww-form-select
+    eww-form-textarea
+    eww-form-text
     header-line
     header-line-active
     header-line-inactive
