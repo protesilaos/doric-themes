@@ -44,7 +44,7 @@
   (defvar doric-water-palette
     '((cursor "#69eebb")
       (bg-main "#2a283d")
-      (fg-main "#ffffff")
+      (fg-main "#f2f5ff")
 
       (bg-shadow-subtle "#404457")
       (fg-shadow-subtle "#b2afbc")
