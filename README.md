@@ -12,3 +12,17 @@ package. For something in-between, which I would consider the best
 + Sample pictures: <https://protesilaos.com/emacs/doric-themes-pictures>
 + Git repository: <https://github.com/protesilaos/doric-themes>
 + Backronym: Doric Only Really Intensifies Conservatively ... themes.
+
+## Sample configuration
+
+```elisp
+(use-package doric-themes
+  :config
+  ;; These are the default values.
+  (setq doric-themes-to-toggle '(doric-light doric-dark))
+  (setq doric-themes-to-rotate doric-themes-collection)
+  :bind
+  (("<f5>" . doric-themes-toggle)
+   ("C-<f5>" . doric-themes-rotate)))
+```
+
