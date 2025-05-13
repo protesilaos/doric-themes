@@ -854,6 +854,9 @@
     tooltip
     treesit-explorer-anonymous-node
     treesit-explorer-field-name
+    tty-menu-disabled-face
+    tty-menu-enabled-face
+    tty-menu-selected-face
     underline
     variable-pitch
     variable-pitch-text
@@ -966,6 +969,9 @@
             `(separator-line ((t :underline ,fg-shadow-subtle)))
             `(fill-column-indicator ((t :foreground ,bg-shadow-intense)))
             `(tooltip ((t :background ,bg-accent :foreground ,fg-accent)))
+            `(tty-menu-disabled-face ((t :background ,bg-accent :foreground ,fg-shadow-subtle)))
+            `(tty-menu-enabled-face ((t :background ,bg-accent :foreground ,fg-main)))
+            `(tty-menu-selected-face ((t :background ,fg-main :foreground ,bg-main)))
 
             `(ansi-color-bright-black ((t :background "gray30" :foreground "gray30")))
             `(ansi-color-black ((t :background "black" :foreground "black")))
