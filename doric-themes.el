@@ -324,6 +324,7 @@
     magit-hash
     marginalia-file-priv-exec
     notmuch-search-matching-authors
+    notmuch-tree-match-author-face
     notmuch-search-flagged-face
     org-imminent-deadline
     org-headline-todo
