@@ -1175,6 +1175,56 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-warning-face ((t :inherit warning)))
 
+            ;; The :inverse-video prevents hl-line-mode from
+            ;; overriding the background.  Such an override really
+            ;; defeats the purpose of setting those highlights.
+            '(hi-aquamarine
+              ((default  :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#227f8f")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#56abcc")))
+            '(hi-black-b ((t :inverse-video t)))
+            `(hi-black-hb ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle :inverse-video t)))
+            '(hi-blue
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#4360bd")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#9abcef")))
+            '(hi-blue-b ((t :inherit (bold hi-blue))))
+            '(hi-green
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#407820")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#76bd46")))
+            '(hi-green-b ((t :inherit (bold hi-green))))
+            '(hi-pink
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#ad507a")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#ef92bf")))
+            '(hi-red-b
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#990000")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#dd6060")))
+            '(hi-salmon
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#9f654a")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#e0aa80")))
+            '(hi-yellow
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#806f00")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#cab000")))
+
             `(isearch ((t :inherit nil :slant normal :underline nil :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
             `(isearch-fail ((t :inherit (underline bold))))
             `(isearch-group-1 ((t :background ,bg-accent :foreground ,fg-accent)))
