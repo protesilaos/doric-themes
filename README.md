@@ -16,13 +16,22 @@ package. For something in-between, which I would consider the best
 ## Sample configuration
 
 ```elisp
+;; I will update this once the actual package is available.  For now,
+;; you have to clone the Git repository somewhere, then specify that
+;; in the `:load-path' below.
 (use-package doric-themes
+  :ensure nil
+  :demand t
+  :load-path "~/Git/Projects/doric-themes/"
   :config
   ;; These are the default values.
   (setq doric-themes-to-toggle '(doric-light doric-dark))
   (setq doric-themes-to-rotate doric-themes-collection)
+
+  (doric-themes-select 'doric-light)
   :bind
   (("<f5>" . doric-themes-toggle)
-   ("C-<f5>" . doric-themes-rotate)))
+   ("C-<f5>" . doric-themes-select)
+   ("M-<f5>" . doric-themes-rotate)))
 ```
 
