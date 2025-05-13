@@ -95,6 +95,7 @@
     magit-log-author
     magit-log-date
     marginalia-date
+    notmuch-search-date
     org-agenda-calendar-daterange
     org-agenda-column-dateline
     org-date
@@ -111,6 +112,11 @@
     markdown-blockquote-face
     match
     mode-line-inactive
+    notmuch-crypto-decryption
+    notmuch-crypto-signature-bad
+    notmuch-crypto-signature-good
+    notmuch-crypto-signature-good-key
+    notmuch-crypto-signature-unknown
     org-agenda-clocking
     org-agenda-restriction-lock
     org-clock-overlay
@@ -257,6 +263,13 @@
     nerd-icons-red-alt
     nerd-icons-silver
     nerd-icons-yellow
+    notmuch-crypto-part-header
+    notmuch-search-count
+    notmuch-search-non-matching-authors
+    notmuch-tag-face
+    notmuch-tree-match-tag-face
+    notmuch-tree-no-match-date-face
+    notmuch-tree-no-match-face
     org-agenda-dimmed-todo-face
     org-agenda-done
     org-agenda-structure-secondary
@@ -419,6 +432,7 @@
     next-error-message
     nobreak-hyphen
     nobreak-space
+    notmuch-tag-unread
     org-agenda-current-time
     org-agenda-date
     org-agenda-date-weekend
@@ -783,6 +797,7 @@
     eldoc-highlight-function-argument
     gnus-emphasis-highlight-words
     lazy-highlight
+    notmuch-tag-added
     orderless-match-face-0
     orderless-match-face-1
     orderless-match-face-2
