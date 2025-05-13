@@ -50,7 +50,7 @@
       (fg-shadow-subtle "#405060")
 
       (bg-shadow-intense "#a0bcd0")
-      (fg-shadow-intense "#0f123e")
+      (fg-shadow-intense "#213067")
 
       (bg-accent "#c2e8ef")
       (fg-accent "#084092")
