@@ -1016,6 +1016,8 @@
 
             `(isearch ((t :inherit nil :slant normal :underline nil :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
             `(isearch-fail ((t :inherit (underline bold))))
+            `(isearch-group-1 ((t :background ,bg-accent :foreground ,fg-accent)))
+            `(isearch-group-2 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
             `(query-replace ((t :inherit isearch)))
 
             `(line-number-current-line ((t :inherit (highlight bold))))
