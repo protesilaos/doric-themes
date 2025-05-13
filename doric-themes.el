@@ -436,6 +436,7 @@
     nobreak-hyphen
     nobreak-space
     notmuch-tag-unread
+    notmuch-tag-flagged
     org-agenda-current-time
     org-agenda-date
     org-agenda-date-weekend
