@@ -89,6 +89,7 @@
     elfeed-search-date-face
     epa-field-body
     epa-field-name
+    eshell-ls-readonly
     mm-uu-extract
     magit-log-author
     magit-log-date
@@ -188,6 +189,7 @@
     dired-ignored
     elfeed-search-title-face
     epa-validity-disabled
+    eshell-ls-unreadable
     file-name-shadow
     font-lock-string-face
     glyphless-char
@@ -313,6 +315,8 @@
     dired-directory
     elfeed-search-feed-face
     epa-validity-high
+    eshell-ls-executable
+    eshell-ls-special
     gnus-server-agent
     gnus-server-cloud-host
     hexl-address-region
@@ -528,6 +532,12 @@
     elfeed-log-warn-level-face
     elfeed-search-unread-title-face
     erc-prompt-face
+    eshell-ls-archive
+    eshell-ls-backup
+    eshell-ls-clutter
+    eshell-ls-directory
+    eshell-ls-missing
+    eshell-ls-product
     eshell-prompt
     font-lock-keyword-face
     font-lock-regexp-grouping-backslash
@@ -817,6 +827,7 @@
     denote-faces-link
     denote-faces-query-link
     dired-symlink
+    eshell-ls-symlink
     info-node
     info-xref
     info-xref-visited
