@@ -403,6 +403,9 @@
     log-view-commit-body
     magit-cherry-equivalent
     magit-diff-context-highlight
+    magit-bisect-bad
+    magit-bisect-good
+    magit-bisect-skip
     magit-reflog-amend
     magit-reflog-checkout
     magit-reflog-cherry-pick
