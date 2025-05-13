@@ -50,6 +50,7 @@
     hl-line
     keycast-key
     magit-diff-file-heading-selection
+    magit-section-heading-selection
     markdown-highlighting-face
     mode-line-highlight
     next-error
@@ -382,6 +383,23 @@
     log-view-commit-body
     magit-cherry-equivalent
     magit-diff-context-highlight
+    magit-reflog-amend
+    magit-reflog-checkout
+    magit-reflog-cherry-pick
+    magit-reflog-commit
+    magit-reflog-merge
+    magit-reflog-other
+    magit-reflog-rebase
+    magit-reflog-remote
+    magit-reflog-reset
+    magit-sequence-done
+    magit-sequence-drop
+    magit-sequence-exec
+    magit-sequence-head
+    magit-sequence-onto
+    magit-sequence-part
+    magit-sequence-pick
+    magit-sequence-stop
     marginalia-archive
     marginalia-char
     marginalia-file-owner
@@ -528,7 +546,9 @@
     magit-diff-conflict-heading
     magit-diff-hunk-heading-highlight
     magit-mode-line-process
+    magit-process-ok
     magit-section-heading
+    magit-signature-good
     magit-tag
     markdown-header-face-1
     markdown-header-face-2
@@ -621,6 +641,8 @@
     magit-branch-warning
     magit-diff-file-heading-highlight
     magit-diff-lines-heading
+    magit-process-ng
+    magit-signature-bad
     marginalia-file-priv-dir
     marginalia-key
     message-mml
@@ -694,6 +716,11 @@
     magit-cherry-unmatched
     magit-diff-hunk-heading
     magit-diff-file-heading
+    magit-signature-error
+    magit-signature-expired
+    magit-signature-expired-key
+    magit-signature-revoked
+    magit-signature-untrusted
     magit-mode-line-process-error
     markdown-inline-code-face
     message-cited-text-1
