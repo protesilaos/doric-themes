@@ -50,6 +50,7 @@
     hl-line
     keycast-key
     magit-diff-file-heading-selection
+    markdown-highlighting-face
     mode-line-highlight
     next-error
     org-date-selected
@@ -104,6 +105,7 @@
     header-line
     header-line-active
     header-line-inactive
+    markdown-blockquote-face
     match
     mode-line-inactive
     org-agenda-clocking
