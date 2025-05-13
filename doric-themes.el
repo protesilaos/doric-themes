@@ -90,7 +90,6 @@
     elfeed-search-feed-face
     epa-field-body
     epa-field-name
-    file-name-shadow
     mm-uu-extract
     magit-log-author
     magit-log-date
@@ -190,6 +189,7 @@
     dired-ignored
     elfeed-search-title-face
     epa-validity-disabled
+    file-name-shadow
     font-lock-string-face
     glyphless-char
     gnus-splash
