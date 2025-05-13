@@ -270,6 +270,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     denote-faces-second
     denote-faces-time
     denote-faces-year
+    display-time-date-and-time
     elfeed-search-date-face
     epa-field-body
     epa-field-name
@@ -547,7 +548,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     dired-perm-write
     dired-set-id
     dired-special
-    display-time-date-and-time
     epa-mark
     epa-validity-low
     epa-validity-medium
