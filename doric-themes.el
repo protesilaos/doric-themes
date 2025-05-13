@@ -1186,6 +1186,8 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(magit-diff-context-highlight (( )))
             `(magit-section-highlight (( )))
 
+            `(markdown-code-face ((t :background ,bg-shadow-subtle :extend t)))
+
             `(org-block ((t :background ,bg-shadow-subtle :extend t)))
             `(org-block-begin-line ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-intense :extend t)))
             `(org-block-end-line ((t :inherit org-block-begin-line)))
