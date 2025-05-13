@@ -49,8 +49,8 @@
       (bg-shadow-subtle "#404457")
       (fg-shadow-subtle "#aea8b8")
 
-      (bg-shadow-intense "#30409f")
-      (fg-shadow-intense "#cfcff8")
+      (bg-shadow-intense "#1f65a3")
+      (fg-shadow-intense "#cfd6f8")
 
       (bg-accent "#38594f")
       (fg-accent "#98dcbf")
