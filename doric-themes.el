@@ -929,8 +929,7 @@
 
 (defun doric-themes-prepare-faces (&rest faces-and-attributes)
   "Set faces to their respective attributes in FACES-AND-ATTRIBUTES."
-  (let ((faces (car faces-and-attributes))
-        (attributes (cdr faces-and-attributes)))
+  (pcase-let ((`(,faces . ,attributes) faces-and-attributes))
     (mapcar
      (lambda (face)
        (backquote (list ',face (list (list t ,@attributes)))))
