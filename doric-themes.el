@@ -58,6 +58,7 @@
     read-multiple-choice-face
     rectangle-preview
     tab-bar-tab-highlight
+    transient-enabled-suffix
     vertico-current))
 
 (defvar doric-themes-intense-shadow-faces
@@ -114,6 +115,7 @@
     secondary-selection
     show-paren-match-expression
     tab-bar
+    transient-disabled-suffix
     tool-bar
     vc-dir-status-ignored
     widget-button
