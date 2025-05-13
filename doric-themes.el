@@ -120,8 +120,6 @@
     transient-disabled-suffix
     tool-bar
     vc-dir-status-ignored
-    widget-button
-    widget-button-pressed
     widget-documentation
     widget-field
     widget-inactive
@@ -308,13 +306,17 @@
     log-view-message
     magit-hash
     marginalia-file-priv-exec
+    notmuch-search-matching-authors
+    notmuch-search-flagged-face
     org-imminent-deadline
     org-headline-todo
     org-todo
     org-warning
     package-status-installed
     transient-value
-    which-key-command-description-face))
+    which-key-command-description-face
+    widget-button
+    widget-button-pressed))
 
 (defvar doric-themes-main-foreground-only-faces
   '(border
