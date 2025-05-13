@@ -6,7 +6,7 @@
 ;; Maintainer: Protesilaos Stavrou <info@protesilaos.com>
 ;; URL: https://github.com/protesilaos/doric-themes
 ;; Version: 0.0.0
-;; Package-Requires: ((emacs "28.1"))
+;; Package-Requires: ((emacs "29.1"))
 ;; Keywords: faces, theme, accessibility
 
 ;; This file is NOT part of GNU Emacs.
@@ -34,6 +34,188 @@
 ;; Intensifies Conservatively ... themes.
 
 ;;; Code:
+
+(require 'seq)
+(eval-when-compile (require 'subr-x))
+
+(defconst doric-themes-light-themes '(doric-light doric-earth doric-wind)
+  "Light themes.")
+
+(defconst doric-themes-dark-themes '(doric-dark doric-fire doric-water)
+  "Dark themes.")
+
+(defconst doric-themes-collection
+  (append doric-themes-light-themes doric-themes-dark-themes)
+  "Symbols of all the Doric themes.")
+
+(defgroup doric-themes ()
+  "Minimalist themes with few colours and precise typography."
+  :group 'faces
+  :prefix "doric-themes-"
+  :tag "Doric Themes")
+
+;;;; User options
+
+(defcustom doric-themes-to-toggle '(doric-light doric-dark)
+  "Specify two themes for the `doric-themes-toggle' command.
+The variable `doric-themes-collection' contains the symbols of all
+themes that form part of this collection."
+  :type `(choice
+          (const :tag "No toggle (default)" nil)
+          (list :tag "Pick two themes to toggle between"
+                (choice :tag "Theme one of two"
+                        ,@(mapcar (lambda (theme)
+                                    (list 'const theme))
+                                  doric-themes-collection))
+                (choice :tag "Theme two of two"
+                        ,@(mapcar (lambda (theme)
+                                    (list 'const theme))
+                                  doric-themes-collection))))
+  :package-version '(doric-themes . "0.1.0")
+  :group 'doric-themes)
+
+(defcustom doric-themes-to-rotate doric-themes-collection
+  "List of themes to rotate among when using the command `doric-themes-rotate'."
+  :type `(repeat (choice
+                  :tag "A theme among the `doric-themes-collection'"
+                  ,@(mapcar (lambda (theme) (list 'const theme)) doric-themes-collection)))
+  :package-version '(doric-themes . "0.1.0")
+  :group 'doric-themes)
+
+;;;; Commands and their helper functions
+
+(defun doric-themes--doric-p (theme)
+  "Return non-nil if THEME name has a doric- prefix."
+  (string-prefix-p "doric-" (symbol-name theme)))
+
+(defun doric-themes--list-enabled-themes ()
+  "Return list of `custom-enabled-themes' matching `doric-themes--doric-p'."
+  (seq-filter #'doric-themes--doric-p custom-enabled-themes))
+
+(defun doric-themes--enable-themes ()
+  "Enable the Doric themes."
+  (dolist (theme doric-themes-collection)
+    (unless (memq theme custom-known-themes)
+      (load-theme theme :no-confirm :no-enable))))
+
+(defun doric-themes--list-known-themes ()
+  "Return list of `custom-known-themes' matching `doric-themes--doric-p'."
+  (doric-themes--enable-themes)
+  (seq-filter #'doric-themes--doric-p custom-known-themes))
+
+(defun doric-themes--current-theme ()
+  "Return first enabled Doric theme."
+  (car (or (doric-themes--list-enabled-themes)
+           (doric-themes--list-known-themes))))
+
+(defun doric-themes--annotate-theme (theme)
+  "Return completion annotation for THEME."
+  (when-let* ((symbol (intern-soft theme))
+              (doc-string (get symbol 'theme-documentation)))
+    (format " -- %s" (propertize (car (split-string doc-string "\\.")) 'face 'completions-annotations))))
+
+(defun doric-themes--completion-table (category candidates)
+  "Pass appropriate metadata CATEGORY to completion CANDIDATES."
+  (lambda (string pred action)
+    (if (eq action 'metadata)
+        `(metadata (category . ,category))
+      (complete-with-action action candidates string pred))))
+
+(defun doric-themes--completion-table-candidates ()
+  "Render `doric-themes--list-known-themes' as completion with theme category."
+  (doric-themes--completion-table 'theme (doric-themes--list-known-themes)))
+
+(defvar doric-themes-select-theme-history nil
+  "Minibuffer history of `doric-themes-select-prompt'.")
+
+(defun doric-themes-select-prompt (&optional prompt)
+  "Minibuffer prompt to select a Doric theme.
+With optional PROMPT string, use it.  Else use a generic prompt."
+  (let ((completion-extra-properties `(:annotation-function ,#'doric-themes--annotate-theme)))
+    (intern
+     (completing-read
+      (or prompt "Select Doric theme: ")
+      (doric-themes--completion-table-candidates)
+      nil t nil 'doric-themes-select-theme-history))))
+
+(defun doric-themes-load-theme (theme)
+  "Load THEME while disabling other themes.
+Return THEME."
+  (mapc #'disable-theme custom-enabled-themes)
+  (load-theme theme :no-confirm)
+  theme)
+
+;;;###autoload
+(defun doric-themes-select (theme)
+  "Load a Doric THEME using minibuffer completion.
+Run `doric-themes-after-load-theme-hook' after loading the theme.
+Disable other themes per `doric-themes-disable-other-themes'."
+  (interactive (list (doric-themes-select-prompt)))
+  (doric-themes-load-theme theme))
+
+(defun doric-themes--toggle-theme-p ()
+  "Return non-nil if `doric-themes-to-toggle' are valid."
+  (condition-case nil
+      (dolist (theme doric-themes-to-toggle)
+        (or (memq theme doric-themes-collection)
+            (memq theme (doric-themes--list-known-themes))
+            (error "`%s' is not part of `doric-themes-collection'" theme)))
+    (error nil)
+    (:success doric-themes-to-toggle)))
+
+;;;###autoload
+(defun doric-themes-toggle ()
+  "Toggle between the two `doric-themes-to-toggle'.
+If `doric-themes-to-toggle' does not specify two Doric themes, inform
+the user about it while prompting with completion for a theme among our
+collection (this is practically the same as the `doric-themes-select'
+command)."
+  (interactive)
+  (if (doric-themes--toggle-theme-p)
+      (pcase-let ((`(,one ,two) doric-themes-to-toggle))
+        (if (eq (car custom-enabled-themes) one)
+            (doric-themes-load-theme two)
+          (doric-themes-load-theme one)))
+    (doric-themes-load-theme
+     (doric-themes-select-prompt
+      (concat "Set two `doric-themes-to-toggle'; "
+              "switching to theme selection for now: ")))))
+
+(defun doric-themes--rotate (themes)
+  "Rotate THEMES rightward such that the car is moved to the end."
+  (if (proper-list-p themes)
+      (let* ((index (seq-position themes (doric-themes--current-theme)))
+             (offset (1+ index)))
+        (append (nthcdr offset themes) (take offset themes)))
+    (error "The `%s' is not a list" themes)))
+
+(defun doric-themes--rotate-p (themes)
+  "Return a new theme among THEMES if it is possible to rotate to it."
+  (if-let* ((new-theme (car (doric-themes--rotate themes))))
+      (if (eq new-theme (doric-themes--current-theme))
+          (car (doric-themes--rotate-p (doric-themes--rotate themes)))
+        new-theme)
+    (error "Cannot determine a theme among `%s'" themes)))
+
+;;;###autoload
+(defun doric-themes-rotate (themes)
+  "Rotate to the next theme among THEMES.
+When called interactively THEMES is the value of `doric-themes-to-rotate'.
+
+If the current theme is already the next in line, then move to the one
+after.  Perform the rotation rightwards, such that the first element in
+the list becomes the last.  Do not modify THEMES in the process."
+  (interactive (list doric-themes-to-rotate))
+  (unless (proper-list-p themes)
+    "This is not a list of themes: `%s'" themes)
+  (let ((candidate (doric-themes--rotate-p themes)))
+    (if (doric-themes--doric-p candidate)
+        (progn
+          (message "Rotating to `%s'" (propertize (symbol-name candidate) 'face 'success))
+          (doric-themes-load-theme candidate))
+      (user-error "`%s' is not part of the Doric collection" candidate))))
+
+;;;; Face customisations
 
 (defvar doric-themes-selection-faces
   '(calendar-today
