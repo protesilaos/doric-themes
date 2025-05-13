@@ -87,7 +87,6 @@
     denote-faces-time
     denote-faces-year
     elfeed-search-date-face
-    elfeed-search-feed-face
     epa-field-body
     epa-field-name
     mm-uu-extract
@@ -312,6 +311,7 @@
 (defvar doric-themes-accent-foreground-only-faces
   '(change-log-acknowledgment
     dired-directory
+    elfeed-search-feed-face
     epa-validity-high
     gnus-server-agent
     gnus-server-cloud-host
