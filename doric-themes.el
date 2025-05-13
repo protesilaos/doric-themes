@@ -799,6 +799,7 @@
     dired-broken-symlink
     dired-flagged
     error
+    fill-column-indicator
     fixed-pitch
     fixed-pitch-serif
     font-lock-comment-delimiter-face
@@ -963,6 +964,7 @@
             `(internal-border ((t :foreground ,bg-shadow-subtle)))
             `(vertical-border ((t :foreground ,bg-shadow-subtle)))
             `(separator-line ((t :underline ,fg-shadow-subtle)))
+            `(fill-column-indicator ((t :foreground ,bg-shadow-intense)))
             `(tooltip ((t :background ,bg-accent :foreground ,fg-accent)))
 
             `(ansi-color-bright-black ((t :background "gray30" :foreground "gray30")))
