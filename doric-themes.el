@@ -91,6 +91,7 @@
     epa-field-body
     epa-field-name
     file-name-shadow
+    mm-uu-extract
     magit-log-author
     magit-log-date
     marginalia-date
@@ -301,6 +302,8 @@
   '(change-log-acknowledgment
     dired-directory
     epa-validity-high
+    gnus-server-agent
+    gnus-server-cloud-host
     hexl-address-region
     log-view-message
     magit-hash
@@ -365,6 +368,8 @@
     font-lock-variable-name-face
     font-lock-variable-use-face
     fringe
+    gnus-header-content
+    gnus-server-opened
     gnus-summary-high-undownloaded
     gnus-summary-high-unread
     gnus-summary-low-undownloaded
@@ -513,6 +518,10 @@
     git-commit-comment-heading
     git-commit-summary
     gnus-emphasis-bold
+    gnus-header-content
+    gnus-header-from
+    gnus-header-newsgroups
+    gnus-header-subject
     gnus-group-mail-1
     gnus-group-mail-2
     gnus-group-mail-3
@@ -524,6 +533,7 @@
     gnus-group-news-5
     gnus-group-news-6
     gnus-group-news-low
+    gnus-server-cloud
     gnus-summary-high-ticked
     gnus-summary-low-ticked
     gnus-summary-normal-ticked
@@ -636,6 +646,7 @@
     font-lock-preprocessor-face
     font-lock-type-face
     gnus-emphasis-bold-italic
+    gnus-server-denied
     help-key-binding
     info-header-xref
     magit-branch-warning
@@ -699,6 +710,7 @@
     gnus-cite-9
     gnus-cite-attribution
     gnus-emphasis-italic
+    gnus-header-name
     gnus-group-mail-1-empty
     gnus-group-mail-2-empty
     gnus-group-mail-3-empty
@@ -710,6 +722,7 @@
     gnus-group-news-5-empty
     gnus-group-news-6-empty
     gnus-group-news-low-empty
+    gnus-server-offline
     help-argument-name
     holiday
     magit-branch-current
@@ -766,6 +779,7 @@
     consult-preview-match
     custom-visibility
     eldoc-highlight-function-argument
+    gnus-emphasis-highlight-words
     lazy-highlight
     orderless-match-face-0
     orderless-match-face-1
