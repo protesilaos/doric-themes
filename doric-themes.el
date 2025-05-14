@@ -527,6 +527,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-server-agent
     gnus-server-cloud-host
     hexl-address-region
+    homoglyph
     log-view-message
     magit-hash
     marginalia-file-priv-exec
@@ -594,7 +595,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-summary-normal-unread
     gnus-summary-selected
     help-for-help-header
-    homoglyph
     icon
     log-edit-header
     kmacro-menu-flagged
