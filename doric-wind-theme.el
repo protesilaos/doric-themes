@@ -52,7 +52,7 @@
       (bg-shadow-intense "#94c2bf")
       (fg-shadow-intense "#133838")
 
-      (bg-accent "#bad0f4")
+      (bg-accent "#bfd4f6")
       (fg-accent "#0f2381")
 
       (fg-faint-red "#750000")
