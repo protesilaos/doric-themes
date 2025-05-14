@@ -271,6 +271,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     denote-faces-time
     denote-faces-year
     display-time-date-and-time
+    ediff-current-diff-Ancestor
     elfeed-search-date-face
     epa-field-body
     epa-field-name
@@ -291,6 +292,12 @@ the list becomes the last.  Do not modify THEMES in the process."
     corfu-default
     corfu-popupinfo
     diff-header
+    ediff-even-diff-A
+    ediff-odd-diff-A
+    ediff-even-diff-B
+    ediff-odd-diff-B
+    ediff-even-diff-C
+    ediff-odd-diff-C
     eww-form-checkbox
     eww-form-select
     eww-form-textarea
@@ -714,6 +721,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     denote-faces-subdirectory
     diff-nonexistent
     dired-header
+    ediff-fine-diff-Ancestor
     edmacro-label
     elfeed-log-debug-level-face
     elfeed-log-error-level-face
@@ -1040,6 +1048,7 @@ the list becomes the last.  Do not modify THEMES in the process."
   '(denote-faces-prompt-new-name
     diff-added
     diff-indicator-added
+    ediff-current-diff-B
     magit-diff-added
     magit-diffstat-added
     smerge-lower
@@ -1047,6 +1056,7 @@ the list becomes the last.  Do not modify THEMES in the process."
 
 (defvar doric-themes-diff-added-refine-faces
   '(diff-refine-added
+    ediff-fine-diff-B
     magit-diff-added-highlight
     smerge-refined-added))
 
@@ -1054,11 +1064,13 @@ the list becomes the last.  Do not modify THEMES in the process."
   '(diff-changed
     diff-changed-unspecified
     diff-indicator-changed
+    ediff-current-diff-C
     magit-diff-base
     smerge-base))
 
 (defvar doric-themes-diff-changed-refine-faces
   '(diff-refine-changed
+    ediff-fine-diff-C
     magit-diff-base-highlight
     smerge-refined-changed))
 
@@ -1066,6 +1078,7 @@ the list becomes the last.  Do not modify THEMES in the process."
   '(denote-faces-prompt-old-name
     diff-removed
     diff-indicator-removed
+    ediff-current-diff-A
     magit-diff-removed
     magit-diffstat-removed
     smerge-upper
@@ -1073,6 +1086,7 @@ the list becomes the last.  Do not modify THEMES in the process."
 
 (defvar doric-themes-diff-removed-refine-faces
   '(diff-refine-removed
+    ediff-fine-diff-A
     magit-diff-removed-highlight
     smerge-refined-removed))
 
