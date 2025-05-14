@@ -384,6 +384,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     file-name-shadow
     font-lock-string-face
     glyphless-char
+    gnus-header-name
     gnus-splash
     gnus-summary-high-ancient
     gnus-summary-high-read
@@ -419,6 +420,10 @@ the list becomes the last.  Do not modify THEMES in the process."
     marginalia-type
     marginalia-value
     marginalia-version
+    message-header-mml
+    message-header-name
+    message-header-newsgroups
+    message-header-xheader
     nerd-icons-blue
     nerd-icons-blue-alt
     nerd-icons-completion-dir-face
@@ -928,7 +933,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-cite-9
     gnus-cite-attribution
     gnus-emphasis-italic
-    gnus-header-name
     gnus-group-mail-1-empty
     gnus-group-mail-2-empty
     gnus-group-mail-3-empty
@@ -958,10 +962,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     message-cited-text-2
     message-cited-text-3
     message-cited-text-4
-    message-header-mml
-    message-header-name
-    message-header-newsgroups
-    message-header-xheader
     mu4e-cited-1-face
     mu4e-cited-2-face
     mu4e-cited-3-face
