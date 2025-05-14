@@ -42,7 +42,7 @@
     (require 'doric-themes))
 
   (defvar doric-wind-palette
-    '((cursor "#000077")
+    '((cursor "#00009b")
       (bg-main "#e8f0e9")
       (fg-main "#000f0f")
       
