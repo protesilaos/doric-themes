@@ -880,6 +880,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-server-denied
     help-key-binding
     info-header-xref
+    line-number-major-tick
     magit-branch-warning
     magit-diff-file-heading-highlight
     magit-diff-lines-heading
@@ -956,6 +957,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-server-offline
     help-argument-name
     holiday
+    line-number-minor-tick
     magit-branch-current
     magit-cherry-unmatched
     magit-diff-hunk-heading
