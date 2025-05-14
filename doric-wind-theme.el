@@ -49,7 +49,7 @@
       (bg-shadow-subtle "#d3dbd9")
       (fg-shadow-subtle "#40484f")
 
-      (bg-shadow-intense "#8fbbbe")
+      (bg-shadow-intense "#94c2bf")
       (fg-shadow-intense "#133838")
 
       (bg-accent "#bad0f4")
