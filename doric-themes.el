@@ -553,16 +553,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     epa-validity-low
     epa-validity-medium
     eww-valid-certificate
-    flymake-end-of-line-diagnostics-face
-    flymake-error
-    flymake-error-echo
-    flymake-error-echo-at-eol
-    flymake-note
-    flymake-note-echo
-    flymake-note-echo-at-eol
-    flymake-warning
-    flymake-warning-echo
-    flymake-warning-echo-at-eol
     font-lock-bracket-face
     font-lock-constant-face
     font-lock-delimiter-face
