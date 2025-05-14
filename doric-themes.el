@@ -507,6 +507,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     dired-directory
     elfeed-search-feed-face
     epa-validity-high
+    escape-glyph
     eshell-ls-executable
     eshell-ls-special
     gnus-server-agent
@@ -551,7 +552,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     epa-mark
     epa-validity-low
     epa-validity-medium
-    escape-glyph
     eww-valid-certificate
     flymake-end-of-line-diagnostics-face
     flymake-error
