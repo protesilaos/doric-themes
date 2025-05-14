@@ -667,6 +667,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     shr-strike-through
     shr-sup
     shr-text
+    shortdoc-section
     so-long-mode-line-inactive
     substitute-match
     tab-bar-tab-group-inactive
@@ -826,6 +827,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     outline-6
     outline-7
     outline-8
+    shortdoc-heading
     shr-h1
     shr-h2
     shr-h3
