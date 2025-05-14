@@ -392,7 +392,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     eshell-ls-unreadable
     file-name-shadow
     font-lock-string-face
-    glyphless-char
     gnus-header-name
     gnus-splash
     gnus-summary-high-ancient
