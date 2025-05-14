@@ -251,6 +251,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     eww-form-file
     eww-form-submit
     gnus-summary-cancelled
+    magit-blame-highlight
     magit-diff-lines-boundary
     mode-line
     mode-line-active
@@ -307,6 +308,8 @@ the list becomes the last.  Do not modify THEMES in the process."
     header-line
     header-line-active
     header-line-inactive
+    magit-blame-heading
+    magit-blame-margin
     markdown-blockquote-face
     match
     mode-line-inactive
