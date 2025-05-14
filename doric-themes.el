@@ -593,7 +593,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-summary-normal-undownloaded
     gnus-summary-normal-unread
     gnus-summary-selected
-    help-for-help-header
     icon
     log-edit-header
     kmacro-menu-flagged
@@ -766,6 +765,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-summary-low-ticked
     gnus-summary-normal-ticked
     grep-heading
+    help-for-help-header
     indium-repl-prompt-face
     info-header-node
     info-index-match
