@@ -293,10 +293,12 @@ the list becomes the last.  Do not modify THEMES in the process."
     corfu-popupinfo
     diff-header
     ediff-even-diff-A
-    ediff-odd-diff-A
+    ediff-even-diff-Ancestor
     ediff-even-diff-B
-    ediff-odd-diff-B
     ediff-even-diff-C
+    ediff-odd-diff-A
+    ediff-odd-diff-Ancestor
+    ediff-odd-diff-B
     ediff-odd-diff-C
     eww-form-checkbox
     eww-form-select
