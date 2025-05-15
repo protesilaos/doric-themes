@@ -315,6 +315,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     markdown-blockquote-face
     match
     mode-line-inactive
+    mu4e-region-code
     notmuch-crypto-decryption
     notmuch-crypto-signature-bad
     notmuch-crypto-signature-good
@@ -437,6 +438,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     message-header-name
     message-header-newsgroups
     message-header-xheader
+    mu4e-header-face
     nerd-icons-blue
     nerd-icons-blue-alt
     nerd-icons-completion-dir-face
