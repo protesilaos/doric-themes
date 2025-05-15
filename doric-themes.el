@@ -219,6 +219,7 @@ the list becomes the last.  Do not modify THEMES in the process."
 
 (defconst doric-themes-selection-faces
   '(calendar-today
+    company-tooltip-selection
     completions-highlight
     consult-highlight-mark
     consult-highlight-match
@@ -250,6 +251,8 @@ the list becomes the last.  Do not modify THEMES in the process."
 
 (defconst doric-themes-intense-shadow-faces
   '(blink-matching-paren-offscreen
+    company-template-field
+    company-tooltip-scrollbar-thumb
     corfu-current
     custom-button
     eww-form-file
@@ -299,7 +302,10 @@ the list becomes the last.  Do not modify THEMES in the process."
     ztreep-diff-header-small-face))
 
 (defconst doric-themes-subtle-shadow-faces
-  '(consult-preview-line
+  '(company-preview
+    company-tooltip
+    company-tooltip-scrollbar-track
+    consult-preview-line
     corfu-default
     corfu-popupinfo
     diff-header
@@ -742,6 +748,8 @@ the list becomes the last.  Do not modify THEMES in the process."
     change-log-file
     circe-prompt-face
     comint-highlight-prompt
+    company-tooltip-quick-access
+    company-tooltip-quick-access-selection
     compilation-info
     compilation-mode-line-exit
     compilation-mode-line-fail
@@ -977,6 +985,8 @@ the list becomes the last.  Do not modify THEMES in the process."
   '(Info-quoted
     aw-minibuffer-leading-char-face
     completions-annotations
+    company-tooltip-annotation
+    company-tooltip-annotation-selection
     corfu-annotations
     custom-comment
     custom-comment-tag
@@ -1082,6 +1092,11 @@ the list becomes the last.  Do not modify THEMES in the process."
     avy-lead-face-1
     avy-lead-face-2
     aw-leading-char-face
+    company-echo-common
+    company-preview-common
+    company-preview-search
+    company-tooltip-common
+    company-tooltip-common-selection
     completions-common-part
     completions-first-difference
     consult-preview-match
