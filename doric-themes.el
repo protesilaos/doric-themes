@@ -280,6 +280,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     epa-field-body
     epa-field-name
     eshell-ls-readonly
+    font-lock-function-name-face
     mm-uu-extract
     magit-log-author
     magit-log-date
@@ -614,7 +615,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     font-lock-delimiter-face
     font-lock-escape-face
     font-lock-function-call-face
-    font-lock-function-name-face
     font-lock-misc-punctuation-face
     font-lock-negation-char-face
     font-lock-number-face
