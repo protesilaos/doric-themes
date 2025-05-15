@@ -243,6 +243,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     pulse-highlight-start-face
     read-multiple-choice-face
     rectangle-preview
+    speedbar-highlight-face
     tab-bar-tab-highlight
     transient-enabled-suffix
     vertico-current))
@@ -260,6 +261,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     mode-line-active
     region
     show-paren-match
+    speedbar-separator-face
     substitute-match
     tab-bar-tab))
 
@@ -580,6 +582,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     proced-pid
     proced-ppid
     proced-sess
+    speedbar-directory-face
     transient-value
     which-key-command-description-face
     widget-button
@@ -710,6 +713,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     shr-text
     shortdoc-section
     so-long-mode-line-inactive
+    speedbar-file-face
     substitute-match
     tab-bar-tab-group-inactive
     tab-bar-tab-inactive
@@ -891,6 +895,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     shr-h6
     slime-repl-prompt-face
     sly-mrepl-prompt-face
+    speedbar-button-face
     so-long-mode-line-active
     telega-chat-prompt
     transient-heading
@@ -1058,6 +1063,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     package-description
     sh-heredoc
     shr-code
+    speedbar-tag-face
     transient-key-noop
     vc-dir-status-edited
     vc-edited-state
@@ -1091,6 +1097,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     orderless-match-face-3
     proced-session-leader-pid
     show-paren-mismatch
+    speedbar-selected-face
     transient-argument
     which-key-special-key-face))
 
