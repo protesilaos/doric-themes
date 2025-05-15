@@ -1288,7 +1288,7 @@ the list becomes the last.  Do not modify THEMES in the process."
                (((class color) (min-colors 88) (background dark))
                 :background "#000000" :foreground "#cab000")))
 
-            `(isearch ((t :inherit nil :slant normal :underline nil :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
+            `(isearch ((t :background ,bg-shadow-intense :foreground ,fg-main)))
             `(isearch-fail ((t :inherit (underline bold))))
             `(isearch-group-1 ((t :background ,bg-accent :foreground ,fg-accent)))
             `(isearch-group-2 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
