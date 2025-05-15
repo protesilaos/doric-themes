@@ -613,7 +613,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     font-lock-bracket-face
     font-lock-constant-face
     font-lock-delimiter-face
-    font-lock-escape-face
     font-lock-function-call-face
     font-lock-misc-punctuation-face
     font-lock-negation-char-face
@@ -1169,6 +1168,7 @@ the list becomes the last.  Do not modify THEMES in the process."
 (defconst doric-themes-warning-foreground-only-faces
   '(TeX-error-description-warning
     font-latex-warning-face
+    font-lock-escape-facex
     font-lock-warning-face
     warning))
 
