@@ -914,6 +914,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     speedbar-button-face
     so-long-mode-line-active
     telega-chat-prompt
+    texinfo-heading
     transient-heading
     transient-mismatched-key
     transient-nonstandard-key
