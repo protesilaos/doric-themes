@@ -329,6 +329,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     show-paren-match-expression
     tab-bar
     transient-disabled-suffix
+    trashed-restored
     tool-bar
     vc-dir-status-ignored
     widget-documentation
