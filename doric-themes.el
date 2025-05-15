@@ -698,9 +698,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     proced-user
     scroll-bar
     sgml-namespace
-    sh-escaped-newline
-    sh-heredoc
-    sh-quoted-exec
     shr-abbreviation
     shr-sliced-image
     shr-strike-through
@@ -869,6 +866,8 @@ the list becomes the last.  Do not modify THEMES in the process."
     outline-8
     proced-emacs-pid
     proced-sort-header
+    sh-escaped-newline
+    sh-quoted-exec
     shortdoc-heading
     shr-h1
     shr-h2
@@ -1039,6 +1038,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     org-tag
     org-verbatim
     package-description
+    sh-heredoc
     shr-code
     transient-key-noop
     vc-dir-status-edited
