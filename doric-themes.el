@@ -892,6 +892,8 @@ the list becomes the last.  Do not modify THEMES in the process."
     outline-8
     proced-emacs-pid
     proced-sort-header
+    reb-regexp-grouping-backslash
+    reb-regexp-grouping-construct
     sh-escaped-newline
     sh-quoted-exec
     shortdoc-heading
@@ -1369,6 +1371,11 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(org-block-begin-line ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-intense :extend t)))
             `(org-block-end-line ((t :inherit org-block-begin-line)))
             `(org-hide ((t :background ,bg-main)))
+
+            `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
+            `(reb-match-1 ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+            `(reb-match-2 ((t :background ,bg-accent :foreground ,fg-accent)))
+            `(reb-match-3 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
 
             `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
