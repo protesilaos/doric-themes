@@ -230,6 +230,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     header-line-highlight
     highlight
     hl-line
+    icomplete-selected-match
     keycast-key
     magit-diff-file-heading-selection
     magit-section-heading-selection
@@ -427,6 +428,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-summary-normal-ancient
     gnus-summary-normal-read
     hexl-ascii-region
+    icomplete-vertical-unselected-prefix-indicator-face
     line-number
     magit-diff-context
     magit-log-graph
@@ -628,6 +630,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-summary-normal-undownloaded
     gnus-summary-normal-unread
     gnus-summary-selected
+    icomplete-vertical-selected-prefix-indicator-face
     ido-only-match
     icon
     log-edit-header
@@ -813,6 +816,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-summary-normal-ticked
     grep-heading
     help-for-help-header
+    icomplete-first-match
     ido-first-match
     indium-repl-prompt-face
     info-header-node
