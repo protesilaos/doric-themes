@@ -56,7 +56,7 @@
       (fg-accent "#3f2781")
 
       (fg-faint-red "#750000")
-      (fg-faint-green "#00620f")
+      (fg-faint-green "#006500")
       (fg-faint-yellow "#5f4602")
       (fg-faint-blue "#353362")
       (fg-faint-magenta "#553372")
