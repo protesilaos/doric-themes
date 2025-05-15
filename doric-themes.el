@@ -562,6 +562,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-server-cloud-host
     hexl-address-region
     homoglyph
+    ido-subdir
     log-view-message
     magit-hash
     marginalia-file-priv-exec
@@ -627,6 +628,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-summary-normal-undownloaded
     gnus-summary-normal-unread
     gnus-summary-selected
+    ido-only-match
     icon
     log-edit-header
     kmacro-menu-flagged
@@ -811,6 +813,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-summary-normal-ticked
     grep-heading
     help-for-help-header
+    ido-first-match
     indium-repl-prompt-face
     info-header-node
     info-index-match
@@ -930,6 +933,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-server-denied
     help-key-binding
     ibuffer-locked-buffer
+    ido-indicator
     info-header-xref
     line-number-major-tick
     magit-branch-warning
