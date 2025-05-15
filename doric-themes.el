@@ -238,6 +238,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     next-error
     org-date-selected
     org-dispatcher-highlight
+    proced-marked
     read-multiple-choice-face
     rectangle-preview
     tab-bar-tab-highlight
@@ -282,6 +283,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     magit-log-date
     marginalia-date
     notmuch-search-date
+    proced-time-colon
     org-agenda-calendar-daterange
     org-agenda-column-dateline
     org-date
@@ -505,6 +507,9 @@ the list becomes the last.  Do not modify THEMES in the process."
     package-status-external
     package-status-from-source
     package-status-new
+    proced-executable
+    proced-interruptible-sleep-status-code
+    proced-mem
     shadow
     transient-inactive-argument
     transient-inactive-value
@@ -541,6 +546,10 @@ the list becomes the last.  Do not modify THEMES in the process."
     org-todo
     org-warning
     package-status-installed
+    proced-pgrp
+    proced-pid
+    proced-ppid
+    proced-sess
     transient-value
     which-key-command-description-face
     widget-button
@@ -660,6 +669,11 @@ the list becomes the last.  Do not modify THEMES in the process."
     org-property-value
     org-quote
     org-verse
+    proced-cpu
+    proced-mark
+    proced-memory-low-usage
+    proced-memory-medium-usage
+    proced-user
     scroll-bar
     sgml-namespace
     sh-escaped-newline
@@ -830,6 +844,8 @@ the list becomes the last.  Do not modify THEMES in the process."
     outline-6
     outline-7
     outline-8
+    proced-emacs-pid
+    proced-sort-header
     shortdoc-heading
     shr-h1
     shr-h2
@@ -901,6 +917,9 @@ the list becomes the last.  Do not modify THEMES in the process."
     package-status-held
     package-status-incompat
     package-status-unsigned
+    proced-memory-high-usage
+    proced-run-status-code
+    proced-uninterruptible-sleep-status-code
     smerge-markers
     transient-key
     transient-key-exit
@@ -1027,6 +1046,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     orderless-match-face-1
     orderless-match-face-2
     orderless-match-face-3
+    proced-session-leader-pid
     show-paren-mismatch
     transient-argument
     which-key-special-key-face))
