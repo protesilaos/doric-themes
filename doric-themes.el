@@ -617,8 +617,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     font-lock-negation-char-face
     font-lock-number-face
     font-lock-punctuation-face
-    font-lock-variable-name-face
-    font-lock-variable-use-face
     fringe
     gnus-header-content
     gnus-server-opened
@@ -1268,6 +1266,7 @@ the list becomes the last.  Do not modify THEMES in the process."
 
             `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
+            `(font-lock-variable-name-face  ((t :inherit italic)))
 
             ;; The :inverse-video prevents hl-line-mode from
             ;; overriding the background.  Such an override really
