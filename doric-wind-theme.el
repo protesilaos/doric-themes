@@ -45,15 +45,15 @@
     '((cursor "#10600b")
       (bg-main "#e8f0e9")
       (fg-main "#000f0f")
-      
+
       (bg-shadow-subtle "#d3dbd9")
       (fg-shadow-subtle "#40484f")
 
       (bg-shadow-intense "#94c2bf")
       (fg-shadow-intense "#004038")
 
-      (bg-accent "#bfd4f6")
-      (fg-accent "#0f2381")
+      (bg-accent "#cbc9f6")
+      (fg-accent "#3f2781")
 
       (fg-faint-red "#750000")
       (fg-faint-green "#00620f")
