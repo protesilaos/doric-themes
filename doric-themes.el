@@ -328,6 +328,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     magit-blame-margin
     markdown-blockquote-face
     match
+    menu
     mode-line-inactive
     mu4e-region-code
     notmuch-crypto-decryption
@@ -674,7 +675,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     marginalia-archive
     marginalia-char
     marginalia-file-owner
-    menu
     message-signature-separator
     minibuffer-depth-indicator
     mm-command-output
