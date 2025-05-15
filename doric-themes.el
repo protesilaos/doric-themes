@@ -217,7 +217,7 @@ the list becomes the last.  Do not modify THEMES in the process."
 
 ;;;; Face customisations
 
-(defvar doric-themes-selection-faces
+(defconst doric-themes-selection-faces
   '(calendar-today
     completions-highlight
     consult-highlight-mark
@@ -246,7 +246,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     transient-enabled-suffix
     vertico-current))
 
-(defvar doric-themes-intense-shadow-faces
+(defconst doric-themes-intense-shadow-faces
   '(blink-matching-paren-offscreen
     corfu-current
     custom-button
@@ -262,7 +262,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     substitute-match
     tab-bar-tab))
 
-(defvar doric-themes-intense-shadow-foreground-only-faces
+(defconst doric-themes-intense-shadow-foreground-only-faces
   '(calendar-month-header
     change-log-date
     denote-faces-date
@@ -294,7 +294,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     vc-up-to-date-state
     ztreep-diff-header-small-face))
 
-(defvar doric-themes-subtle-shadow-faces
+(defconst doric-themes-subtle-shadow-faces
   '(consult-preview-line
     corfu-default
     corfu-popupinfo
@@ -342,7 +342,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     widget-unselected
     xref-match))
 
-(defvar doric-themes-subtle-shadow-foreground-only-faces
+(defconst doric-themes-subtle-shadow-foreground-only-faces
   '(all-the-icons-blue
     all-the-icons-blue-alt
     all-the-icons-completion-dir-face
@@ -541,7 +541,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     xref-line-number
     ztreep-expand-sign-face))
 
-(defvar doric-themes-accent-foreground-only-faces
+(defconst doric-themes-accent-foreground-only-faces
   '(change-log-acknowledgment
     dired-directory
     diredfl-dir-name
@@ -577,7 +577,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     widget-button-pressed
     ztreep-node-face))
 
-(defvar doric-themes-main-foreground-only-faces
+(defconst doric-themes-main-foreground-only-faces
   '(border
     breadcrumb-imenu-crumbs-face
     breadcrumb-project-base-face
@@ -724,7 +724,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     which-key-note-face which-key-separator-face
     ztreep-leaf-face))
 
-(defvar doric-themes-bold-faces
+(defconst doric-themes-bold-faces
   '(abbrev-table-name
     bookmark-face
     bookmark-menu-bookmark
@@ -897,7 +897,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     ztreep-diff-header-face
     ztreep-header-face))
 
-(defvar doric-themes-bold-italic-faces
+(defconst doric-themes-bold-italic-faces
   '(appt-notification
     aw-key-face
     change-log-conditionals
@@ -954,7 +954,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     vertico-group-title
     which-key-key-face))
 
-(defvar doric-themes-italic-faces
+(defconst doric-themes-italic-faces
   '(Info-quoted
     aw-minibuffer-leading-char-face
     completions-annotations
@@ -1052,7 +1052,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     which-key-local-map-description-face
     ztreep-node-count-children-face))
 
-(defvar doric-themes-underline-emphasis-faces
+(defconst doric-themes-underline-emphasis-faces
   '(avy-goto-char-timer-face
     avy-lead-face
     avy-lead-face-0
@@ -1076,7 +1076,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     transient-argument
     which-key-special-key-face))
 
-(defvar doric-themes-underline-link-faces
+(defconst doric-themes-underline-link-faces
   '(browse-url-button
     button
     custom-link
@@ -1098,7 +1098,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     package-name
     shr-link))
 
-(defvar doric-themes-diff-added-faces
+(defconst doric-themes-diff-added-faces
   '(denote-faces-prompt-new-name
     diff-added
     diff-indicator-added
@@ -1108,13 +1108,13 @@ the list becomes the last.  Do not modify THEMES in the process."
     smerge-lower
     ztreep-diff-model-add-face))
 
-(defvar doric-themes-diff-added-refine-faces
+(defconst doric-themes-diff-added-refine-faces
   '(diff-refine-added
     ediff-fine-diff-B
     magit-diff-added-highlight
     smerge-refined-added))
 
-(defvar doric-themes-diff-changed-faces
+(defconst doric-themes-diff-changed-faces
   '(diff-changed
     diff-changed-unspecified
     diff-indicator-changed
@@ -1122,13 +1122,13 @@ the list becomes the last.  Do not modify THEMES in the process."
     magit-diff-base
     smerge-base))
 
-(defvar doric-themes-diff-changed-refine-faces
+(defconst doric-themes-diff-changed-refine-faces
   '(diff-refine-changed
     ediff-fine-diff-C
     magit-diff-base-highlight
     smerge-refined-changed))
 
-(defvar doric-themes-diff-removed-faces
+(defconst doric-themes-diff-removed-faces
   '(denote-faces-prompt-old-name
     diff-removed
     diff-indicator-removed
@@ -1138,7 +1138,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     smerge-upper
     ztreep-diff-model-diff-face))
 
-(defvar doric-themes-diff-removed-refine-faces
+(defconst doric-themes-diff-removed-refine-faces
   '(diff-refine-removed
     ediff-fine-diff-A
     magit-diff-removed-highlight
