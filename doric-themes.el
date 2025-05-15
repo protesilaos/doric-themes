@@ -613,14 +613,10 @@ the list becomes the last.  Do not modify THEMES in the process."
     font-lock-bracket-face
     font-lock-constant-face
     font-lock-delimiter-face
-    font-lock-function-call-face
     font-lock-misc-punctuation-face
     font-lock-negation-char-face
     font-lock-number-face
-    font-lock-property-name-face
-    font-lock-property-use-face
     font-lock-punctuation-face
-    font-lock-regexp-face
     font-lock-variable-name-face
     font-lock-variable-use-face
     fringe
