@@ -338,6 +338,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     org-agenda-clocking
     org-agenda-restriction-lock
     org-clock-overlay
+    scroll-bar
     secondary-selection
     show-paren-match-expression
     tab-bar
@@ -710,7 +711,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     proced-memory-low-usage
     proced-memory-medium-usage
     proced-user
-    scroll-bar
     sgml-namespace
     shr-abbreviation
     shr-sliced-image
