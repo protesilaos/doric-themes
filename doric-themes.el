@@ -272,6 +272,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     denote-faces-second
     denote-faces-time
     denote-faces-year
+    diredfl-date-time
     display-time-date-and-time
     ediff-current-diff-Ancestor
     elfeed-search-date-face
@@ -393,6 +394,17 @@ the list becomes the last.  Do not modify THEMES in the process."
     denote-faces-time-delimiter
     diff-context
     dired-ignored
+    diredfl-compressed-file-suffix
+    diredfl-dir-priv
+    diredfl-file-suffix
+    diredfl-ignored-file-name
+    diredfl-link-priv
+    diredfl-no-priv
+    diredfl-other-priv
+    diredfl-rare-priv
+    diredfl-read-priv
+    diredfl-tagged-autofile-name
+    diredfl-write-priv
     elfeed-search-title-face
     epa-validity-disabled
     eshell-ls-unreadable
@@ -528,6 +540,9 @@ the list becomes the last.  Do not modify THEMES in the process."
 (defvar doric-themes-accent-foreground-only-faces
   '(change-log-acknowledgment
     dired-directory
+    diredfl-dir-name
+    diredfl-exec-priv
+    diredfl-executable-tag
     elfeed-search-feed-face
     epa-validity-high
     escape-glyph
@@ -577,6 +592,10 @@ the list becomes the last.  Do not modify THEMES in the process."
     dired-perm-write
     dired-set-id
     dired-special
+    diredfl-autofile-name
+    diredfl-compressed-file-name
+    diredfl-file-name
+    diredfl-number
     epa-mark
     epa-validity-low
     epa-validity-medium
@@ -741,6 +760,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     denote-faces-subdirectory
     diff-nonexistent
     dired-header
+    diredfl-dir-heading
     ediff-fine-diff-Ancestor
     edmacro-label
     elfeed-log-debug-level-face
@@ -902,6 +922,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-emphasis-bold-italic
     gnus-server-denied
     help-key-binding
+    ibuffer-locked-buffer
     info-header-xref
     line-number-major-tick
     magit-branch-warning
@@ -1060,6 +1081,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     denote-faces-link
     denote-faces-query-link
     dired-symlink
+    diredfl-symlink
     eshell-ls-symlink
     info-node
     info-xref
@@ -1183,6 +1205,11 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(dired-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
             `(dired-flagged ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
 
+            `(diredfl-deletion ((t :inherit dired-mark)))
+            `(diredfl-deletion-file-name ((t :inherit dired-flagged)))
+            `(diredfl-flag-mark ((t :inherit dired-mark)))
+            `(diredfl-flag-mark-line ((t :inherit dired-marked)))
+            
             ,@(doric-themes-prepare-faces doric-themes-intense-shadow-faces :background 'bg-shadow-intense :foreground 'fg-shadow-intense)
             ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-faces :background 'bg-shadow-subtle :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-intense-shadow-foreground-only-faces :foreground 'fg-shadow-intense)
