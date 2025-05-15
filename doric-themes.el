@@ -38,10 +38,10 @@
 (require 'seq)
 (eval-when-compile (require 'subr-x))
 
-(defconst doric-themes-light-themes '(doric-light doric-earth doric-wind)
+(defconst doric-themes-light-themes '(doric-light doric-marble doric-earth doric-wind)
   "Light themes.")
 
-(defconst doric-themes-dark-themes '(doric-dark doric-fire doric-water)
+(defconst doric-themes-dark-themes '(doric-dark doric-obsidian doric-fire doric-water)
   "Dark themes.")
 
 (defconst doric-themes-collection
