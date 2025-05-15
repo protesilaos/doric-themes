@@ -239,6 +239,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     org-date-selected
     org-dispatcher-highlight
     proced-marked
+    pulse-highlight-start-face
     read-multiple-choice-face
     rectangle-preview
     tab-bar-tab-highlight
