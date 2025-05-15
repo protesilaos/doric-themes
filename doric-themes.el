@@ -1249,6 +1249,10 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(magit-section-highlight (( )))
 
             `(markdown-code-face ((t :background ,bg-shadow-subtle :extend t)))
+            `(notmuch-message-summary-face
+              ((((supports :overline t))
+                 :overline ,fg-shadow-subtle)
+                (t :background ,bg-shadow-subtle)))
 
             `(org-block ((t :background ,bg-shadow-subtle :extend t)))
             `(org-block-begin-line ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-intense :extend t)))
