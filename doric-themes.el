@@ -1161,6 +1161,22 @@ the list becomes the last.  Do not modify THEMES in the process."
     magit-diff-removed-highlight
     smerge-refined-removed))
 
+(defconst doric-themes-error-foreground-only-faces
+  '(TeX-error-description-error
+    dired-broken-symlink
+    error))
+
+(defconst doric-themes-warning-foreground-only-faces
+  '(TeX-error-description-warning
+    font-latex-warning-face
+    font-lock-warning-face
+    warning))
+
+(defconst doric-themes-success-foreground-only-faces
+  '(TeX-error-description-help
+    TeX-error-description-tex-said
+    success))
+
 (defun doric-themes-prepare-faces (&rest faces-and-attributes)
   "Set faces to their respective attributes in FACES-AND-ATTRIBUTES."
   (pcase-let ((`(,faces . ,attributes) faces-and-attributes))
@@ -1220,7 +1236,6 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(ansi-color-bright-cyan ((t :background ,fg-faint-cyan :foreground ,fg-faint-cyan)))
             `(ansi-color-cyan ((t :background ,fg-faint-cyan :foreground ,fg-faint-cyan)))
 
-            `(dired-broken-symlink ((t :inherit (underline error))))
             `(dired-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
             `(dired-flagged ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
 
@@ -1228,13 +1243,17 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(diredfl-deletion-file-name ((t :inherit dired-flagged)))
             `(diredfl-flag-mark ((t :inherit dired-mark)))
             `(diredfl-flag-mark-line ((t :inherit dired-marked)))
-            
+
             ,@(doric-themes-prepare-faces doric-themes-intense-shadow-faces :background 'bg-shadow-intense :foreground 'fg-shadow-intense)
             ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-faces :background 'bg-shadow-subtle :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-intense-shadow-foreground-only-faces :foreground 'fg-shadow-intense)
             ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-foreground-only-faces :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-accent-foreground-only-faces :foreground 'fg-accent)
             ,@(doric-themes-prepare-faces doric-themes-main-foreground-only-faces :foreground 'fg-main)
+
+            ,@(doric-themes-prepare-faces doric-themes-error-foreground-only-faces :inherit ''bold :foreground 'fg-faint-red)
+            ,@(doric-themes-prepare-faces doric-themes-warning-foreground-only-faces :inherit ''bold :foreground 'fg-faint-yellow)
+            ,@(doric-themes-prepare-faces doric-themes-success-foreground-only-faces :inherit ''bold :foreground 'fg-faint-green)
 
             ,@(doric-themes-prepare-faces doric-themes-bold-faces :inherit ''bold :foreground 'fg-shadow-intense)
             ,@(doric-themes-prepare-faces doric-themes-bold-italic-faces :inherit ''bold-italic :foreground 'fg-shadow-intense)
@@ -1253,7 +1272,6 @@ the list becomes the last.  Do not modify THEMES in the process."
 
             `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
-            `(font-lock-warning-face ((t :inherit warning)))
 
             ;; The :inverse-video prevents hl-line-mode from
             ;; overriding the background.  Such an override really
@@ -1329,12 +1347,6 @@ the list becomes the last.  Do not modify THEMES in the process."
 
             `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
-
-            `(font-latex-warning-face ((t :inherit warning)))
-            `(TeX-error-description-error ((t :inherit error)))
-            `(TeX-error-description-help ((t :inherit success)))
-            `(TeX-error-description-tex-said ((t :inherit success)))
-            `(TeX-error-description-warning ((t :inherit warning)))
 
             `(whitespace-big-indent ((t :foreground ,bg-shadow-intense)))
             `(whitespace-empty ((t :foreground ,bg-shadow-intense)))
