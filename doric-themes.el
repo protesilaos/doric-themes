@@ -413,6 +413,9 @@ the list becomes the last.  Do not modify THEMES in the process."
     epa-validity-disabled
     eshell-ls-unreadable
     file-name-shadow
+    font-latex-sedate-face
+    font-latex-string-face
+    font-latex-verbatim-face
     font-lock-string-face
     gnus-header-name
     gnus-splash
@@ -552,6 +555,8 @@ the list becomes the last.  Do not modify THEMES in the process."
     escape-glyph
     eshell-ls-executable
     eshell-ls-special
+    font-latex-math-face
+    font-latex-script-char-face
     gnus-server-agent
     gnus-server-cloud-host
     hexl-address-region
@@ -775,6 +780,14 @@ the list becomes the last.  Do not modify THEMES in the process."
     eshell-ls-missing
     eshell-ls-product
     eshell-prompt
+    font-latex-bold-face
+    font-latex-sectioning-0-face
+    font-latex-sectioning-1-face
+    font-latex-sectioning-2-face
+    font-latex-sectioning-3-face
+    font-latex-sectioning-4-face
+    font-latex-sectioning-5-face
+    font-latex-slide-title-face
     font-lock-keyword-face
     font-lock-regexp-grouping-backslash
     font-lock-regexp-grouping-construct
@@ -973,6 +986,9 @@ the list becomes the last.  Do not modify THEMES in the process."
     elfeed-search-tag-face
     elisp-shorthand-font-lock-face
     epa-string
+    font-latex-doctex-documentation-face
+    font-latex-doctex-preprocessor-face
+    font-latex-italic-face
     font-lock-doc-face
     font-lock-doc-markup-face
     git-commit-comment-file
@@ -1064,6 +1080,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     consult-preview-match
     custom-visibility
     eldoc-highlight-function-argument
+    font-latex-underline-face
     gnus-emphasis-highlight-words
     lazy-highlight
     notmuch-tag-added
@@ -1312,6 +1329,12 @@ the list becomes the last.  Do not modify THEMES in the process."
 
             `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
+
+            `(font-latex-warning-face ((t :inherit warning)))
+            `(TeX-error-description-error ((t :inherit error)))
+            `(TeX-error-description-help ((t :inherit success)))
+            `(TeX-error-description-tex-said ((t :inherit success)))
+            `(TeX-error-description-warning ((t :inherit warning)))
 
             `(whitespace-big-indent ((t :foreground ,bg-shadow-intense)))
             `(whitespace-empty ((t :foreground ,bg-shadow-intense)))
