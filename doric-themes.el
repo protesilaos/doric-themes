@@ -618,7 +618,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     font-lock-misc-punctuation-face
     font-lock-negation-char-face
     font-lock-number-face
-    font-lock-operator-face
     font-lock-property-name-face
     font-lock-property-use-face
     font-lock-punctuation-face
@@ -789,6 +788,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     font-latex-sectioning-5-face
     font-latex-slide-title-face
     font-lock-keyword-face
+    font-lock-operator-face
     font-lock-regexp-grouping-backslash
     font-lock-regexp-grouping-construct
     geiser-font-lock-repl-prompt
