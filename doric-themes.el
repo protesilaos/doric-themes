@@ -290,6 +290,8 @@ the list becomes the last.  Do not modify THEMES in the process."
     org-agenda-column-dateline
     org-date
     org-sexp-date
+    vc-state-base
+    vc-up-to-date-state
     ztreep-diff-header-small-face))
 
 (defvar doric-themes-subtle-shadow-faces
@@ -717,8 +719,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     vc-dir-header-value
     vc-dir-mark-indicator
     vc-dir-status-up-to-date
-    vc-state-base
-    vc-up-to-date-state
     vtable
     which-key-highlighted-command-face
     which-key-note-face which-key-separator-face
