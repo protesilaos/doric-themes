@@ -246,6 +246,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     rectangle-preview
     speedbar-highlight-face
     tab-bar-tab-highlight
+    tab-line-highlight
     transient-enabled-suffix
     vertico-current))
 
@@ -266,7 +267,9 @@ the list becomes the last.  Do not modify THEMES in the process."
     show-paren-match
     speedbar-separator-face
     substitute-match
-    tab-bar-tab))
+    tab-bar-tab
+    tab-line-tab-current
+    tab-line-tab-inactive-alternate))
 
 (defconst doric-themes-intense-shadow-foreground-only-faces
   '(calendar-month-header
@@ -343,6 +346,8 @@ the list becomes the last.  Do not modify THEMES in the process."
     secondary-selection
     show-paren-match-expression
     tab-bar
+    tab-line
+    tab-line-tab
     transient-disabled-suffix
     trashed-restored
     tool-bar
@@ -591,6 +596,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     proced-ppid
     proced-sess
     speedbar-directory-face
+    tab-line-close-highlight
     transient-value
     which-key-command-description-face
     widget-button
@@ -974,6 +980,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     proced-run-status-code
     proced-uninterruptible-sleep-status-code
     smerge-markers
+    tab-line-tab-modified
     transient-key
     transient-key-exit
     transient-key-recurse
@@ -1076,6 +1083,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     sh-heredoc
     shr-code
     speedbar-tag-face
+    tab-line-tab-special
     transient-key-noop
     vc-dir-status-edited
     vc-edited-state
