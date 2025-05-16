@@ -261,8 +261,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     gnus-summary-cancelled
     magit-blame-highlight
     magit-diff-lines-boundary
-    mode-line
-    mode-line-active
     region
     show-paren-match
     speedbar-separator-face
@@ -332,7 +330,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     markdown-blockquote-face
     match
     menu
-    mode-line-inactive
     mu4e-region-code
     notmuch-crypto-decryption
     notmuch-crypto-signature-bad
@@ -1371,6 +1368,17 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(magit-section-highlight (( )))
 
             `(markdown-code-face ((t :background ,bg-shadow-subtle :extend t)))
+
+            `(mode-line
+              ((((supports :box t))
+                 :box ,fg-shadow-subtle :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
+                (t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
+            `(mode-line-active ((t :inherit mode-line)))
+            `(mode-line-inactive
+              ((((supports :box t))
+                :box ,bg-shadow-intense :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)
+               (t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+
             `(notmuch-message-summary-face
               ((((supports :overline t))
                  :overline ,fg-shadow-subtle)
