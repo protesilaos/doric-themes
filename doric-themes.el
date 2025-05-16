@@ -211,7 +211,7 @@ the list becomes the last.  Do not modify THEMES in the process."
   (let ((candidate (doric-themes--rotate-p themes)))
     (if (doric-themes--doric-p candidate)
         (progn
-          (message "Rotating to `%s'" (propertize (symbol-name candidate) 'face 'success))
+          (message "Rotating to `%s'" (propertize (symbol-name candidate) 'face 'bold))
           (doric-themes-load-theme candidate))
       (user-error "`%s' is not part of the Doric collection" candidate))))
 
