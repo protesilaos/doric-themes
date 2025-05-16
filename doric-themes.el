@@ -293,11 +293,11 @@ the list becomes the last.  Do not modify THEMES in the process."
     magit-log-date
     marginalia-date
     notmuch-search-date
-    proced-time-colon
     org-agenda-calendar-daterange
     org-agenda-column-dateline
     org-date
     org-sexp-date
+    proced-time-colon
     vc-state-base
     vc-up-to-date-state
     ztreep-diff-header-small-face))
