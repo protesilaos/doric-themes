@@ -47,7 +47,7 @@
       (fg-main "#e7e7e7")
 
       (bg-shadow-subtle "#2f2f2f")
-      (fg-shadow-subtle "#9a9a9a")
+      (fg-shadow-subtle "#8d8d8d")
 
       (bg-shadow-intense "#505050")
       (fg-shadow-intense "#b2b2b2")
