@@ -232,7 +232,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     highlight
     hl-line
     icomplete-selected-match
-    keycast-key
     magit-diff-file-heading-selection
     magit-section-heading-selection
     markdown-highlighting-face
@@ -1363,6 +1362,8 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(query-replace ((t :inherit isearch)))
 
             `(line-number-current-line ((t :inherit (highlight bold))))
+
+            `(keycast-key ((t :inherit bold-italic :background ,fg-shadow-intense :foreground ,bg-main)))
 
             `(magit-diff-context-highlight (( )))
             `(magit-section-highlight (( )))
