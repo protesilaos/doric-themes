@@ -238,7 +238,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     markdown-highlighting-face
     mode-line-highlight
     next-error
-    org-date-selected
     org-dispatcher-highlight
     proced-marked
     pulse-highlight-start-face
@@ -1388,6 +1387,10 @@ the list becomes the last.  Do not modify THEMES in the process."
             `(org-block ((t :background ,bg-shadow-subtle :extend t)))
             `(org-block-begin-line ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-intense :extend t)))
             `(org-block-end-line ((t :inherit org-block-begin-line)))
+            `(org-date-selected
+              ((((supports :box t))
+                :box (:line-width (-1 . -1) :color ,fg-accent) :background ,bg-accent :foreground ,fg-main)
+               (t :background ,bg-accent :foreground ,fg-main)))
             `(org-hide ((t :background ,bg-main)))
 
             `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
