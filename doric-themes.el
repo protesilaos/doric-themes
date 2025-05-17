@@ -1294,12 +1294,12 @@ the list becomes the last.  Do not modify THEMES in the process."
 
             ,@(doric-themes-prepare-faces doric-themes-selection-faces :background 'bg-accent)
 
-            ,@(doric-themes-prepare-faces doric-themes-diff-added-faces :foreground 'fg-faint-green)
-            ,@(doric-themes-prepare-faces doric-themes-diff-added-refine-faces :inherit ''bold :foreground 'fg-faint-green)
-            ,@(doric-themes-prepare-faces doric-themes-diff-changed-faces :foreground 'fg-faint-yellow)
-            ,@(doric-themes-prepare-faces doric-themes-diff-changed-refine-faces :inherit ''bold :foreground 'fg-faint-yellow)
-            ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces :foreground 'fg-faint-red)
-            ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :foreground 'fg-faint-red)
+            ,@(doric-themes-prepare-faces doric-themes-diff-added-faces :background ''unspecified :foreground 'fg-faint-green)
+            ,@(doric-themes-prepare-faces doric-themes-diff-added-refine-faces :inherit ''bold :background ''unspecified :foreground 'fg-faint-green)
+            ,@(doric-themes-prepare-faces doric-themes-diff-changed-faces :background ''unspecified :foreground 'fg-faint-yellow)
+            ,@(doric-themes-prepare-faces doric-themes-diff-changed-refine-faces :inherit ''bold :background ''unspecified :foreground 'fg-faint-yellow)
+            ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces :background ''unspecified :foreground 'fg-faint-red)
+            ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :background ''unspecified :foreground 'fg-faint-red)
 
             `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
