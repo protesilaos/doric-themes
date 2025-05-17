@@ -232,6 +232,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     highlight
     hl-line
     icomplete-selected-match
+    ido-first-match
     magit-diff-file-heading-selection
     magit-section-heading-selection
     markdown-highlighting-face
@@ -831,7 +832,6 @@ the list becomes the last.  Do not modify THEMES in the process."
     grep-heading
     help-for-help-header
     icomplete-first-match
-    ido-first-match
     indium-repl-prompt-face
     info-header-node
     info-index-match
