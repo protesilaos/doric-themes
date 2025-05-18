@@ -289,8 +289,6 @@ is either the `dark' or `light' symbol."
     read-multiple-choice-face
     rectangle-preview
     speedbar-highlight-face
-    tab-bar-tab-highlight
-    tab-line-highlight
     transient-enabled-suffix
     vertico-current))
 
@@ -309,8 +307,6 @@ is either the `dark' or `light' symbol."
     show-paren-match
     speedbar-separator-face
     substitute-match
-    tab-bar-tab
-    tab-line-tab-current
     tab-line-tab-inactive-alternate))
 
 (defconst doric-themes-intense-shadow-foreground-only-faces
@@ -1463,6 +1459,12 @@ is either the `dark' or `light' symbol."
 
             `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
+
+            `(tab-bar-tab ((t :underline ,fg-shadow-subtle :background ,bg-shadow-intense :foreground ,fg-main)))
+            `(tab-bar-tab-highlight ((t :underline ,fg-accent :background ,bg-accent :foreground ,fg-accent)))
+
+            `(tab-line-tab-current ((t :underline ,fg-shadow-subtle :background ,bg-shadow-intense :foreground ,fg-main)))
+            `(tab-line-highlight ((t :underline ,fg-accent :background ,bg-accent :foreground ,fg-accent)))
 
             '(telega-webpage-fixed ((t :inherit fixed-pitch)))
             '(telega-webpage-preformatted ((t :inherit fixed-pitch)))
