@@ -1466,51 +1466,6 @@ is either the `dark' or `light' symbol."
          (provide-theme ',name))
     (error "No palette found for `%s'" name)))
 
-(custom-declare-theme 'doric-themes-typography 'doric-themes
-  "Special theme for changes on top of the Doric themes.")
-
-(enable-theme 'doric-themes-typography)
-
-(setq custom-enabled-themes (remq 'doric-themes-typography custom-enabled-themes))
-
-(defconst doric-themes-fixed-pitch-faces
-  '(adoc-meta-face
-    adoc-meta-hide-face
-    adoc-secondary-text-face
-    adoc-table-face
-    company-tooltip
-    corfu-default
-    devdocs-code-block
-    help-key-binding
-    info-colors-lisp-code-block
-    markdown-code-face
-    markdown-language-keyword-face
-    markdown-table-face
-    markup-meta-face
-    markup-replacement-face
-    org-block
-    org-block-begin-line
-    org-checkbox
-    org-column-title
-    org-date
-    org-document-info-keyword
-    org-drawer
-    org-formula
-    org-meta-line
-    org-property-value
-    org-table
-    telega-webpage-fixed
-    telega-webpage-preformatted
-    vtable))
-
-(let* ((custom--inhibit-theme-enable nil)
-       (attributes (list :inherit 'fixed-pitch))
-       (faces (mapcar
-               (lambda (face)
-                 `(,face ((t ,@attributes))))
-               doric-themes-fixed-pitch-faces)))
-  (apply 'custom-theme-set-faces 'doric-themes-typography faces))
-
 ;;;; Add themes from package to path
 
 ;;;###autoload
