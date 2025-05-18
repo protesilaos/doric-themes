@@ -1438,6 +1438,7 @@ is either the `dark' or `light' symbol."
                 :box (:line-width (-1 . -1) :color ,fg-accent) :background ,bg-accent :foreground ,fg-main)
                (t :background ,bg-accent :foreground ,fg-main)))
             `(org-hide ((t :background ,bg-main)))
+            `(org-indent ((t :inherit (fixed-pitch org-hide))))
 
             `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
             `(reb-match-1 ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
