@@ -215,6 +215,53 @@ the list becomes the last.  Do not modify THEMES in the process."
           (doric-themes-load-theme candidate))
       (user-error "`%s' is not part of the Doric collection" candidate))))
 
+(defun doric-themes--minus-current (&optional variant)
+  "Return list of Doric themes minus the current one.
+Optional VARIANT limits the list of themes to either the dark or light
+subset.  VARIANT is either `light' or `dark', which correspond to
+`doric-themes-light-themes' and `doric-themes-dark-themes',
+respectively."
+  (let* ((sequence (or
+                    (cond
+                     ((eq variant 'dark)
+                      doric-themes-dark-themes)
+                     ((eq variant 'light)
+                      doric-themes-light-themes))
+                    (doric-themes--list-known-themes)))
+         (themes (copy-sequence sequence)))
+    (if-let* ((current-theme (doric-themes--current-theme)))
+        (delete current-theme themes)
+      themes)))
+
+(defvar doric-themes-subset-history nil
+  "Minibuffer history for `doric-themes-subset-prompt'.")
+
+(defun doric-themes-subset-prompt ()
+  "Select `dark' or `light' and return it as a symbol."
+  (let ((default (car doric-themes-subset-history)))
+    (intern
+     (completing-read
+      (format-prompt "Select variant" default)
+      '("dark" "light")
+      nil :require-match nil
+      doric-themes-subset-history default))))
+
+;;;###autoload
+(defun doric-themes-load-random (&optional variant)
+  "Load a Doric theme at random, excluding the current one.
+
+With optional VARIANT as a prefix argument, prompt to limit the set of
+themes to either dark or light variants.  When called from Lisp, VARIANT
+is either the `dark' or `light' symbol."
+  (interactive
+   (list
+    (when current-prefix-arg
+      (doric-themes-subset-prompt))))
+  (let* ((themes (doric-themes--minus-current variant))
+         (match (or (nth (random (length themes)) themes) (car themes))))
+    (doric-themes-load-theme match)
+    (message "Match `%s'" (propertize (symbol-name match) 'face 'bold))))
+
 ;;;; Face customisations
 
 (defconst doric-themes-selection-faces
@@ -287,6 +334,7 @@ the list becomes the last.  Do not modify THEMES in the process."
     epa-field-name
     eshell-ls-readonly
     font-lock-function-name-face
+    haskell-constructor-face
     mm-uu-extract
     magit-log-author
     magit-log-date
