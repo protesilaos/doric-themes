@@ -35,6 +35,13 @@ package. For something in-between, which I would consider the best
   ;; (doric-themes-load-random)
   ;; (doric-themes-load-random 'light)
   ;; (doric-themes-load-random 'dark)
+
+  ;; ;; For optimal results, also define your preferred font family (or use my `fontaine' package):
+  ;;
+  ;; (set-face-attribute 'default nil :family "Aporetic Sans Mono" :height 160)
+  ;; (set-face-attribute 'variable-pitch nil :family "Aporetic Sans" :height 1.0)
+  ;; (set-face-attribute 'fixed-pitch nil :family "Aporetic Sans Mono" :height 1.0)
+
   :bind
   (("<f5>" . doric-themes-toggle)
    ("C-<f5>" . doric-themes-select)

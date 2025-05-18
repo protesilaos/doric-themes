@@ -349,10 +349,8 @@ is either the `dark' or `light' symbol."
 
 (defconst doric-themes-subtle-shadow-faces
   '(company-preview
-    company-tooltip
     company-tooltip-scrollbar-track
     consult-preview-line
-    corfu-default
     corfu-popupinfo
     diff-header
     ediff-even-diff-A
@@ -565,17 +563,12 @@ is either the `dark' or `light' symbol."
     org-agenda-done
     org-agenda-structure-secondary
     org-column
-    org-column-title
-    org-document-info-keyword
     org-done
-    org-drawer
     org-headline-done
-    org-meta-line
     org-scheduled
     org-scheduled-previously
     org-scheduled-today
     org-special-keyword
-    org-table
     org-table-header
     org-table-row
     org-time-grid
@@ -743,15 +736,12 @@ is either the `dark' or `light' symbol."
     org-agenda-filter-tags
     org-agenda-structure-filter
     org-archived
-    org-checkbox
     org-default
     org-document-info
     org-ellipsis
-    org-formula
     org-inline-src-block
     org-latex-and-related
     org-mode-line-clock
-    org-property-value
     org-quote
     org-verse
     proced-cpu
@@ -998,7 +988,6 @@ is either the `dark' or `light' symbol."
     font-lock-type-face
     gnus-emphasis-bold-italic
     gnus-server-denied
-    help-key-binding
     ibuffer-locked-buffer
     ido-indicator
     info-header-xref
@@ -1295,6 +1284,12 @@ is either the `dark' or `light' symbol."
             `(tty-menu-enabled-face ((t :background ,bg-accent :foreground ,fg-main)))
             `(tty-menu-selected-face ((t :background ,fg-main :foreground ,bg-main)))
 
+
+            '(adoc-meta-face ((t :inherit fixed-pitch)))
+            '(adoc-meta-hide-face ((t :inherit fixed-pitch)))
+            '(adoc-secondary-text-face ((t :inherit fixed-pitch)))
+            '(adoc-table-face ((t :inherit fixed-pitch)))
+
             `(ansi-color-bright-black ((t :background "gray30" :foreground "gray30")))
             `(ansi-color-black ((t :background "black" :foreground "black")))
             `(ansi-color-bright-white ((t :background "white" :foreground "white")))
@@ -1311,6 +1306,12 @@ is either the `dark' or `light' symbol."
             `(ansi-color-magenta ((t :background ,fg-faint-magenta :foreground ,fg-faint-magenta)))
             `(ansi-color-bright-cyan ((t :background ,fg-faint-cyan :foreground ,fg-faint-cyan)))
             `(ansi-color-cyan ((t :background ,fg-faint-cyan :foreground ,fg-faint-cyan)))
+
+            `(company-tooltip ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+
+            `(corfu-default ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+
+            '(devdocs-code-block ((t :inherit fixed-pitch)))
 
             `(dired-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
             `(dired-flagged ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
@@ -1406,14 +1407,20 @@ is either the `dark' or `light' symbol."
             `(isearch-group-2 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
             `(query-replace ((t :inherit isearch)))
 
-            `(line-number-current-line ((t :inherit (highlight bold))))
+            '(help-key-binding ((t :inherit (fixed-pitch bold-italic))))
+            '(line-number-current-line ((t :inherit (highlight bold))))
 
             `(keycast-key ((t :inherit bold-italic :background ,fg-shadow-intense :foreground ,bg-main)))
 
             `(magit-diff-context-highlight (( )))
             `(magit-section-highlight (( )))
 
-            `(markdown-code-face ((t :background ,bg-shadow-subtle :extend t)))
+            `(markdown-code-face ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
+            '(markdown-language-keyword-face ((t :inherit fixed-pitch)))
+            '(markdown-table-face ((t :inherit fixed-pitch)))
+
+            '(markup-meta-face ((t :inherit fixed-pitch)))
+            '(markup-replacement-face ((t :inherit fixed-pitch)))
 
             `(mode-line
               ((((supports :box t))
@@ -1430,15 +1437,23 @@ is either the `dark' or `light' symbol."
                  :overline ,fg-shadow-subtle)
                 (t :background ,bg-shadow-subtle)))
 
-            `(org-block ((t :background ,bg-shadow-subtle :extend t)))
-            `(org-block-begin-line ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-intense :extend t)))
+            `(org-block ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
+            `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-intense :extend t)))
             `(org-block-end-line ((t :inherit org-block-begin-line)))
+            '(org-checkbox ((t :inherit fixed-pitch)))
+            `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             `(org-date-selected
               ((((supports :box t))
                 :box (:line-width (-1 . -1) :color ,fg-accent) :background ,bg-accent :foreground ,fg-main)
                (t :background ,bg-accent :foreground ,fg-main)))
-            `(org-hide ((t :background ,bg-main)))
-            `(org-indent ((t :inherit (fixed-pitch org-hide))))
+            `(org-document-info-keyword ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            '(org-formula ((t :inherit fixed-pitch)))
+            `(org-hide ((t :inherit fixed-pitch :background ,bg-main)))
+            `(org-indent ((t :inherit fixed-pitch :background ,bg-main)))
+            `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            '(org-property-value ((t :inherit fixed-pitch)))
+            `(org-table ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
 
             `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
             `(reb-match-1 ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
@@ -1447,6 +1462,11 @@ is either the `dark' or `light' symbol."
 
             `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
+
+            '(telega-webpage-fixed ((t :inherit fixed-pitch)))
+            '(telega-webpage-preformatted ((t :inherit fixed-pitch)))
+
+            '(vtable ((t :inherit fixed-pitch)))
 
             `(whitespace-big-indent ((t :foreground ,bg-shadow-intense)))
             `(whitespace-empty ((t :foreground ,bg-shadow-intense)))
