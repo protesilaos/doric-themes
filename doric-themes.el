@@ -1424,8 +1424,9 @@ is either the `dark' or `light' symbol."
 
             `(mode-line
               ((((supports :box t))
-                 :box ,fg-shadow-subtle :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
-                (t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
+                :box ,fg-shadow-subtle :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
+               (t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
+
             `(mode-line-active ((t :inherit mode-line)))
             `(mode-line-inactive
               ((((supports :box t))
