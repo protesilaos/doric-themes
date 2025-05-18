@@ -289,6 +289,8 @@ is either the `dark' or `light' symbol."
     read-multiple-choice-face
     rectangle-preview
     speedbar-highlight-face
+    tab-bar-tab-highlight
+    tab-line-highlight
     transient-enabled-suffix
     vertico-current))
 
@@ -581,6 +583,9 @@ is either the `dark' or `light' symbol."
     proced-interruptible-sleep-status-code
     proced-mem
     shadow
+    tab-bar-tab-group-inactive
+    tab-bar-tab-inactive
+    tab-bar-tab-ungrouped
     transient-inactive-argument
     transient-inactive-value
     transient-unreachable
@@ -755,10 +760,6 @@ is either the `dark' or `light' symbol."
     so-long-mode-line-inactive
     speedbar-file-face
     substitute-match
-    tab-bar-tab-group-inactive
-    tab-bar-tab-inactive
-    tab-bar-tab-ungrouped
-    tab-line
     tabulated-list-fake-header
     vc-dir-directory
     vc-dir-file
@@ -1460,11 +1461,8 @@ is either the `dark' or `light' symbol."
             `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
 
-            `(tab-bar-tab ((t :underline ,fg-shadow-subtle :background ,bg-shadow-intense :foreground ,fg-main)))
-            `(tab-bar-tab-highlight ((t :underline ,fg-accent :background ,bg-accent :foreground ,fg-accent)))
-
-            `(tab-line-tab-current ((t :underline ,fg-shadow-subtle :background ,bg-shadow-intense :foreground ,fg-main)))
-            `(tab-line-highlight ((t :underline ,fg-accent :background ,bg-accent :foreground ,fg-accent)))
+            `(tab-bar-tab ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
+            `(tab-line-tab-current ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
 
             '(telega-webpage-fixed ((t :inherit fixed-pitch)))
             '(telega-webpage-preformatted ((t :inherit fixed-pitch)))
