@@ -60,17 +60,15 @@
   "Specify two themes for the `doric-themes-toggle' command.
 The variable `doric-themes-collection' contains the symbols of all
 themes that form part of this collection."
-  :type `(choice
-          (const :tag "No toggle (default)" nil)
-          (list :tag "Pick two themes to toggle between"
-                (choice :tag "Theme one of two"
-                        ,@(mapcar (lambda (theme)
-                                    (list 'const theme))
-                                  doric-themes-collection))
-                (choice :tag "Theme two of two"
-                        ,@(mapcar (lambda (theme)
-                                    (list 'const theme))
-                                  doric-themes-collection))))
+  :type (let ((themes (mapcar
+                       (lambda (theme)
+                         (list 'const theme))
+                       doric-themes-collection)))
+          `(choice
+            (const :tag "No toggle (default)" nil)
+            (list :tag "Pick two themes to toggle between"
+                  (choice :tag "Theme one of two" ,@themes)
+                  (choice :tag "Theme two of two" ,@themes))))
   :package-version '(doric-themes . "0.1.0")
   :group 'doric-themes)
 
