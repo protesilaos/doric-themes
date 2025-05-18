@@ -1480,7 +1480,6 @@ is either the `dark' or `light' symbol."
     company-tooltip
     corfu-default
     devdocs-code-block
-    help-key-binding
     info-colors-lisp-code-block
     markdown-code-face
     markdown-language-keyword-face
