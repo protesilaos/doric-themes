@@ -42,7 +42,7 @@
     (require 'doric-themes))
 
   (defvar doric-water-palette
-    '((cursor "#89ee9b")
+    '((cursor "#99ddee")
       (bg-main "#2a283d")
       (fg-main "#f2f5ff")
 
