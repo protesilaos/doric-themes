@@ -1433,10 +1433,9 @@ is either the `dark' or `light' symbol."
                (t :underline ,bg-shadow-intense)))
 
             `(notmuch-message-summary-face
-              ((default :foreground ,fg-shadow-intense)
+              ((default :background ,bg-shadow-subtle)
                (((supports :overline t))
-                 :overline ,fg-shadow-subtle)
-                (t :background ,bg-shadow-subtle)))
+                 :overline ,fg-shadow-subtle)))
 
             `(org-block ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
             `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-intense :extend t)))
