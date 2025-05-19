@@ -1431,7 +1431,8 @@ is either the `dark' or `light' symbol."
                (t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
 
             `(notmuch-message-summary-face
-              ((((supports :overline t))
+              ((default :foreground ,fg-shadow-intense)
+               (((supports :overline t))
                  :overline ,fg-shadow-subtle)
                 (t :background ,bg-shadow-subtle)))
 
