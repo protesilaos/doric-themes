@@ -1420,15 +1420,17 @@ is either the `dark' or `light' symbol."
             '(markup-replacement-face ((t :inherit fixed-pitch)))
 
             `(mode-line
-              ((((supports :box t))
-                :box ,fg-shadow-subtle :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
-               (t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
+              ((default :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
+               (((supports :box t))
+                :box ,fg-shadow-subtle)
+               (t :underline ,fg-shadow-subtle)))
 
             `(mode-line-active ((t :inherit mode-line)))
             `(mode-line-inactive
-              ((((supports :box t))
-                :box ,bg-shadow-intense :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)
-               (t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+              ((default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)
+               (((supports :box t))
+                :box ,bg-shadow-intense)
+               (t :underline ,bg-shadow-intense)))
 
             `(notmuch-message-summary-face
               ((default :foreground ,fg-shadow-intense)
