@@ -1444,9 +1444,9 @@ is either the `dark' or `light' symbol."
             '(org-checkbox ((t :inherit fixed-pitch)))
             `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             `(org-date-selected
-              ((((supports :box t))
-                :box (:line-width (-1 . -1) :color ,fg-accent) :background ,bg-accent :foreground ,fg-main)
-               (t :background ,bg-accent :foreground ,fg-main)))
+              ((default :background ,bg-accent :foreground ,fg-main)
+               (((supports :box t))
+                :box (:line-width (-1 . -1) :color ,fg-accent))))
             `(org-document-info-keyword ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             '(org-formula ((t :inherit fixed-pitch)))
