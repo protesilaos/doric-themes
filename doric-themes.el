@@ -308,8 +308,7 @@ is either the `dark' or `light' symbol."
     region
     show-paren-match
     speedbar-separator-face
-    substitute-match
-    tab-line-tab-inactive-alternate))
+    substitute-match))
 
 (defconst doric-themes-intense-shadow-foreground-only-faces
   '(calendar-month-header
@@ -384,7 +383,6 @@ is either the `dark' or `light' symbol."
     show-paren-match-expression
     tab-bar
     tab-line
-    tab-line-tab
     transient-disabled-suffix
     trashed-restored
     tool-bar
@@ -583,7 +581,6 @@ is either the `dark' or `light' symbol."
     proced-mem
     shadow
     tab-bar-tab-group-inactive
-    tab-bar-tab-inactive
     tab-bar-tab-ungrouped
     transient-inactive-argument
     transient-inactive-value
@@ -1464,7 +1461,12 @@ is either the `dark' or `light' symbol."
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
 
             `(tab-bar-tab ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
+            `(tab-bar-tab-inactive ((t :background ,bg-neutral :foreground ,fg-shadow-subtle)))
+
+            `(tab-line-tab ((t :inherit tab-line-tab-current)))
             `(tab-line-tab-current ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
+            `(tab-line-tab-inactive ((t :background ,bg-neutral :foreground ,fg-shadow-subtle)))
+            `(tab-line-tab-inactive-alternate ((t :inherit tab-line-tab-inactive)))
 
             '(telega-webpage-fixed ((t :inherit fixed-pitch)))
             '(telega-webpage-preformatted ((t :inherit fixed-pitch)))
