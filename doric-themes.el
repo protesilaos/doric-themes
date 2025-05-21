@@ -46,7 +46,12 @@
     doric-wind)
   "Light themes.")
 
-(defconst doric-themes-dark-themes '(doric-dark doric-obsidian doric-fire doric-water)
+(defconst doric-themes-dark-themes
+  '(doric-dark
+    doric-fire
+    doric-plum
+    doric-obsidian
+    doric-water)
   "Dark themes.")
 
 (defconst doric-themes-collection
