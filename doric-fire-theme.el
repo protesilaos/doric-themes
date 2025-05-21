@@ -45,6 +45,7 @@
     '((cursor "#fe7062")
       (bg-main "#2a281d")
       (fg-main "#f0e5e0")
+      (border "#928a7e")
 
       (bg-shadow-subtle "#45372f")
       (fg-shadow-subtle "#b0a8a0")

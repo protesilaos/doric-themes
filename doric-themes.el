@@ -380,7 +380,6 @@ is either the `dark' or `light' symbol."
     org-agenda-clocking
     org-agenda-restriction-lock
     org-clock-overlay
-    scroll-bar
     secondary-selection
     show-paren-match-expression
     tab-bar
@@ -1275,6 +1274,7 @@ is either the `dark' or `light' symbol."
             `(internal-border ((t :foreground ,bg-shadow-subtle)))
             `(vertical-border ((t :foreground ,bg-shadow-subtle)))
             `(separator-line ((t :underline ,fg-shadow-subtle)))
+            `(scroll-bar ((t :background ,bg-main :foreground ,border)))
             `(fill-column-indicator ((t :foreground ,bg-shadow-intense)))
             `(tooltip ((t :background ,bg-accent :foreground ,fg-accent)))
             `(tty-menu-disabled-face ((t :background ,bg-accent :foreground ,fg-shadow-subtle)))
@@ -1429,8 +1429,8 @@ is either the `dark' or `light' symbol."
             `(mode-line-inactive
               ((default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)
                (((supports :box t))
-                :box ,bg-shadow-intense)
-               (t :underline ,bg-shadow-intense)))
+                :box ,border)
+               (t :underline ,border)))
 
             `(notmuch-message-summary-face
               ((default :background ,bg-shadow-subtle)
