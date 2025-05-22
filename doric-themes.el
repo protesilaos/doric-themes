@@ -75,7 +75,7 @@ themes that form part of this collection."
                          (list 'const theme))
                        doric-themes-collection)))
           `(choice
-            (const :tag "No toggle (default)" nil)
+            (const :tag "No toggle" nil)
             (list :tag "Pick two themes to toggle between"
                   (choice :tag "Theme one of two" ,@themes)
                   (choice :tag "Theme two of two" ,@themes))))
