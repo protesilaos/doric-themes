@@ -745,7 +745,6 @@ is either the `dark' or `light' symbol."
     org-archived
     org-default
     org-document-info
-    org-ellipsis
     org-inline-src-block
     org-latex-and-related
     org-mode-line-clock
@@ -1452,6 +1451,7 @@ is either the `dark' or `light' symbol."
                 :box (:line-width (-1 . -1) :color ,fg-accent))))
             `(org-document-info-keyword ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            `(org-ellipsis (( ))) ; inherits from the heading's color
             '(org-formula ((t :inherit fixed-pitch)))
             `(org-hide ((t :foreground ,bg-main)))
             `(org-indent ((t :inherit (fixed-pitch org-hide))))
