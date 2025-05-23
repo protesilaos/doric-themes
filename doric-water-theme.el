@@ -47,15 +47,15 @@
       (fg-main "#f2f5ff")
       (border "#8d8c9e")
 
-      (bg-shadow-subtle "#3e4050")
+      (bg-shadow-subtle "#393c4b")
       (fg-shadow-subtle "#b2afbc")
 
       (bg-neutral "#505460")
 
-      (bg-shadow-intense "#455eab")
+      (bg-shadow-intense "#405290")
       (fg-shadow-intense "#cedff2")
 
-      (bg-accent "#62504f")
+      (bg-accent "#524040")
       (fg-accent "#c0a7b2")
 
       (fg-faint-red "#dba2a2")
