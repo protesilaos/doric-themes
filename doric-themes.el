@@ -1416,7 +1416,7 @@ is either the `dark' or `light' symbol."
             `(magit-section-highlight (( )))
 
             `(markdown-code-face ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
-            '(markdown-language-keyword-face ((t :inherit fixed-pitch)))
+            `(markdown-language-keyword-face ((t :inherit fixed-pitch :background ,bg-neutral)))
             '(markdown-table-face ((t :inherit fixed-pitch)))
 
             '(markup-meta-face ((t :inherit fixed-pitch)))
@@ -1441,7 +1441,7 @@ is either the `dark' or `light' symbol."
                  :overline ,fg-shadow-subtle)))
 
             `(org-block ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
-            `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-intense :extend t)))
+            `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-shadow-intense :extend t)))
             `(org-block-end-line ((t :inherit org-block-begin-line)))
             '(org-checkbox ((t :inherit fixed-pitch)))
             `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
