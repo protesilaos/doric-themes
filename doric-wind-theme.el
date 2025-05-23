@@ -47,10 +47,10 @@
       (fg-main "#000f0f")
       (border "#98a09a")
 
-      (bg-shadow-subtle "#d7e3df")
+      (bg-shadow-subtle "#d8e4df")
       (fg-shadow-subtle "#4c4f52")
 
-      (bg-neutral "#c4cfcd")
+      (bg-neutral "#ced9db")
 
       (bg-shadow-intense "#94c2bf")
       (fg-shadow-intense "#004038")
