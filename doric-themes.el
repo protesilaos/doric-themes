@@ -274,7 +274,6 @@ is either the `dark' or `light' symbol."
 
 (defconst doric-themes-selection-faces
   '(calendar-today
-    company-tooltip-selection
     completions-highlight
     consult-highlight-mark
     consult-highlight-match
@@ -307,6 +306,7 @@ is either the `dark' or `light' symbol."
 (defconst doric-themes-intense-shadow-faces
   '(blink-matching-paren-offscreen
     company-template-field
+    company-tooltip-selection
     company-tooltip-scrollbar-thumb
     corfu-current
     custom-button
