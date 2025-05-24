@@ -42,7 +42,7 @@
     (require 'doric-themes))
 
   (defvar doric-fire-palette
-    '((cursor "#fe7062")
+    '((cursor "#e06e42")
       (bg-main "#2a281d")
       (fg-main "#f0e5e0")
       (border "#928a7e")
