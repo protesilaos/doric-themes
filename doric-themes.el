@@ -273,7 +273,12 @@ is either the `dark' or `light' symbol."
 ;;;; Face customisations
 
 (defconst doric-themes-selection-faces
-  '(calendar-today
+  '(avy-goto-char-timer-face
+    avy-lead-face
+    avy-lead-face-0
+    avy-lead-face-1
+    avy-lead-face-2
+    calendar-today
     completions-highlight
     consult-highlight-mark
     consult-highlight-match
@@ -1127,12 +1132,7 @@ is either the `dark' or `light' symbol."
     ztreep-node-count-children-face))
 
 (defconst doric-themes-underline-emphasis-faces
-  '(avy-goto-char-timer-face
-    avy-lead-face
-    avy-lead-face-0
-    avy-lead-face-1
-    avy-lead-face-2
-    aw-leading-char-face
+  '(aw-leading-char-face
     company-echo-common
     company-preview-common
     company-preview-search
