@@ -90,6 +90,19 @@ themes that form part of this collection."
   :package-version '(doric-themes . "0.1.0")
   :group 'doric-themes)
 
+(defvaralias 'doric-themes-post-load-hook 'doric-themes-after-load-theme-hook
+  "Alias for `doric-themes-after-load-theme-hook'.")
+
+(defcustom doric-themes-after-load-theme-hook nil
+  "Hook that runs after loading a Doric theme.
+This is used by the commands `doric-themes-toggle',
+`doric-themes-rotate', `doric-themes-load-random',
+`doric-themes-select', as well as the function
+`doric-themes-load-theme'."
+  :type 'hook
+  :package-version '(doric-themes . "0.1.0")
+  :group 'doric-themes)
+
 ;;;; Commands and their helper functions
 
 (defun doric-themes--doric-p (theme)
@@ -147,17 +160,18 @@ With optional PROMPT string, use it.  Else use a generic prompt."
       nil t nil 'doric-themes-select-theme-history))))
 
 (defun doric-themes-load-theme (theme)
-  "Load THEME while disabling other themes.
-Return THEME."
+  "Load THEME while disabling other themes and return THEME."
   (mapc #'disable-theme custom-enabled-themes)
   (load-theme theme :no-confirm)
+  (run-hooks 'doric-themes-after-load-theme-hook)
   theme)
 
 ;;;###autoload
 (defun doric-themes-select (theme)
   "Load a Doric THEME using minibuffer completion.
-Run `doric-themes-after-load-theme-hook' after loading the theme.
-Disable other themes per `doric-themes-disable-other-themes'."
+Disable other themes per `doric-themes-disable-other-themes'.
+
+Run `doric-themes-after-load-theme-hook' after loading the theme."
   (interactive (list (doric-themes-select-prompt)))
   (doric-themes-load-theme theme))
 
@@ -177,7 +191,9 @@ Disable other themes per `doric-themes-disable-other-themes'."
 If `doric-themes-to-toggle' does not specify two Doric themes, inform
 the user about it while prompting with completion for a theme among our
 collection (this is practically the same as the `doric-themes-select'
-command)."
+command).
+
+Run `doric-themes-after-load-theme-hook' after loading the theme."
   (interactive)
   (if (doric-themes--toggle-theme-p)
       (pcase-let ((`(,one ,two) doric-themes-to-toggle))
@@ -212,7 +228,9 @@ When called interactively THEMES is the value of `doric-themes-to-rotate'.
 
 If the current theme is already the next in line, then move to the one
 after.  Perform the rotation rightwards, such that the first element in
-the list becomes the last.  Do not modify THEMES in the process."
+the list becomes the last.  Do not modify THEMES in the process.
+
+Run `doric-themes-after-load-theme-hook' after loading a theme."
   (interactive (list doric-themes-to-rotate))
   (unless (proper-list-p themes)
     "This is not a list of themes: `%s'" themes)
@@ -260,7 +278,9 @@ respectively."
 
 With optional VARIANT as a prefix argument, prompt to limit the set of
 themes to either dark or light variants.  When called from Lisp, VARIANT
-is either the `dark' or `light' symbol."
+is either the `dark' or `light' symbol.
+
+Run `doric-themes-after-load-theme-hook' after loading a theme."
   (interactive
    (list
     (when current-prefix-arg
