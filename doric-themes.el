@@ -373,8 +373,6 @@ is either the `dark' or `light' symbol."
     eww-form-textarea
     eww-form-text
     header-line
-    header-line-active
-    header-line-inactive
     magit-blame-heading
     magit-blame-margin
     markdown-blockquote-face
