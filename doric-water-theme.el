@@ -44,16 +44,16 @@
   (defvar doric-water-palette
     '((cursor "#99ddee")
       (bg-main "#2a283d")
-      (fg-main "#f2f5ff")
+      (fg-main "#edf0f8")
       (border "#8d8c9e")
 
       (bg-shadow-subtle "#34384c")
-      (fg-shadow-subtle "#b2afbc")
+      (fg-shadow-subtle "#aea6b8")
 
       (bg-neutral "#3e4053")
 
       (bg-shadow-intense "#405290")
-      (fg-shadow-intense "#cedff2")
+      (fg-shadow-intense "#b8c2e0")
 
       (bg-accent "#523e48")
       (fg-accent "#c2a0a0")
