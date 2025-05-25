@@ -1,0 +1,257 @@
+#+title: Contrast ratio values of the Doric themes
+#+author: Protesilaos Stavrou (https://protesilaos.com)
+#+startup: content indent
+
+Evaluate this snippet. Then update a table by typing =C-c C-c= with
+point at the =#+TBLFM:= line.
+
+#+begin_src emacs-lisp :results output silent
+;; Copied from my `modus-themes'.
+
+;; This is the WCAG formula to measure relative luminance:
+;; <https://www.w3.org/TR/WCAG20-TECHS/G18.html>.
+(defun modus-themes--wcag-contribution (channel weight)
+  "Return the CHANNEL contribution to overall luminance given WEIGHT."
+  (* weight
+     (if (<= channel 0.03928)
+         (/ channel 12.92)
+       (expt (/ (+ channel 0.055) 1.055) 2.4))))
+
+(defun modus-themes-wcag-formula (hex)
+  "Get WCAG value of color value HEX.
+The value is defined in hexadecimal RGB notation, such #123456."
+  (let ((channels (color-name-to-rgb hex))
+        (weights '(0.2126 0.7152 0.0722))
+        contribution)
+    (while channels
+      (push (modus-themes--wcag-contribution (pop channels) (pop weights)) contribution))
+    (apply #'+ contribution)))
+
+;;;###autoload
+(defun modus-themes-contrast (c1 c2)
+  "Measure WCAG contrast ratio between C1 and C2.
+C1 and C2 are color values written in hexadecimal RGB."
+  (let ((ct (/ (+ (modus-themes-wcag-formula c1) 0.05)
+               (+ (modus-themes-wcag-formula c2) 0.05))))
+    (max ct (/ ct))))
+
+(defalias #'Λ #'modus-themes-contrast)
+#+end_src
+
+* Light themes
+:PROPERTIES:
+:CUSTOM_ID: h:light-themes
+:END:
+** Doric Cherry
+:PROPERTIES:
+:CUSTOM_ID: h:doric-cherry
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #f7edf1 |          #e5dde0 |    #dfd0d9 |           #cc95b7 |   #edcae5 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #311926 |   14.13 |            12.14 |      10.91 |              6.59 |     10.93 |
+| fg-shadow-subtle  | #655260 |    6.26 |             5.38 |       4.83 |              2.92 |      4.84 |
+| fg-shadow-intense | #5e2249 |   10.18 |             8.75 |       7.86 |              4.75 |      7.87 |
+| fg-accent         | #85296f |    7.21 |             6.19 |       5.57 |              3.36 |      5.57 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #750000 |   10.44 |             8.97 |       8.06 |              4.87 |      8.07 |
+| fg-faint-green    | #056100 |    6.75 |             5.80 |       5.21 |              3.15 |      5.22 |
+| fg-faint-yellow   | #5f4602 |    7.76 |             6.66 |       5.99 |              3.62 |      6.00 |
+| fg-faint-blue     | #353362 |   10.18 |             8.74 |       7.86 |              4.75 |      7.87 |
+| fg-faint-magenta  | #553372 |    8.72 |             7.49 |       6.73 |              4.07 |      6.74 |
+| fg-faint-cyan     | #35485e |    8.19 |             7.03 |       6.32 |              3.82 |      6.33 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+** Doric Earth
+:PROPERTIES:
+:CUSTOM_ID: h:doric-earth
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #f0eddf |          #dfdfce |    #d7d3c2 |           #c09fa0 |   #e2cdb3 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #1b0d10 |   16.09 |            14.02 |      12.58 |              7.83 |     12.25 |
+| fg-shadow-subtle  | #605040 |    6.58 |             5.73 |       5.14 |              3.20 |      5.01 |
+| fg-shadow-intense | #461327 |   12.93 |            11.27 |      10.11 |              6.30 |      9.85 |
+| fg-accent         | #783002 |    8.05 |             7.01 |       6.29 |              3.92 |      6.13 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #750000 |   10.18 |             8.87 |       7.96 |              4.96 |      7.75 |
+| fg-faint-green    | #056100 |    6.58 |             5.74 |       5.15 |              3.21 |      5.01 |
+| fg-faint-yellow   | #5f4602 |    7.57 |             6.59 |       5.92 |              3.68 |      5.76 |
+| fg-faint-blue     | #353362 |    9.93 |             8.65 |       7.76 |              4.83 |      7.56 |
+| fg-faint-magenta  | #553372 |    8.51 |             7.41 |       6.65 |              4.14 |      6.48 |
+| fg-faint-cyan     | #35485e |    7.98 |             6.96 |       6.24 |              3.89 |      6.08 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+** Doric Light
+:PROPERTIES:
+:CUSTOM_ID: h:doric-light
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #ffffff |          #efeff2 |    #e1e4e5 |           #a0bcd0 |   #d4edf0 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #000000 |   21.00 |            18.30 |      16.43 |             10.60 |     17.17 |
+| fg-shadow-subtle  | #455058 |    8.26 |             7.20 |       6.47 |              4.17 |      6.76 |
+| fg-shadow-intense | #213067 |   12.48 |            10.87 |       9.76 |              6.30 |     10.20 |
+| fg-accent         | #084092 |    9.73 |             8.48 |       7.61 |              4.91 |      7.95 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #750000 |   11.96 |            10.42 |       9.35 |              6.03 |      9.78 |
+| fg-faint-green    | #056100 |    7.73 |             6.74 |       6.05 |              3.90 |      6.32 |
+| fg-faint-yellow   | #5f4602 |    8.89 |             7.74 |       6.95 |              4.48 |      7.27 |
+| fg-faint-blue     | #353362 |   11.66 |            10.16 |       9.12 |              5.88 |      9.53 |
+| fg-faint-magenta  | #553372 |    9.99 |             8.70 |       7.81 |              5.04 |      8.17 |
+| fg-faint-cyan     | #35485e |    9.38 |             8.17 |       7.34 |              4.73 |      7.67 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+** Doric Marble
+:PROPERTIES:
+:CUSTOM_ID: h:doric-marble
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #ededed |          #dfdfdf |    #d5d5d5 |           #b0b0b0 |   #e7dac6 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #202020 |   13.92 |            12.23 |      11.10 |              7.51 |     11.83 |
+| fg-shadow-subtle  | #606060 |    5.37 |             4.72 |       4.28 |              2.90 |      4.56 |
+| fg-shadow-intense | #424242 |    8.58 |             7.54 |       6.85 |              4.63 |      7.29 |
+| fg-accent         | #673435 |    8.46 |             7.44 |       6.75 |              4.57 |      7.19 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #750000 |   10.21 |             8.97 |       8.15 |              5.51 |      8.68 |
+| fg-faint-green    | #056100 |    6.60 |             5.80 |       5.27 |              3.56 |      5.61 |
+| fg-faint-yellow   | #5f4602 |    7.59 |             6.67 |       6.05 |              4.10 |      6.45 |
+| fg-faint-blue     | #353362 |    9.96 |             8.75 |       7.94 |              5.38 |      8.46 |
+| fg-faint-magenta  | #553372 |    8.53 |             7.49 |       6.80 |              4.60 |      7.25 |
+| fg-faint-cyan     | #35485e |    8.01 |             7.04 |       6.39 |              4.32 |      6.80 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+** Doric Wind
+:PROPERTIES:
+:CUSTOM_ID: h:doric-wind
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #ffffff |          #efeff2 |    #e1e4e5 |           #a0bcd0 |   #d4edf0 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #000000 |   21.00 |            18.30 |      16.43 |             10.60 |     17.17 |
+| fg-shadow-subtle  | #455058 |    8.26 |             7.20 |       6.47 |              4.17 |      6.76 |
+| fg-shadow-intense | #213067 |   12.48 |            10.87 |       9.76 |              6.30 |     10.20 |
+| fg-accent         | #084092 |    9.73 |             8.48 |       7.61 |              4.91 |      7.95 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #750000 |   11.96 |            10.42 |       9.35 |              6.03 |      9.78 |
+| fg-faint-green    | #056100 |    7.73 |             6.74 |       6.05 |              3.90 |      6.32 |
+| fg-faint-yellow   | #5f4602 |    8.89 |             7.74 |       6.95 |              4.48 |      7.27 |
+| fg-faint-blue     | #353362 |   11.66 |            10.16 |       9.12 |              5.88 |      9.53 |
+| fg-faint-magenta  | #553372 |    9.99 |             8.70 |       7.81 |              5.04 |      8.17 |
+| fg-faint-cyan     | #35485e |    9.38 |             8.17 |       7.34 |              4.73 |      7.67 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+* Dark themes
+:PROPERTIES:
+:CUSTOM_ID: h:dark-themes
+:END:
+** Doric Dark
+:PROPERTIES:
+:CUSTOM_ID: h:doric-dark
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #000000 |          #332d38 |    #3c3843 |           #50447f |   #521e40 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #ffffff |   21.00 |            13.35 |      11.42 |              8.49 |     12.97 |
+| fg-shadow-subtle  | #a2a0b2 |    8.21 |             5.22 |       4.46 |              3.32 |      5.07 |
+| fg-shadow-intense | #cfcff8 |   13.93 |             8.86 |       7.58 |              5.63 |      8.61 |
+| fg-accent         | #cda4df |    9.97 |             6.34 |       5.42 |              4.03 |      6.16 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #dba2a2 |    9.70 |             6.17 |       5.28 |              3.92 |      5.99 |
+| fg-faint-green    | #85c397 |   10.25 |             6.52 |       5.57 |              4.14 |      6.33 |
+| fg-faint-yellow   | #c4a992 |    9.44 |             6.00 |       5.13 |              3.81 |      5.83 |
+| fg-faint-blue     | #95afd2 |    9.34 |             5.94 |       5.08 |              3.77 |      5.77 |
+| fg-faint-magenta  | #c5a3b2 |    9.26 |             5.88 |       5.03 |              3.74 |      5.72 |
+| fg-faint-cyan     | #a5bfce |   10.94 |             6.96 |       5.95 |              4.42 |      6.76 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+** Doric Fire
+:PROPERTIES:
+:CUSTOM_ID: h:doric-fire
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #2a281d |          #40332f |    #493c37 |           #733930 |   #4e2a1f |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #f0e5e0 |   11.97 |             9.81 |       8.56 |              7.21 |     10.14 |
+| fg-shadow-subtle  | #9b9280 |    4.80 |             3.93 |       3.43 |              2.89 |      4.07 |
+| fg-shadow-intense | #ceb29f |    7.39 |             6.06 |       5.29 |              4.45 |      6.26 |
+| fg-accent         | #c0906f |    5.25 |             4.31 |       3.76 |              3.17 |      4.45 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #d09090 |    5.69 |             4.66 |       4.07 |              3.43 |      4.82 |
+| fg-faint-green    | #85c397 |    7.22 |             5.92 |       5.16 |              4.35 |      6.12 |
+| fg-faint-yellow   | #c4a992 |    6.65 |             5.45 |       4.75 |              4.00 |      5.63 |
+| fg-faint-blue     | #95afd2 |    6.58 |             5.39 |       4.71 |              3.96 |      5.58 |
+| fg-faint-magenta  | #c5a3b2 |    6.52 |             5.34 |       4.66 |              3.93 |      5.53 |
+| fg-faint-cyan     | #a5bfce |    7.71 |             6.32 |       5.51 |              4.64 |      6.53 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+** Doric Obsidian
+:PROPERTIES:
+:CUSTOM_ID: h:doric-obsidian
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #181818 |          #2f2f2f |    #3a3a3a |           #505050 |   #4a2b29 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #e7e7e7 |   14.36 |            10.83 |       9.20 |              6.52 |     10.18 |
+| fg-shadow-subtle  | #8d8d8d |    5.35 |             4.03 |       3.43 |              2.43 |      3.79 |
+| fg-shadow-intense | #b4b4b4 |    8.56 |             6.46 |       5.49 |              3.89 |      6.07 |
+| fg-accent         | #be7f6b |    5.44 |             4.10 |       3.49 |              2.47 |      3.86 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #dba2a2 |    8.20 |             6.19 |       5.25 |              3.73 |      5.81 |
+| fg-faint-green    | #85c397 |    8.67 |             6.53 |       5.55 |              3.94 |      6.14 |
+| fg-faint-yellow   | #c4a992 |    7.98 |             6.02 |       5.11 |              3.62 |      5.66 |
+| fg-faint-blue     | #95afd2 |    7.90 |             5.95 |       5.06 |              3.59 |      5.60 |
+| fg-faint-magenta  | #c5a3b2 |    7.83 |             5.90 |       5.01 |              3.55 |      5.55 |
+| fg-faint-cyan     | #a5bfce |    9.25 |             6.98 |       5.93 |              4.20 |      6.56 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+** Doric Plum
+:PROPERTIES:
+:CUSTOM_ID: h:doric-plum
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #221832 |          #30283c |    #383349 |           #5e4170 |   #501e3e |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #e2d7e7 |   12.14 |            10.11 |       8.69 |              6.13 |      9.46 |
+| fg-shadow-subtle  | #92829c |    4.74 |             3.94 |       3.39 |              2.39 |      3.69 |
+| fg-shadow-intense | #d2b6e0 |    9.25 |             7.70 |       6.62 |              4.67 |      7.21 |
+| fg-accent         | #c58fba |    6.44 |             5.36 |       4.61 |              3.25 |      5.02 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #dba2a2 |    7.79 |             6.49 |       5.58 |              3.93 |      6.08 |
+| fg-faint-green    | #85c397 |    8.23 |             6.86 |       5.90 |              4.16 |      6.42 |
+| fg-faint-yellow   | #c4a992 |    7.58 |             6.32 |       5.43 |              3.83 |      5.91 |
+| fg-faint-blue     | #95afd2 |    7.50 |             6.25 |       5.37 |              3.79 |      5.85 |
+| fg-faint-magenta  | #c5a3b2 |    7.44 |             6.19 |       5.33 |              3.75 |      5.80 |
+| fg-faint-cyan     | #a5bfce |    8.79 |             7.32 |       6.30 |              4.44 |      6.86 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+** Doric Water
+:PROPERTIES:
+:CUSTOM_ID: h:doric-water
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #2a283d |          #34384c |    #3e4053 |           #405290 |   #523e48 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #f2f5ff |   13.12 |            10.62 |       9.35 |              6.82 |      9.00 |
+| fg-shadow-subtle  | #b2afbc |    6.64 |             5.37 |       4.73 |              3.45 |      4.55 |
+| fg-shadow-intense | #cedff2 |   10.52 |             8.51 |       7.49 |              5.47 |      7.22 |
+| fg-accent         | #c2a0a0 |    6.01 |             4.86 |       4.28 |              3.12 |      4.12 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-faint-red      | #dba2a2 |    6.60 |             5.34 |       4.70 |              3.43 |      4.53 |
+| fg-faint-green    | #85c397 |    6.98 |             5.64 |       4.97 |              3.63 |      4.79 |
+| fg-faint-yellow   | #c4a992 |    6.42 |             5.20 |       4.57 |              3.34 |      4.41 |
+| fg-faint-blue     | #95afd2 |    6.36 |             5.14 |       4.53 |              3.30 |      4.36 |
+| fg-faint-magenta  | #c5a3b2 |    6.30 |             5.10 |       4.49 |              3.27 |      4.32 |
+| fg-faint-cyan     | #a5bfce |    7.45 |             6.03 |       5.30 |              3.87 |      5.11 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
