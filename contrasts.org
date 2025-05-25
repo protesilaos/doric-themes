@@ -36,6 +36,10 @@ C1 and C2 are color values written in hexadecimal RGB."
     (max ct (/ ct))))
 
 (defalias #'Λ #'modus-themes-contrast)
+
+;; Just an alias for the built-in function that measures distance
+;; between colours...
+(defalias #'Δ #'color-distance)
 #+end_src
 
 * Light themes
@@ -63,6 +67,16 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-cyan     | #35485e |    8.19 |             7.03 |       6.32 |              3.82 |      6.33 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
 
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #f7edf1 |          #e5dde0 |    #dfd0d9 |           #cc95b7 |   #edcae5 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #f7edf1 |       0 |             2591 |       6292 |             43766 |      5533 |
+| bg-shadow-subtle  | #e5dde0 |    2591 |                0 |        890 |             26336 |      1695 |
+| bg-neutral        | #dfd0d9 |    6292 |              890 |          0 |             17584 |      1022 |
+| bg-shadow-intense | #cc95b7 |   43766 |            26336 |      17584 |                 0 |     19021 |
+| bg-accent         | #edcae5 |    5533 |             1695 |       1022 |             19021 |         0 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
+
 ** Doric Earth
 :PROPERTIES:
 :CUSTOM_ID: h:doric-earth
@@ -83,6 +97,16 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-magenta  | #553372 |    8.51 |             7.41 |       6.65 |              4.14 |      6.48 |
 | fg-faint-cyan     | #35485e |    7.98 |             6.96 |       6.24 |              3.89 |      6.08 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #f0eddf |          #dfdfce |    #d7d3c2 |           #c09fa0 |   #e2cdb3 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #f0eddf |       0 |             2246 |       6333 |             39749 |      8774 |
+| bg-shadow-subtle  | #dfdfce |    2246 |                0 |       1075 |             23899 |      2889 |
+| bg-neutral        | #d7d3c2 |    6333 |             1075 |          0 |             14957 |       978 |
+| bg-shadow-intense | #c09fa0 |   39749 |            23899 |      14957 |                 0 |     12608 |
+| bg-accent         | #e2cdb3 |    8774 |             2889 |        978 |             12608 |         0 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
 
 ** Doric Light
 :PROPERTIES:
@@ -105,6 +129,16 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-cyan     | #35485e |    9.38 |             8.17 |       7.34 |              4.73 |      7.67 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
 
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #ffffff |          #efeff2 |    #e1e4e5 |           #a0bcd0 |   #d4edf0 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #ffffff |       0 |             2143 |       7009 |             48556 |      7212 |
+| bg-shadow-subtle  | #efeff2 |    2143 |                0 |       1418 |             30569 |      2143 |
+| bg-neutral        | #e1e4e5 |    7009 |             1418 |          0 |             19178 |      1074 |
+| bg-shadow-intense | #a0bcd0 |   48556 |            30569 |      19178 |                 0 |     19460 |
+| bg-accent         | #d4edf0 |    7212 |             2143 |       1074 |             19460 |         0 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
+
 ** Doric Marble
 :PROPERTIES:
 :CUSTOM_ID: h:doric-marble
@@ -126,6 +160,16 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-cyan     | #35485e |    8.01 |             7.04 |       6.39 |              4.32 |      6.80 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
 
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #ededed |          #dfdfdf |    #d5d5d5 |           #b0b0b0 |   #e7dac6 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #ededed |       0 |             1777 |       5224 |             33751 |      4753 |
+| bg-shadow-subtle  | #dfdfdf |    1777 |                0 |        907 |             20036 |      1616 |
+| bg-neutral        | #d5d5d5 |    5224 |              907 |          0 |             12417 |      1520 |
+| bg-shadow-intense | #b0b0b0 |   33751 |            20036 |      12417 |                 0 |     16715 |
+| bg-accent         | #e7dac6 |    4753 |             1616 |       1520 |             16715 |         0 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
+
 ** Doric Wind
 :PROPERTIES:
 :CUSTOM_ID: h:doric-wind
@@ -146,6 +190,16 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-magenta  | #553372 |    9.99 |             8.70 |       7.81 |              5.04 |      8.17 |
 | fg-faint-cyan     | #35485e |    9.38 |             8.17 |       7.34 |              4.73 |      7.67 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #ffffff |          #efeff2 |    #e1e4e5 |           #a0bcd0 |   #d4edf0 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #e8f0e9 |    3479 |              317 |        757 |             26771 |      1298 |
+| bg-shadow-subtle  | #d8e4df |    9563 |             2796 |        311 |             15614 |      1001 |
+| bg-neutral        | #ced9db |   15585 |             6238 |       1740 |              9464 |      2683 |
+| bg-shadow-intense | #94c2bf |   56317 |            37062 |      24282 |              1220 |     24175 |
+| bg-accent         | #ded4fb |   10708 |             3955 |       2093 |             17166 |      3068 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
 
 * Dark themes
 :PROPERTIES:
@@ -172,6 +226,16 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-cyan     | #a5bfce |   10.94 |             6.96 |       5.95 |              4.42 |      6.76 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
 
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #000000 |          #332d38 |    #3c3843 |           #50447f |   #521e40 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #000000 |       0 |            22833 |      33365 |             78768 |     29991 |
+| bg-shadow-subtle  | #332d38 |   22833 |                0 |       1008 |             17981 |      3273 |
+| bg-neutral        | #3c3843 |   33365 |             1008 |          0 |             11385 |      3861 |
+| bg-shadow-intense | #50447f |   78768 |            17981 |      11385 |                 0 |     16560 |
+| bg-accent         | #521e40 |   29991 |             3273 |       3861 |             16560 |         0 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
+
 ** Doric Fire
 :PROPERTIES:
 :CUSTOM_ID: h:doric-fire
@@ -192,6 +256,16 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-magenta  | #c5a3b2 |    6.52 |             5.34 |       4.66 |              3.93 |      5.53 |
 | fg-faint-cyan     | #a5bfce |    7.71 |             6.32 |       5.51 |              4.64 |      6.53 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #2a281d |          #40332f |    #493c37 |           #733930 |   #4e2a1f |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #2a281d |       0 |             2476 |       5658 |             14539 |      2946 |
+| bg-shadow-subtle  | #40332f |    2476 |                0 |        687 |              6310 |      1478 |
+| bg-neutral        | #493c37 |    5658 |              687 |          0 |              4377 |      2933 |
+| bg-shadow-intense | #733930 |   14539 |             6310 |       4377 |                 0 |      4952 |
+| bg-accent         | #4e2a1f |    2946 |             1478 |       2933 |              4952 |         0 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
 
 ** Doric Obsidian
 :PROPERTIES:
@@ -214,6 +288,17 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-cyan     | #a5bfce |    9.25 |             6.98 |       5.93 |              4.20 |      6.56 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
 
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #181818 |          #2f2f2f |    #3a3a3a |           #505050 |   #4a2b29 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #181818 |       0 |             4798 |      10485 |             28444 |      7796 |
+| bg-shadow-subtle  | #2f2f2f |    4798 |                0 |       1097 |              9877 |      1808 |
+| bg-neutral        | #3a3a3a |   10485 |             1097 |          0 |              4390 |      2288 |
+| bg-shadow-intense | #505050 |   28444 |             9877 |       4390 |                 0 |      9738 |
+| bg-accent         | #4a2b29 |    7796 |             1808 |       2288 |              9738 |         0 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
+
+
 ** Doric Plum
 :PROPERTIES:
 :CUSTOM_ID: h:doric-plum
@@ -235,6 +320,16 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-cyan     | #a5bfce |    8.79 |             7.32 |       6.30 |              4.44 |      6.86 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
 
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #221832 |          #30283c |    #383349 |           #5e4170 |   #501e3e |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #221832 |       0 |             1744 |       5505 |             25593 |      5289 |
+| bg-shadow-subtle  | #30283c |    1744 |                0 |       1106 |             14795 |      2737 |
+| bg-neutral        | #383349 |    5505 |             1106 |          0 |              8276 |      3426 |
+| bg-shadow-intense | #5e4170 |   25593 |            14795 |       8276 |                 0 |     12099 |
+| bg-accent         | #501e3e |    5289 |             2737 |       3426 |             12099 |         0 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
+
 ** Doric Water
 :PROPERTIES:
 :CUSTOM_ID: h:doric-water
@@ -255,3 +350,13 @@ C1 and C2 are color values written in hexadecimal RGB."
 | fg-faint-magenta  | #c5a3b2 |    6.30 |             5.10 |       4.49 |              3.27 |      4.32 |
 | fg-faint-cyan     | #a5bfce |    7.45 |             6.03 |       5.30 |              3.87 |      5.11 |
 #+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #2a283d |          #34384c |    #3e4053 |           #405290 |   #523e48 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| bg-main           | #2a283d |       0 |             1890 |       4574 |             27573 |      5904 |
+| bg-shadow-subtle  | #34384c |    1890 |                0 |        619 |             15968 |      2241 |
+| bg-neutral        | #3e4053 |    4574 |              619 |          0 |             11639 |      1267 |
+| bg-shadow-intense | #405290 |   27573 |            15968 |      11639 |                 0 |     16537 |
+| bg-accent         | #523e48 |    5904 |             2241 |       1267 |             16537 |         0 |
+#+TBLFM: $3='(Δ $2 @2$3) :: $4='(Δ $2 @2$4) :: $5='(Δ $2 @2$5) :: $6='(Δ $2 @2$6) :: $7='(Δ $2 @2$7)
