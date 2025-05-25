@@ -702,7 +702,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-lock-negation-char-face
     font-lock-number-face
     font-lock-punctuation-face
-    fringe
     gnus-header-content
     gnus-server-opened
     gnus-summary-high-undownloaded
@@ -1286,6 +1285,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
            (custom-theme-set-faces
             ',name
             `(default ((t :background ,bg-main :foreground ,fg-main)))
+            `(fringe ((t :background unspecified :foreground ,fg-accent)))
             `(cursor ((t :background ,cursor)))
 
             '(bold ((t :weight bold)))
