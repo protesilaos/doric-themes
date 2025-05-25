@@ -44,7 +44,7 @@
   (defvar doric-earth-palette
     '((cursor "#770000")
       (bg-main "#f0eddf")
-      (fg-main "#1b0d10")
+      (fg-main "#30232e")
       (border "#a29986")
 
       (bg-shadow-subtle "#dfdfce")

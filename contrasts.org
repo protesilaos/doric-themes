@@ -71,7 +71,7 @@ C1 and C2 are color values written in hexadecimal RGB."
 |                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
 | Name              |         | #f0eddf |          #dfdfce |    #d7d3c2 |           #c09fa0 |   #e2cdb3 |
 |-------------------+---------+---------+------------------+------------+-------------------+-----------|
-| fg-main           | #1b0d10 |   16.09 |            14.02 |      12.58 |              7.83 |     12.25 |
+| fg-main           | #30232e |   12.72 |            11.09 |       9.95 |              6.20 |      9.69 |
 | fg-shadow-subtle  | #635650 |    6.01 |             5.23 |       4.70 |              2.92 |      4.57 |
 | fg-shadow-intense | #58383f |    8.71 |             7.59 |       6.81 |              4.24 |      6.63 |
 | fg-accent         | #74321f |    8.06 |             7.02 |       6.30 |              3.93 |      6.14 |
