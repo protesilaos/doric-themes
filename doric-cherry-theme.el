@@ -44,19 +44,19 @@
   (defvar doric-cherry-palette
     '((cursor "#a02050")
       (bg-main "#f7edf1")
-      (fg-main "#311926")
+      (fg-main "#35292f")
       (border "#c4a7b0")
 
       (bg-shadow-subtle "#e5dde0")
-      (fg-shadow-subtle "#655260")
+      (fg-shadow-subtle "#675462")
 
       (bg-neutral "#dfd0d9")
 
       (bg-shadow-intense "#cc95b7")
-      (fg-shadow-intense "#5e2249")
+      (fg-shadow-intense "#683455")
 
       (bg-accent "#edcae5")
-      (fg-accent "#85296f")
+      (fg-accent "#77266e")
 
       (fg-faint-red "#750000")
       (fg-faint-green "#056100")
