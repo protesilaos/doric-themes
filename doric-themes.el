@@ -1141,8 +1141,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     tab-line-tab-special
     transient-key-noop
     vc-dir-status-edited
-    vc-edited-state
-    vc-locally-added-state
     vc-git-log-edit-summary-max-warning
     vc-git-log-edit-summary-target-warning
     which-key-docstring-face
@@ -1495,6 +1493,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 
             '(telega-webpage-fixed ((t :inherit fixed-pitch)))
             '(telega-webpage-preformatted ((t :inherit fixed-pitch)))
+
+            `(vc-edited-state ((t :inherit italic)))
+            `(vc-locally-added-state ((t :inherit italic)))
 
             '(vtable ((t :inherit fixed-pitch)))
 
