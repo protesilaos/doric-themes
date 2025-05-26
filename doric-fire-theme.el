@@ -52,11 +52,11 @@
 
       (bg-neutral "#493c37")
 
-      (bg-shadow-intense "#733930")
-      (fg-shadow-intense "#dab8a4")
+      (bg-shadow-intense "#601a2f")
+      (fg-shadow-intense "#e2b0a4")
 
-      (bg-accent "#4e2a1f")
-      (fg-accent "#e0936f")
+      (bg-accent "#52402f")
+      (fg-accent "#e6a577")
 
       (fg-faint-red "#d09090")
       (fg-faint-green "#85c397")
