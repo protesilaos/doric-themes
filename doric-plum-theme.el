@@ -45,12 +45,12 @@
     '((cursor "#c070d0")
       (bg-main "#221832")
       (fg-main "#e2d7e7")
-      (border "#67607a")
+      (border "#6a647e")
 
-      (bg-shadow-subtle "#30283c")
+      (bg-shadow-subtle "#302f3c")
       (fg-shadow-subtle "#a694b1")
 
-      (bg-neutral "#383349")
+      (bg-neutral "#423b53")
 
       (bg-shadow-intense "#5e4170")
       (fg-shadow-intense "#cea6d0")
