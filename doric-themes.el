@@ -49,8 +49,8 @@
 (defconst doric-themes-dark-themes
   '(doric-dark
     doric-fire
-    doric-plum
     doric-obsidian
+    doric-plum
     doric-water)
   "Dark themes.")
 
