@@ -45,7 +45,7 @@
     '((cursor "#eeddbb")
       (bg-main "#181818")
       (fg-main "#e7e7e7")
-      (border "#7e7e7e")
+      (border "#727272")
 
       (bg-shadow-subtle "#2f2f2f")
       (fg-shadow-subtle "#969696")
@@ -55,8 +55,8 @@
       (bg-shadow-intense "#505050")
       (fg-shadow-intense "#b0b0b0")
 
-      (bg-accent "#4a2b29")
-      (fg-accent "#b58f6b")
+      (bg-accent "#432f2a")
+      (fg-accent "#b59487")
 
       (fg-faint-red "#dba2a2")
       (fg-faint-green "#85c397")
