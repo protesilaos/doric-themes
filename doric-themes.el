@@ -1441,8 +1441,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(mode-line
               ((default :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
                (((supports :box t))
-                :box ,fg-shadow-subtle)
-               (t :underline ,fg-shadow-subtle)))
+                :box ,border)
+               (t :underline ,border)))
 
             `(mode-line-active ((t :inherit mode-line)))
             `(mode-line-inactive
