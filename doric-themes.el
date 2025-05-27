@@ -596,8 +596,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-scheduled-previously
     org-scheduled-today
     org-special-keyword
-    org-table-header
-    org-table-row
     org-time-grid
     org-upcoming-deadline
     org-upcoming-distant-deadline
@@ -652,6 +650,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-search-flagged-face
     org-imminent-deadline
     org-headline-todo
+    org-table-header
+    org-table-row
     org-todo
     org-warning
     package-status-installed
@@ -1473,7 +1473,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(org-indent ((t :inherit (fixed-pitch org-hide))))
             `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             '(org-property-value ((t :inherit fixed-pitch)))
-            `(org-table ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
 
             `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
             `(reb-match-1 ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
