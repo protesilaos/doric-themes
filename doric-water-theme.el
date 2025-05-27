@@ -47,16 +47,16 @@
       (fg-main "#edf0f8")
       (border "#8d8c9e")
 
-      (bg-shadow-subtle "#34384c")
+      (bg-shadow-subtle "#3a3c4c")
       (fg-shadow-subtle "#aea6b8")
 
-      (bg-neutral "#3e4053")
+      (bg-neutral "#4a4a5f")
 
-      (bg-shadow-intense "#405290")
-      (fg-shadow-intense "#b8c2e0")
+      (bg-shadow-intense "#496278")
+      (fg-shadow-intense "#c0ddf2")
 
-      (bg-accent "#523e48")
-      (fg-accent "#c2a0a0")
+      (bg-accent "#403f75")
+      (fg-accent "#adade0")
 
       (fg-faint-red "#dba2a2")
       (fg-faint-green "#85c397")
