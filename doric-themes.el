@@ -1433,7 +1433,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 
             `(markdown-code-face ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
             `(markdown-language-keyword-face ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral)))
-            '(markdown-table-face ((t :inherit fixed-pitch)))
+            `(markdown-table-face ((t :inherit fixed-pitch :foreground ,fg-accent)))
 
             '(markup-meta-face ((t :inherit fixed-pitch)))
             '(markup-replacement-face ((t :inherit fixed-pitch)))
