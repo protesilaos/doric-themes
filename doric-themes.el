@@ -400,7 +400,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     header-line
     magit-blame-heading
     magit-blame-margin
-    markdown-blockquote-face
     match
     menu
     mu4e-region-code
@@ -1112,6 +1111,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-signature-revoked
     magit-signature-untrusted
     magit-mode-line-process-error
+    markdown-blockquote-face
     markdown-inline-code-face
     message-cited-text-1
     message-cited-text-2
@@ -1432,7 +1432,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(magit-section-highlight (( )))
 
             `(markdown-code-face ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
-            `(markdown-language-keyword-face ((t :inherit fixed-pitch :background ,bg-neutral)))
+            `(markdown-language-keyword-face ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral)))
             '(markdown-table-face ((t :inherit fixed-pitch)))
 
             '(markup-meta-face ((t :inherit fixed-pitch)))
@@ -1457,7 +1457,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
                  :overline ,fg-shadow-subtle)))
 
             `(org-block ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
-            `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-shadow-intense :extend t)))
+            `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral :extend t)))
             `(org-block-end-line ((t :inherit org-block-begin-line)))
             '(org-checkbox ((t :inherit fixed-pitch)))
             `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
@@ -1484,11 +1484,11 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
 
             `(tab-bar-tab ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
-            `(tab-bar-tab-inactive ((t :background ,bg-neutral :foreground ,fg-shadow-subtle)))
+            `(tab-bar-tab-inactive ((t :background ,bg-neutral :foreground ,fg-neutral)))
 
             `(tab-line-tab ((t :inherit tab-line-tab-current)))
             `(tab-line-tab-current ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
-            `(tab-line-tab-inactive ((t :background ,bg-neutral :foreground ,fg-shadow-subtle)))
+            `(tab-line-tab-inactive ((t :background ,bg-neutral :foreground ,fg-neutral)))
             `(tab-line-tab-inactive-alternate ((t :inherit tab-line-tab-inactive)))
 
             '(telega-webpage-fixed ((t :inherit fixed-pitch)))

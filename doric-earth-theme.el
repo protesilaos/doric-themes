@@ -50,7 +50,8 @@
       (bg-shadow-subtle "#dfdfce")
       (fg-shadow-subtle "#635650")
 
-      (bg-neutral "#d7d3c2")
+      (bg-neutral "#d1ceb6")
+      (fg-neutral "#604d48")
 
       (bg-shadow-intense "#c09fa0")
       (fg-shadow-intense "#58383f")
