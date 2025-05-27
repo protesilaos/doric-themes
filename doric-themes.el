@@ -1041,8 +1041,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     transient-key-return
     transient-key-stack
     transient-key-stay
-    vertico-group-title
-    which-key-key-face))
+    vertico-group-title))
 
 (defconst doric-themes-italic-faces
   '(Info-quoted
@@ -1424,6 +1423,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(query-replace ((t :inherit isearch)))
 
             '(help-key-binding ((t :inherit (fixed-pitch bold-italic))))
+
             '(line-number-current-line ((t :inherit (highlight bold))))
 
             `(keycast-key ((t :inherit bold-italic :background ,fg-shadow-intense :foreground ,bg-main)))
@@ -1498,6 +1498,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(vc-locally-added-state ((t :inherit italic)))
 
             '(vtable ((t :inherit fixed-pitch)))
+
+            '(which-key-key-face ((t :inherit (fixed-pitch bold-italic))))
 
             `(whitespace-big-indent ((t :foreground ,bg-shadow-intense)))
             `(whitespace-empty ((t :foreground ,bg-shadow-intense)))
