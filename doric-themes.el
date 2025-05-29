@@ -1494,6 +1494,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             '(telega-webpage-fixed ((t :inherit fixed-pitch)))
             '(telega-webpage-preformatted ((t :inherit fixed-pitch)))
 
+            '(textsec-suspicious (( )))
+
             `(vc-edited-state ((t :inherit italic)))
             `(vc-locally-added-state ((t :inherit italic)))
 
