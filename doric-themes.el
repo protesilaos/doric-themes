@@ -682,6 +682,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     denote-faces-prompt-current-name
     denote-faces-title
     diary
+    dictionary-word-definition-face
     dired-mark
     dired-perm-write
     dired-set-id
@@ -832,6 +833,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     denote-faces-keywords
     denote-faces-signature
     denote-faces-subdirectory
+    dictionary-button-face
     diff-nonexistent
     dired-header
     diredfl-dir-heading
@@ -1000,6 +1002,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     css-selector
     custom-changed
     custom-invalid
+    dictionary-word-entry-face
     diff-error
     diff-file-header
     diff-hunk-header
@@ -1179,6 +1182,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     custom-link
     denote-faces-link
     denote-faces-query-link
+    dictionary-reference-face
     dired-symlink
     diredfl-symlink
     eshell-ls-symlink
