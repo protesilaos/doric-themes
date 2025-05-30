@@ -259,18 +259,17 @@ respectively."
         (delete current-theme themes)
       themes)))
 
-(defvar doric-themes-subset-history nil
-  "Minibuffer history for `doric-themes-subset-prompt'.")
+(make-obsolete-variable 'doric-themes-subset-history nil "0.2.0")
 
 (defun doric-themes-subset-prompt ()
   "Select `dark' or `light' and return it as a symbol."
-  (let ((default (car doric-themes-subset-history)))
-    (intern
-     (completing-read
-      (format-prompt "Select variant" default)
-      '("dark" "light")
-      nil :require-match nil
-      doric-themes-subset-history default))))
+  (intern
+   (cadr
+    (read-multiple-choice
+     "Variant"
+     '((?d "dark" "Load a random dark theme")
+       (?l "light" "Load a random light theme"))
+     "Limit to the dark or light subset of the Ef themes collection."))))
 
 ;;;###autoload
 (defun doric-themes-load-random (&optional variant)
