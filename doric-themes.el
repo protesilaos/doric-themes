@@ -319,7 +319,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-dispatcher-highlight
     proced-marked
     pulse-highlight-start-face
-    read-multiple-choice-face
     rectangle-preview
     speedbar-highlight-face
     tab-bar-tab-highlight
@@ -1301,7 +1300,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(tty-menu-disabled-face ((t :background ,bg-accent :foreground ,fg-shadow-subtle)))
             `(tty-menu-enabled-face ((t :background ,bg-accent :foreground ,fg-main)))
             `(tty-menu-selected-face ((t :background ,fg-main :foreground ,bg-main)))
-
+            `(read-multiple-choice-face ((t :inherit bold-italic :background ,fg-shadow-intense :foreground ,bg-main)))
 
             '(adoc-meta-face ((t :inherit fixed-pitch)))
             '(adoc-meta-hide-face ((t :inherit fixed-pitch)))
