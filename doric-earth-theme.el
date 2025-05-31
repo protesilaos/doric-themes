@@ -51,7 +51,7 @@
       (fg-shadow-subtle "#635650")
 
       (bg-neutral "#d1ceb6")
-      (fg-neutral "#604d48")
+      (fg-neutral "#504033")
 
       (bg-shadow-intense "#c09fa0")
       (fg-shadow-intense "#58383f")
