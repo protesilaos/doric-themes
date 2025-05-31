@@ -1203,6 +1203,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diff-indicator-added
     ediff-current-diff-B
     magit-diff-added
+    magit-diff-added-highlight
     magit-diffstat-added
     smerge-lower
     ztreep-diff-model-add-face))
@@ -1210,7 +1211,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-diff-added-refine-faces
   '(diff-refine-added
     ediff-fine-diff-B
-    magit-diff-added-highlight
     smerge-refined-added))
 
 (defconst doric-themes-diff-changed-faces
@@ -1219,12 +1219,12 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diff-indicator-changed
     ediff-current-diff-C
     magit-diff-base
+    magit-diff-base-highlight
     smerge-base))
 
 (defconst doric-themes-diff-changed-refine-faces
   '(diff-refine-changed
     ediff-fine-diff-C
-    magit-diff-base-highlight
     smerge-refined-changed))
 
 (defconst doric-themes-diff-removed-faces
@@ -1233,6 +1233,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diff-indicator-removed
     ediff-current-diff-A
     magit-diff-removed
+    magit-diff-removed-highlight
     magit-diffstat-removed
     smerge-upper
     ztreep-diff-model-diff-face))
@@ -1240,7 +1241,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-diff-removed-refine-faces
   '(diff-refine-removed
     ediff-fine-diff-A
-    magit-diff-removed-highlight
     smerge-refined-removed))
 
 (defconst doric-themes-error-foreground-only-faces
