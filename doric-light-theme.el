@@ -48,10 +48,10 @@
       (border "#b0b0b0")
 
       (bg-shadow-subtle "#efeff2")
-      (fg-shadow-subtle "#455058")
+      (fg-shadow-subtle "#5a6268")
 
       (bg-neutral "#dbdce1")
-      (fg-neutral "#4f5559")
+      (fg-neutral "#424d53")
 
       (bg-shadow-intense "#a0bcd0")
       (fg-shadow-intense "#213067")
