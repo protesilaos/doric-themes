@@ -672,7 +672,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     breadcrumb-project-crumbs-face
     c-annotation-face
     change-log-function
-    change-log-list
     child-frame-border
     consult-bookmark
     consult-buffer
@@ -990,6 +989,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(appt-notification
     aw-key-face
     change-log-conditionals
+    change-log-list
     comint-highlight-input
     compilation-error
     completions-group-title
