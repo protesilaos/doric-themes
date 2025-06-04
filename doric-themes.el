@@ -912,6 +912,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-section-heading
     magit-signature-good
     magit-tag
+    Man-overstrike
     markdown-header-face-1
     markdown-header-face-2
     markdown-header-face-3
@@ -1166,6 +1167,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-latex-underline-face
     gnus-emphasis-highlight-words
     lazy-highlight
+    Man-underline
     notmuch-tag-added
     orderless-match-face-0
     orderless-match-face-1
