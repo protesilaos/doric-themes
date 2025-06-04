@@ -663,6 +663,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     which-key-command-description-face
     widget-button
     widget-button-pressed
+    woman-addition
     ztreep-node-face))
 
 (defconst doric-themes-main-foreground-only-faces
@@ -980,6 +981,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     vc-needs-update-state
     vc-removed-state
     which-func
+    woman-bold
     world-clock-label
     xref-file-header
     ztreep-diff-header-face
@@ -1146,6 +1148,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     which-key-docstring-face
     which-key-group-description-face
     which-key-local-map-description-face
+    woman-italic
     ztreep-node-count-children-face))
 
 (defconst doric-themes-underline-emphasis-faces
