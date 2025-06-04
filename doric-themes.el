@@ -344,7 +344,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     substitute-match))
 
 (defconst doric-themes-intense-shadow-foreground-only-faces
-  '(calendar-month-header
+  '(all-the-icons-completion-dir-face
+    all-the-icons-dired-dir-face
+    all-the-icons-ibuffer-dir-face
+    calendar-month-header
     change-log-date
     denote-faces-date
     denote-faces-day
@@ -367,6 +370,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-log-author
     magit-log-date
     marginalia-date
+    nerd-icons-completion-dir-face
+    nerd-icons-dired-dir-face
+    nerd-icons-ibuffer-dir-face
     notmuch-search-date
     org-agenda-calendar-daterange
     org-agenda-column-dateline
@@ -427,13 +433,11 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-subtle-shadow-foreground-only-faces
   '(all-the-icons-blue
     all-the-icons-blue-alt
-    all-the-icons-completion-dir-face
     all-the-icons-cyan
     all-the-icons-cyan-alt
     all-the-icons-dblue
     all-the-icons-dcyan
     all-the-icons-dgreen
-    all-the-icons-dired-dir-face
     all-the-icons-dmaroon
     all-the-icons-dorange
     all-the-icons-dpink
@@ -442,6 +446,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     all-the-icons-dsilver
     all-the-icons-dyellow
     all-the-icons-green
+    all-the-icons-ibuffer-file-face
+    all-the-icons-ibuffer-mode-face
+    all-the-icons-ibuffer-size-face
     all-the-icons-lblue
     all-the-icons-lcyan
     all-the-icons-lgreen
@@ -543,13 +550,11 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     mu4e-header-face
     nerd-icons-blue
     nerd-icons-blue-alt
-    nerd-icons-completion-dir-face
     nerd-icons-cyan
     nerd-icons-cyan-alt
     nerd-icons-dblue
     nerd-icons-dcyan
     nerd-icons-dgreen
-    nerd-icons-dired-dir-face
     nerd-icons-dmaroon
     nerd-icons-dorange
     nerd-icons-dpink
@@ -558,6 +563,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     nerd-icons-dsilver
     nerd-icons-dyellow
     nerd-icons-green
+    nerd-icons-ibuffer-file-face
+    nerd-icons-ibuffer-mode-face
+    nerd-icons-ibuffer-size-face
     nerd-icons-lblue
     nerd-icons-lcyan
     nerd-icons-lgreen
