@@ -1377,6 +1377,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces :background ''unspecified :foreground 'fg-faint-red)
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :background ''unspecified :foreground 'fg-faint-red)
 
+            '(embark-keybinding ((t :inherit (fixed-pitch bold-italic))))
+
             `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-variable-name-face  ((t :inherit italic)))
