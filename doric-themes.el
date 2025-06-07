@@ -777,8 +777,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-inline-src-block
     org-latex-and-related
     org-mode-line-clock
-    org-quote
-    org-verse
     proced-cpu
     proced-mark
     proced-memory-low-usage
@@ -1492,6 +1490,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(org-indent ((t :inherit (fixed-pitch org-hide))))
             `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             '(org-property-value ((t :inherit fixed-pitch)))
+            '(org-quote ((t :inherit org-block)))
+            '(org-verse ((t :inherit org-block)))
             `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
 
             `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
