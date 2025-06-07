@@ -544,6 +544,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     marginalia-type
     marginalia-value
     marginalia-version
+    markdown-metadata-key-face
     message-header-mml
     message-header-name
     message-header-newsgroups
