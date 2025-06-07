@@ -1162,8 +1162,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     ztreep-node-count-children-face))
 
 (defconst doric-themes-underline-emphasis-faces
-  '(aw-leading-char-face
-    company-echo-common
+  '(company-echo-common
     company-preview-common
     company-preview-search
     company-tooltip-common
@@ -1337,6 +1336,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(ansi-color-magenta ((t :background ,fg-faint-magenta :foreground ,fg-faint-magenta)))
             `(ansi-color-bright-cyan ((t :background ,fg-faint-cyan :foreground ,fg-faint-cyan)))
             `(ansi-color-cyan ((t :background ,fg-faint-cyan :foreground ,fg-faint-cyan)))
+
+            `(aw-leading-char-face ((t :inherit bold-italic :height 1.5 :foreground ,fg-accent)))
 
             `(company-tooltip ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
 
