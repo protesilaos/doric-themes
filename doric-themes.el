@@ -469,6 +469,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     all-the-icons-silver
     all-the-icons-yellow
     avy-background-face
+    aw-background-face
     breadcrumb-face
     calendar-weekend-header
     change-log-email
