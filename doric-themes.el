@@ -603,6 +603,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-scheduled-previously
     org-scheduled-today
     org-special-keyword
+    org-tag
     org-time-grid
     org-upcoming-deadline
     org-upcoming-distant-deadline
@@ -1142,7 +1143,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-latex-and-related
     org-macro
     org-priority
-    org-tag
     org-verbatim
     package-description
     sh-heredoc
