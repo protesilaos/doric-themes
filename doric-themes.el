@@ -601,7 +601,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-done
     org-headline-done
     org-scheduled
-    org-scheduled-previously
     org-scheduled-today
     org-special-keyword
     org-tag
@@ -1492,6 +1491,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             '(org-property-value ((t :inherit fixed-pitch)))
             '(org-quote ((t :inherit org-block)))
+            `(org-scheduled-previously ((t :inherit bold :foreground ,fg-shadow-subtle)))
             '(org-verse ((t :inherit org-block)))
             `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
 
