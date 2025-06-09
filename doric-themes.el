@@ -657,7 +657,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-tree-match-author-face
     notmuch-search-flagged-face
     org-headline-todo
-    org-table-header
     org-table-row
     org-todo
     org-warning
@@ -948,6 +947,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-level-7
     org-level-8
     org-list-dt
+    org-table-header
     org-tag-group
     org-target
     outline-1
