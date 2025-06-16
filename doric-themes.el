@@ -1500,6 +1500,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(reb-match-2 ((t :background ,bg-accent :foreground ,fg-accent)))
             `(reb-match-3 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
 
+            `(spacious-padding-line-active ((t :foreground ,fg-accent)))
+            `(spacious-padding-line-inactive ((t :foreground ,bg-accent)))
             `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
             `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
 
