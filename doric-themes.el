@@ -1137,12 +1137,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-wash-cited-text
     org-agenda-calendar-event
     org-agenda-calendar-sexp
-    org-code
     org-inline-src-block
     org-latex-and-related
     org-macro
     org-priority
-    org-verbatim
     package-description
     sh-heredoc
     shr-code
@@ -1476,6 +1474,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral :extend t)))
             `(org-block-end-line ((t :inherit org-block-begin-line)))
             '(org-checkbox ((t :inherit fixed-pitch)))
+            `(org-code ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
             `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             `(org-date-selected
               ((default :background ,bg-accent :foreground ,fg-main)
@@ -1492,6 +1491,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             '(org-property-value ((t :inherit fixed-pitch)))
             '(org-quote ((t :inherit org-block)))
             `(org-scheduled-previously ((t :inherit bold :foreground ,fg-shadow-subtle)))
+            `(org-verbatim ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
             '(org-verse ((t :inherit org-block)))
             `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
 
