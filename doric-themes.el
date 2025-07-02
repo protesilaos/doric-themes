@@ -58,11 +58,11 @@
   (append doric-themes-light-themes doric-themes-dark-themes)
   "Symbols of all the Doric themes.")
 
-(defgroup doric-themes ()
-  "Minimalist themes with few colours and precise typography."
+(defgroup doric-themes nil
+  "Highly legible minimalist themes with precise typography."
   :group 'faces
-  :prefix "doric-themes-"
-  :tag "Doric Themes")
+  :link '(url-link :tag "Homepage" "https://protesilaos.com/emacs/doric-themes")
+  :link '(url-link :tag "Sample pictures" "https://protesilaos.com/emacs/doric-themes-pictures"))
 
 ;;;; User options
 
