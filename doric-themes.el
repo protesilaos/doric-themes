@@ -379,6 +379,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-date
     org-sexp-date
     proced-time-colon
+    rcirc-timestamp
     vc-state-base
     vc-up-to-date-state
     ztreep-diff-header-small-face))
@@ -960,6 +961,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     outline-8
     proced-emacs-pid
     proced-sort-header
+    rcirc-prompt
+    rcirc-other-nick
     reb-regexp-grouping-backslash
     reb-regexp-grouping-construct
     sh-escaped-newline
@@ -1044,6 +1047,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     proced-memory-high-usage
     proced-run-status-code
     proced-uninterruptible-sleep-status-code
+    rcirc-bright-nick
+    rcirc-track-keyword
     smerge-markers
     tab-line-tab-modified
     transient-key
@@ -1142,6 +1147,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-macro
     org-priority
     package-description
+    rcirc-dim-nick
     sh-heredoc
     shr-code
     speedbar-tag-face
@@ -1177,6 +1183,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     orderless-match-face-2
     orderless-match-face-3
     proced-session-leader-pid
+    rcirc-my-nick
+    rcirc-nick-in-message
+    rcirc-nick-in-message-full-line
+    rcirc-track-nick
     show-paren-mismatch
     speedbar-selected-face
     transient-argument
@@ -1203,6 +1213,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-footnote
     org-link
     package-name
+    rcirc-url
     shr-link))
 
 (defconst doric-themes-diff-added-faces
@@ -1494,6 +1505,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(org-verbatim ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
             '(org-verse ((t :inherit org-block)))
             `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
+
+            '(rcirc-monospace-text ((t :inherit fixed-pitch)))
+            '(rcirc-server ((t :inherit font-lock-comment-face)))
 
             `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
             `(reb-match-1 ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
