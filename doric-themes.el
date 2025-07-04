@@ -1506,6 +1506,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             '(org-verse ((t :inherit org-block)))
             `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
 
+            `(package-mark-delete-line ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
+            `(package-mark-install-line ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
+
             '(rcirc-monospace-text ((t :inherit fixed-pitch)))
             '(rcirc-server ((t :inherit font-lock-comment-face)))
 
