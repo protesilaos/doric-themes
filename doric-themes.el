@@ -1,4 +1,4 @@
-;;; doric-themes.el --- Highly legible minimalist themes -*- lexical-binding:t -*-
+;;; doric-themes.el --- Highly legible minimalist themes with precise typography -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
