@@ -61,7 +61,6 @@
 (defgroup doric-themes nil
   "Highly legible minimalist themes with precise typography."
   :group 'faces
-  :link '(url-link :tag "Homepage" "https://protesilaos.com/emacs/doric-themes")
   :link '(url-link :tag "Sample pictures" "https://protesilaos.com/emacs/doric-themes-pictures"))
 
 ;;;; User options
