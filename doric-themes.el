@@ -43,6 +43,7 @@
     doric-earth
     doric-light
     doric-marble
+    doric-oak
     doric-wind)
   "Light themes.")
 
