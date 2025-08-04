@@ -51,6 +51,7 @@
   '(doric-dark
     doric-fire
     doric-obsidian
+    doric-pine
     doric-plum
     doric-water)
   "Dark themes.")
