@@ -47,8 +47,8 @@
       (fg-main "#d0e2c8")
       (border "#8c997f")
 
-      (bg-shadow-subtle "#3f4637")
-      (fg-shadow-subtle "#b4b5aa")
+      (bg-shadow-subtle "#40503d")
+      (fg-shadow-subtle "#bcbeaf")
 
       (bg-neutral "#4b5943")
       (fg-neutral "#c2ceaf")
