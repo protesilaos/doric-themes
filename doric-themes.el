@@ -1285,6 +1285,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(flycheck-warning
     flyspell-duplicate
     flymake-warning
+    jinx-misspelled
     writegood-passive-voice-face
     writegood-weasels-face))
 
