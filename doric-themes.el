@@ -1275,6 +1275,17 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     TeX-error-description-tex-said
     success))
 
+(defconst doric-themes-error-underline-faces
+  '(flyspell-incorrect
+    flymake-error))
+
+(defconst doric-themes-warning-underline-faces
+  '(flyspell-duplicate
+    flymake-warning))
+
+(defconst doric-themes-success-underline-faces
+  '(flymake-note))
+
 (defun doric-themes-prepare-faces (&rest faces-and-attributes)
   "Set faces to their respective attributes in FACES-AND-ATTRIBUTES."
   (pcase-let ((`(,faces . ,attributes) faces-and-attributes))
@@ -1369,6 +1380,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             ,@(doric-themes-prepare-faces doric-themes-error-foreground-only-faces :inherit ''bold :foreground 'fg-red)
             ,@(doric-themes-prepare-faces doric-themes-warning-foreground-only-faces :inherit ''bold :foreground 'fg-yellow)
             ,@(doric-themes-prepare-faces doric-themes-success-foreground-only-faces :inherit ''bold :foreground 'fg-green)
+            ,@(doric-themes-prepare-faces doric-themes-error-underline-faces :underline '(list :style 'wave :color fg-red))
+            ,@(doric-themes-prepare-faces doric-themes-warning-underline-faces :underline '(list :style 'wave :color fg-yellow))
+            ,@(doric-themes-prepare-faces doric-themes-success-underline-faces :underline '(list :style 'wave :color fg-cyan))
 
             ,@(doric-themes-prepare-faces doric-themes-bold-faces :inherit ''bold :foreground 'fg-shadow-intense)
             ,@(doric-themes-prepare-faces doric-themes-bold-italic-faces :inherit ''bold-italic :foreground 'fg-shadow-subtle)
@@ -1389,33 +1403,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold)
 
             '(embark-keybinding ((t :inherit (fixed-pitch bold-italic))))
-
-            `(flyspell-incorrect
-              ((((supports :underline (:style wave)))
-                :underline (:style wave :color ,fg-red))
-               (t
-                :underline ,fg-red)))
-            `(flyspell-duplicate
-              ((((supports :underline (:style wave)))
-                :underline (:style wave :color ,fg-yellow))
-               (t
-                :underline ,fg-yellow)))
-
-            `(flymake-error
-              ((((supports :underline (:style wave)))
-                :underline (:style wave :color ,fg-red))
-               (t
-                :underline ,fg-red)))
-            `(flymake-note
-              ((((supports :underline (:style wave)))
-                :underline (:style wave :color ,fg-cyan))
-               (t
-                :underline ,fg-cyan)))
-            `(flymake-warning
-              ((((supports :underline (:style wave)))
-                :underline (:style wave :color ,fg-yellow))
-               (t
-                :underline ,fg-yellow)))
 
             `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
