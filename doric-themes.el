@@ -1276,15 +1276,18 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     success))
 
 (defconst doric-themes-error-underline-faces
-  '(flyspell-incorrect
+  '(flycheck-error
+    flyspell-incorrect
     flymake-error))
 
 (defconst doric-themes-warning-underline-faces
-  '(flyspell-duplicate
+  '(flycheck-warning
+    flyspell-duplicate
     flymake-warning))
 
 (defconst doric-themes-success-underline-faces
-  '(flymake-note))
+  '(flycheck-info
+    flymake-note))
 
 (defun doric-themes-prepare-faces (&rest faces-and-attributes)
   "Set faces to their respective attributes in FACES-AND-ATTRIBUTES."
