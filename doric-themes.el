@@ -1278,12 +1278,15 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-error-underline-faces
   '(flycheck-error
     flyspell-incorrect
-    flymake-error))
+    flymake-error
+    writegood-duplicates-face))
 
 (defconst doric-themes-warning-underline-faces
   '(flycheck-warning
     flyspell-duplicate
-    flymake-warning))
+    flymake-warning
+    writegood-passive-voice-face
+    writegood-weasels-face))
 
 (defconst doric-themes-success-underline-faces
   '(flycheck-info
