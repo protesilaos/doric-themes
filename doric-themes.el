@@ -389,7 +389,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     company-tooltip-scrollbar-track
     consult-preview-line
     corfu-popupinfo
-    diff-header
     ediff-even-diff-A
     ediff-even-diff-Ancestor
     ediff-even-diff-B
@@ -1012,7 +1011,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     dictionary-word-entry-face
     diff-error
     diff-file-header
-    diff-hunk-header
     dired-warning
     elfeed-search-filter-face
     eww-invalid-certificate
@@ -1348,6 +1346,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
             `(corfu-default ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
 
             '(devdocs-code-block ((t :inherit fixed-pitch)))
+
+            '(diff-header (( )))
+            `(diff-hunk-header ((t :inherit bold :background ,bg-shadow-subtle)))
+            `(diff-function ((t :background ,bg-shadow-subtle)))
 
             `(dired-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
             `(dired-flagged ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
