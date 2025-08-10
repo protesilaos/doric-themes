@@ -66,12 +66,12 @@
       (fg-magenta "#700054")
       (fg-cyan "#005460")
 
-      (bg-red "#edbfa5")
-      (bg-green "#c8e0af")
-      (bg-yellow "#eae9b0")
-      (bg-blue "#c4d0f2")
-      (bg-magenta "#ecbbe9")
-      (bg-cyan "#b4e8e0"))
+      (bg-red "#e7bab2")
+      (bg-green "#bfd2a0")
+      (bg-yellow "#e2e0a8")
+      (bg-blue "#c4c8dd")
+      (bg-magenta "#d8bade")
+      (bg-cyan "#bee0db"))
   "Palette of `doric-oak' theme.")
 
   (doric-themes-define-theme doric-oak light))
