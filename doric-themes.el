@@ -1390,6 +1390,33 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 
             '(embark-keybinding ((t :inherit (fixed-pitch bold-italic))))
 
+            `(flyspell-incorrect
+              ((((supports :underline (:style wave)))
+                :underline (:style wave :color ,fg-red))
+               (t
+                :underline ,fg-red)))
+            `(flyspell-duplicate
+              ((((supports :underline (:style wave)))
+                :underline (:style wave :color ,fg-yellow))
+               (t
+                :underline ,fg-yellow)))
+
+            `(flymake-error
+              ((((supports :underline (:style wave)))
+                :underline (:style wave :color ,fg-red))
+               (t
+                :underline ,fg-red)))
+            `(flymake-note
+              ((((supports :underline (:style wave)))
+                :underline (:style wave :color ,fg-cyan))
+               (t
+                :underline ,fg-cyan)))
+            `(flymake-warning
+              ((((supports :underline (:style wave)))
+                :underline (:style wave :color ,fg-yellow))
+               (t
+                :underline ,fg-yellow)))
+
             `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
             `(font-lock-variable-name-face  ((t :inherit italic)))
