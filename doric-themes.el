@@ -1306,8 +1306,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
      faces)))
 
 ;;;###autoload
-(defmacro doric-themes-define-theme (name background-mode)
-  "Define theme with NAME and `light' or `dark' BACKGROUND-MODE."
+(defmacro doric-themes-define-theme (name background-mode &optional description)
+  "Define theme with NAME and `light' or `dark' BACKGROUND-MODE.
+With optional DESCRIPTION use it to describe the theme, otherwise
+default a generic text that mentions the BACKGROUND-MODE."
   (declare (indent 0))
   (unless (memq background-mode '(light dark))
     (error "The BACKGROUND-MODE must be either `light' or `dark'"))
@@ -1315,7 +1317,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
       `(progn
          (custom-declare-theme
           ',name 'doric-themes
-          ,(format "Minimalist %s theme." background-mode)
+          ,(or description (format "Minimalist %s theme." background-mode))
           (list :kind 'color-scheme :background-mode ',background-mode :family 'doric))
          (let ,palette
            (custom-theme-set-faces

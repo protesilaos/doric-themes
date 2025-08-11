@@ -1,4 +1,4 @@
-;;; doric-cherry-theme.el --- Minimalist light theme -*- lexical-binding:t -*-
+;;; doric-cherry-theme.el --- Minimalist theme with light background and pink+purple hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#c2ebe8"))
   "Palette of `doric-cherry' theme.")
 
-  (doric-themes-define-theme doric-cherry light))
+  (doric-themes-define-theme doric-cherry light "Minimalist theme with light background and pink+purple hues"))
 
 (provide 'doric-cherry-theme)
 ;;; doric-cherry-theme.el ends here

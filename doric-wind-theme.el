@@ -1,4 +1,4 @@
-;;; doric-wind-theme.el --- Minimalist light theme -*- lexical-binding:t -*-
+;;; doric-wind-theme.el --- Minimalist theme with light background and green+teal hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#c2ebe8"))
     "Palette of `doric-wind' theme.")
 
-  (doric-themes-define-theme doric-wind light))
+  (doric-themes-define-theme doric-wind light "Minimalist theme with light background and green+teal hues"))
 
 (provide 'doric-wind-theme)
 ;;; doric-wind-theme.el ends here

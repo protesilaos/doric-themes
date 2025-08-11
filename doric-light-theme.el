@@ -1,4 +1,4 @@
-;;; doric-light-theme.el --- Minimalist light theme -*- lexical-binding:t -*-
+;;; doric-light-theme.el --- Minimalist theme with light background and cool hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#c1ebe4"))
   "Palette of `doric-light' theme.")
 
-  (doric-themes-define-theme doric-light light))
+  (doric-themes-define-theme doric-light light "Minimalist theme with light background and cool hues"))
 
 (provide 'doric-light-theme)
 ;;; doric-light-theme.el ends here

@@ -1,4 +1,4 @@
-;;; doric-earth-theme.el --- Minimalist light theme -*- lexical-binding:t -*-
+;;; doric-earth-theme.el --- Minimalist theme with light background and brown hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#c9e6e0"))
     "Palette of `doric-earth' theme.")
 
-  (doric-themes-define-theme doric-earth light))
+  (doric-themes-define-theme doric-earth light "Minimalist theme with light background and brown hues"))
 
 (provide 'doric-earth-theme)
 ;;; doric-earth-theme.el ends here

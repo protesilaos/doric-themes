@@ -1,4 +1,4 @@
-;;; doric-fire-theme.el --- Minimalist dark theme -*- lexical-binding:t -*-
+;;; doric-fire-theme.el --- Minimalist theme with dark background and orange hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#2f4954"))
   "Palette of `doric-fire' theme.")
 
-  (doric-themes-define-theme doric-fire dark))
+  (doric-themes-define-theme doric-fire dark "Minimalist theme with dark background and orange hues"))
 
 (provide 'doric-fire-theme)
 ;;; doric-fire-theme.el ends here

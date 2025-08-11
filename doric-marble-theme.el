@@ -1,4 +1,4 @@
-;;; doric-marble-theme.el --- Minimalist light theme -*- lexical-binding:t -*-
+;;; doric-marble-theme.el --- Minimalist theme with light grey background and rocky hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#c1ebe4"))
   "Palette of `doric-marble' theme.")
 
-  (doric-themes-define-theme doric-marble light))
+  (doric-themes-define-theme doric-marble light "Minimalist theme with light grey background and rocky hues"))
 
 (provide 'doric-marble-theme)
 ;;; doric-marble-theme.el ends here

@@ -1,4 +1,4 @@
-;;; doric-pine-theme.el --- Minimalist dark theme -*- lexical-binding:t -*-
+;;; doric-pine-theme.el --- Minimalist theme with dark background and woody+earthly hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#2f495f"))
   "Palette of `doric-pine' theme.")
 
-  (doric-themes-define-theme doric-pine dark))
+  (doric-themes-define-theme doric-pine dark "Minimalist theme with dark background and woody+earthly hues"))
 
 (provide 'doric-pine-theme)
 ;;; doric-pine-theme.el ends here

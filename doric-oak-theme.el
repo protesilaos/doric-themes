@@ -1,4 +1,4 @@
-;;; doric-oak-theme.el --- Minimalist light theme -*- lexical-binding:t -*-
+;;; doric-oak-theme.el --- Minimalist theme with light background and woody+earthly hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#bee0db"))
   "Palette of `doric-oak' theme.")
 
-  (doric-themes-define-theme doric-oak light))
+  (doric-themes-define-theme doric-oak light "Minimalist theme with light background and woody+earthly hues"))
 
 (provide 'doric-oak-theme)
 ;;; doric-oak-theme.el ends here

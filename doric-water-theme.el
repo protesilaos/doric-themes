@@ -1,4 +1,4 @@
-;;; doric-water-theme.el --- Minimalist dark theme -*- lexical-binding:t -*-
+;;; doric-water-theme.el --- Minimalist theme with dark background and blue+teal hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#2f495f"))
   "Palette of `doric-water' theme.")
 
-  (doric-themes-define-theme doric-water dark))
+  (doric-themes-define-theme doric-water dark "Minimalist theme with dark background and blue+teal hues"))
 
 (provide 'doric-water-theme)
 ;;; doric-water-theme.el ends here

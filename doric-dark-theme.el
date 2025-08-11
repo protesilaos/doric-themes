@@ -1,4 +1,4 @@
-;;; doric-dark-theme.el --- Minimalist dark theme -*- lexical-binding:t -*-
+;;; doric-dark-theme.el --- Minimalist theme with dark background and cool hues -*- lexical-binding:t -*-
 
 ;; Copyright (C) 2025  Free Software Foundation, Inc.
 
@@ -74,7 +74,7 @@
       (bg-cyan "#2f4f54"))
   "Palette of `doric-dark' theme.")
 
-  (doric-themes-define-theme doric-dark dark))
+  (doric-themes-define-theme doric-dark dark "Minimalist theme with dark background and cool hues"))
 
 (provide 'doric-dark-theme)
 ;;; doric-dark-theme.el ends here
