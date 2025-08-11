@@ -406,6 +406,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-blame-margin
     match
     menu
+    message-separator
     mu4e-region-code
     notmuch-crypto-decryption
     notmuch-crypto-signature-bad
@@ -1029,7 +1030,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     marginalia-file-priv-dir
     marginalia-key
     message-mml
-    message-separator
     org-mode-line-clock-overrun
     package-status-avail-obso
     package-status-disabled
