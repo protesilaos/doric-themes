@@ -42,32 +42,32 @@
     (require 'doric-themes))
 
   (defvar doric-fire-palette
-    '((cursor "#e06e42")
-      (bg-main "#2a281d")
-      (fg-main "#f0e5e0")
+    '((cursor "#ef7839")
+      (bg-main "#282420")
+      (fg-main "#f5ceb0")
       (border "#706061")
 
-      (bg-shadow-subtle "#40332f")
+      (bg-shadow-subtle "#40332b")
       (fg-shadow-subtle "#afa497")
 
       (bg-neutral "#4f4542")
       (fg-neutral "#d9cfbe")
 
-      (bg-shadow-intense "#601a2f")
-      (fg-shadow-intense "#e2b0a4")
+      (bg-shadow-intense "#7c362c")
+      (fg-shadow-intense "#f3ac6f")
 
-      (bg-accent "#52402f")
-      (fg-accent "#e6a577")
+      (bg-accent "#56452f")
+      (fg-accent "#d6b577")
 
-      (fg-red "#eca28f")
-      (fg-green "#b9d0aa")
-      (fg-yellow "#c0b080")
+      (fg-red "#eca27f")
+      (fg-green "#b9d08a")
+      (fg-yellow "#c5ba80")
       (fg-blue "#9fbfe7")
       (fg-magenta "#e9acbf")
       (fg-cyan "#a0c0d0")
 
-      (bg-red "#54290f")
-      (bg-green "#29401f")
+      (bg-red "#54241f")
+      (bg-green "#2f401f")
       (bg-yellow "#504420")
       (bg-blue "#363457")
       (bg-magenta "#5a2f40")
