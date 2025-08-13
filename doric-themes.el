@@ -54,6 +54,7 @@
     doric-obsidian
     doric-pine
     doric-plum
+    doric-valley
     doric-water)
   "Dark themes.")
 
