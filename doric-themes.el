@@ -1484,7 +1484,7 @@ default a generic text that mentions the BACKGROUND-MODE."
 
             '(help-key-binding ((t :inherit (fixed-pitch bold-italic))))
 
-            '(line-number-current-line ((t :inherit (highlight bold))))
+            `(line-number-current-line ((t :inherit bold :background ,bg-accent :foreground ,fg-accent)))
 
             `(keycast-key ((t :inherit bold-italic :background ,fg-shadow-intense :foreground ,bg-main)))
 
