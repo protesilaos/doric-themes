@@ -39,7 +39,8 @@
 (eval-when-compile (require 'subr-x))
 
 (defconst doric-themes-light-themes
-  '(doric-cherry
+  '(doric-beach
+    doric-cherry
     doric-earth
     doric-light
     doric-marble
