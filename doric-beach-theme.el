@@ -42,7 +42,7 @@
     (require 'doric-themes))
 
   (defvar doric-beach-palette
-    '((cursor "#a07000")
+    '((cursor "#3f8cab")
       (bg-main "#eae3d8")
       (fg-main "#213937")
       (border "#b4afb0")
