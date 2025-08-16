@@ -359,6 +359,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     denote-faces-second
     denote-faces-time
     denote-faces-year
+    diary
     diredfl-date-time
     display-time-date-and-time
     ediff-current-diff-Ancestor
@@ -378,6 +379,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-search-date
     org-agenda-calendar-daterange
     org-agenda-column-dateline
+    org-agenda-diary
     org-date
     org-sexp-date
     proced-time-colon
@@ -651,6 +653,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     gnus-server-agent
     gnus-server-cloud-host
     hexl-address-region
+    holiday
     homoglyph
     ido-subdir
     log-view-message
@@ -690,7 +693,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     consult-file
     denote-faces-prompt-current-name
     denote-faces-title
-    diary
     dictionary-word-definition-face
     dired-mark
     dired-perm-write
@@ -766,7 +768,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-agenda-current-time
     org-agenda-date
     org-agenda-date-weekend
-    org-agenda-diary
     org-agenda-filter-category
     org-agenda-filter-effort
     org-agenda-filter-regexp
@@ -1069,6 +1070,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     custom-state
     custom-themed
     diary-anniversary
+    diary-time
     diff-function
     diff-index
     elfeed-search-tag-face
@@ -1097,7 +1099,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     gnus-group-news-low-empty
     gnus-server-offline
     help-argument-name
-    holiday
     line-number-minor-tick
     magit-branch-current
     magit-cherry-unmatched
