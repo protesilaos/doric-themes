@@ -66,12 +66,12 @@
       (fg-magenta "#e9acbf")
       (fg-cyan "#a0c0d0")
 
-      (bg-red "#621f33")
-      (bg-green "#19402f")
-      (bg-yellow "#50442f")
-      (bg-blue "#3a386b")
+      (bg-red "#5b301f")
+      (bg-green "#34502f")
+      (bg-yellow "#514e2f")
+      (bg-blue "#2a3f5d")
       (bg-magenta "#5a2f40")
-      (bg-cyan "#2f495f"))
+      (bg-cyan "#2f4e4f"))
   "Palette of `doric-valley' theme.")
 
   (doric-themes-define-theme doric-valley dark "Minimalist theme with dark background and indigo+gold hues"))
