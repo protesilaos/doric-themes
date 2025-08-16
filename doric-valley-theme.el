@@ -53,8 +53,8 @@
       (bg-neutral "#554f52")
       (fg-neutral "#d9cfbe")
 
-      (bg-shadow-intense "#5a5470")
-      (fg-shadow-intense "#d2cae7")
+      (bg-shadow-intense "#4a5e60")
+      (fg-shadow-intense "#b2e2c7")
 
       (bg-accent "#714d4c")
       (fg-accent "#f6c097")
