@@ -359,7 +359,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     denote-faces-second
     denote-faces-time
     denote-faces-year
-    diary
     diredfl-date-time
     display-time-date-and-time
     ediff-current-diff-Ancestor
@@ -381,7 +380,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-search-date
     org-agenda-calendar-daterange
     org-agenda-column-dateline
-    org-agenda-diary
     org-date
     org-sexp-date
     proced-time-colon
@@ -395,6 +393,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     company-tooltip-scrollbar-track
     consult-preview-line
     corfu-popupinfo
+    diary
     ediff-even-diff-A
     ediff-even-diff-Ancestor
     ediff-even-diff-B
@@ -420,6 +419,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-crypto-signature-good-key
     notmuch-crypto-signature-unknown
     org-agenda-clocking
+    org-agenda-diary
     org-agenda-restriction-lock
     org-clock-overlay
     secondary-selection
