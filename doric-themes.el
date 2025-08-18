@@ -549,7 +549,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     marginalia-type
     marginalia-value
     marginalia-version
-    markdown-metadata-key-face
     message-header-mml
     message-header-name
     message-header-newsgroups
@@ -612,7 +611,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-time-grid
     org-upcoming-deadline
     org-upcoming-distant-deadline
-    package-help-section-name
     package-status-available
     package-status-built-in
     package-status-dependency
@@ -725,7 +723,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     icomplete-vertical-selected-prefix-indicator-face
     ido-only-match
     icon
-    log-edit-header
     kmacro-menu-flagged
     kmacro-menu-mark
     kmacro-menu-marked
@@ -874,7 +871,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     geiser-font-lock-repl-prompt
     git-commit-comment-action
     git-commit-comment-branch-local
-    git-commit-comment-heading
     git-commit-summary
     gnus-emphasis-bold
     gnus-header-content
@@ -996,6 +992,13 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     xref-file-header
     ztreep-diff-header-face
     ztreep-header-face))
+
+(defconst doric-themes-bold-intense-faces
+  '(git-commit-comment-heading
+    git-commit-summary
+    log-edit-header
+    markdown-metadata-key-face
+    package-help-section-name))
 
 (defconst doric-themes-bold-italic-faces
   '(appt-notification
@@ -1401,6 +1404,7 @@ default a generic text that mentions the BACKGROUND-MODE."
             ,@(doric-themes-prepare-faces doric-themes-success-underline-faces :underline '(list :style 'wave :color fg-cyan))
 
             ,@(doric-themes-prepare-faces doric-themes-bold-faces :inherit ''bold :foreground 'fg-shadow-intense)
+            ,@(doric-themes-prepare-faces doric-themes-bold-intense-faces :inherit ''bold :foreground 'fg-main)
             ,@(doric-themes-prepare-faces doric-themes-bold-italic-faces :inherit ''bold-italic :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-italic-faces :inherit ''italic :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-underline-link-faces :inherit ''underline :foreground 'fg-accent)
