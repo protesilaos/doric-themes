@@ -997,6 +997,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(git-commit-comment-heading
     git-commit-summary
     log-edit-header
+    magit-section-heading
     markdown-metadata-key-face
     package-help-section-name))
 
@@ -1501,7 +1502,6 @@ default a generic text that mentions the BACKGROUND-MODE."
             `(magit-diff-hunk-heading-highlight ((t :inherit bold :background ,bg-neutral)))
             `(magit-diff-hunk-heading-selection ((t :inherit bold :background ,bg-accent)))
             `(magit-diff-lines-heading ((t :background ,fg-shadow-subtle :foreground ,bg-main)))
-            `(magit-section-heading ((t :inherit bold)))
             `(magit-section-heading-selection ((t :inherit bold :background ,bg-accent)))
             `(magit-section-highlight ((t :background ,bg-shadow-subtle)))
 
