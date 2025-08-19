@@ -373,6 +373,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-log-author
     magit-log-date
     marginalia-date
+    message-header-cc
+    message-header-other
     nerd-icons-completion-dir-face
     nerd-icons-dired-dir-face
     nerd-icons-ibuffer-dir-face
@@ -549,8 +551,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     marginalia-type
     marginalia-value
     marginalia-version
-    message-header-mml
-    message-header-name
     message-header-newsgroups
     message-header-xheader
     mu4e-header-face
@@ -921,8 +921,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     markdown-header-face-4
     markdown-header-face-5
     markdown-header-face-6
-    message-header-cc
-    message-header-other
     message-header-subject
     message-header-to
     minibuffer-prompt
@@ -999,6 +997,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     log-edit-header
     magit-section-heading
     markdown-metadata-key-face
+    message-header-name
     package-help-section-name))
 
 (defconst doric-themes-bold-italic-faces
