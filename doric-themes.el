@@ -847,7 +847,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     elfeed-log-error-level-face
     elfeed-log-info-level-face
     elfeed-log-warn-level-face
-    elfeed-search-unread-title-face
     erc-prompt-face
     eshell-ls-archive
     eshell-ls-backup
@@ -992,7 +991,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     ztreep-header-face))
 
 (defconst doric-themes-bold-intense-faces
-  '(git-commit-comment-heading
+  '(elfeed-search-unread-title-face
+    git-commit-comment-heading
     git-commit-summary
     log-edit-header
     magit-section-heading
