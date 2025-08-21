@@ -651,7 +651,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     gnus-server-agent
     gnus-server-cloud-host
     hexl-address-region
-    holiday
     homoglyph
     ido-subdir
     log-view-message
@@ -1480,6 +1479,8 @@ default a generic text that mentions the BACKGROUND-MODE."
                 :background "#ffffff" :foreground "#806f00")
                (((class color) (min-colors 88) (background dark))
                 :background "#000000" :foreground "#cab000")))
+
+            `(holiday ((t :inherit bold :foreground ,fg-accent)))
 
             `(isearch ((t :background ,bg-shadow-intense :foreground ,fg-main)))
             `(isearch-fail ((t :inherit (underline bold))))
