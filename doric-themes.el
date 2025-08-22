@@ -349,7 +349,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(all-the-icons-completion-dir-face
     all-the-icons-dired-dir-face
     all-the-icons-ibuffer-dir-face
-    calendar-month-header
+    calendar-weekday-header
     change-log-date
     denote-faces-date
     denote-faces-day
@@ -600,7 +600,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-tree-no-match-face
     org-agenda-dimmed-todo-face
     org-agenda-done
-    org-agenda-structure-secondary
     org-column
     org-done
     org-headline-done
@@ -766,7 +765,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-agenda-filter-effort
     org-agenda-filter-regexp
     org-agenda-filter-tags
-    org-agenda-structure-filter
     org-archived
     org-default
     org-document-info
@@ -806,6 +804,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     breadcrumb-imenu-leaf-face
     breadcrumb-project-leaf-face
     buffer-menu-buffer
+    calendar-month-header
     change-log-name
     change-log-file
     circe-prompt-face
@@ -921,7 +920,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     minibuffer-prompt
     mode-line-buffer-id
     mode-line-emphasis
-    org-agenda-structure
+    org-agenda-date
     org-checkbox-statistics-done
     org-checkbox-statistics-todo
     org-document-title
@@ -985,15 +984,14 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     ztreep-header-face))
 
 (defconst doric-themes-bold-intense-faces
-  '(calendar-weekday-header
-    elfeed-search-unread-title-face
+  '(elfeed-search-unread-title-face
     git-commit-comment-heading
     git-commit-summary
     log-edit-header
     magit-section-heading
     markdown-metadata-key-face
     message-header-name
-    org-agenda-date
+    org-agenda-structure
     package-help-section-name))
 
 (defconst doric-themes-bold-italic-faces
@@ -1112,6 +1110,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-wash-cited-text
     org-agenda-calendar-event
     org-agenda-calendar-sexp
+    org-agenda-structure-secondary
     org-inline-src-block
     org-latex-and-related
     org-macro
