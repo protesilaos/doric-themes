@@ -1558,6 +1558,13 @@ default a generic text that mentions the BACKGROUND-MODE."
             `(package-mark-delete-line ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
             `(package-mark-install-line ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
 
+            `(pulsar-blue ((t :background ,bg-blue)))
+            `(pulsar-cyan ((t :background ,bg-cyan)))
+            `(pulsar-green ((t :background ,bg-green)))
+            `(pulsar-magenta ((t :background ,bg-magenta)))
+            `(pulsar-red ((t :background ,bg-red)))
+            `(pulsar-yellow ((t :background ,bg-yellow)))
+
             '(rcirc-monospace-text ((t :inherit fixed-pitch)))
             '(rcirc-server ((t :inherit font-lock-comment-face)))
 
