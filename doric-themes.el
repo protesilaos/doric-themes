@@ -834,8 +834,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     denote-faces-subdirectory
     dictionary-button-face
     diff-nonexistent
-    dired-header
-    diredfl-dir-heading
     ediff-fine-diff-Ancestor
     edmacro-label
     elfeed-log-debug-level-face
@@ -984,7 +982,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     ztreep-header-face))
 
 (defconst doric-themes-bold-intense-faces
-  '(elfeed-search-unread-title-face
+  '(dired-header
+    diredfl-dir-heading
+    elfeed-search-unread-title-face
     git-commit-comment-heading
     git-commit-summary
     log-edit-header
