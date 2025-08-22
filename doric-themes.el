@@ -1477,7 +1477,7 @@ default a generic text that mentions the BACKGROUND-MODE."
                (((class color) (min-colors 88) (background dark))
                 :background "#000000" :foreground "#cab000")))
 
-            `(holiday ((t :inherit bold :foreground ,fg-accent)))
+            `(holiday ((t :inherit bold :background ,bg-shadow-subtle :foreground ,fg-main)))
 
             `(isearch ((t :background ,bg-shadow-intense :foreground ,fg-main)))
             `(isearch-fail ((t :inherit (underline bold))))
