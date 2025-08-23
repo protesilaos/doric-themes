@@ -862,8 +862,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-lock-regexp-grouping-backslash
     font-lock-regexp-grouping-construct
     geiser-font-lock-repl-prompt
-    git-commit-comment-action
-    git-commit-comment-branch-local
     git-commit-summary
     gnus-emphasis-bold
     gnus-header-content
@@ -1019,6 +1017,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-lock-builtin-face
     font-lock-preprocessor-face
     font-lock-type-face
+    git-commit-comment-action
+    git-commit-comment-branch-remote
+    git-commit-comment-branch-local
     gnus-emphasis-bold-italic
     gnus-server-denied
     ibuffer-locked-buffer
