@@ -603,8 +603,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-column
     org-done
     org-headline-done
-    org-scheduled
-    org-scheduled-today
     org-special-keyword
     org-tag
     org-time-grid
@@ -659,6 +657,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-tree-match-author-face
     notmuch-search-flagged-face
     org-headline-todo
+    org-scheduled-previously
     org-table-row
     org-todo
     org-warning
@@ -771,6 +770,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-inline-src-block
     org-latex-and-related
     org-mode-line-clock
+    org-scheduled
+    org-scheduled-today
     proced-cpu
     proced-mark
     proced-memory-low-usage
@@ -1550,7 +1551,6 @@ default a generic text that mentions the BACKGROUND-MODE."
             `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             '(org-property-value ((t :inherit fixed-pitch)))
             '(org-quote ((t :inherit org-block)))
-            `(org-scheduled-previously ((t :inherit bold :foreground ,fg-shadow-subtle)))
             `(org-verbatim ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
             '(org-verse ((t :inherit org-block)))
             `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
