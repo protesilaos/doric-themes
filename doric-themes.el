@@ -1487,9 +1487,22 @@ default a generic text that mentions the BACKGROUND-MODE."
 
             '(help-key-binding ((t :inherit (fixed-pitch bold-italic))))
 
-            `(line-number-current-line ((t :inherit bold :background ,bg-accent :foreground ,fg-accent)))
-
             `(keycast-key ((t :inherit bold-italic :background ,fg-shadow-intense :foreground ,bg-main)))
+
+            `(lin-blue ((t :background ,bg-blue)))
+            `(lin-cyan ((t :background ,bg-cyan)))
+            `(lin-green ((t :background ,bg-green)))
+            `(lin-magenta ((t :background ,bg-magenta)))
+            `(lin-red ((t :background ,bg-red)))
+            `(lin-yellow ((t :background ,bg-yellow)))
+            `(lin-blue-override-fg ((t :background ,bg-blue :foreground ,fg-main)))
+            `(lin-cyan-override-fg ((t :background ,bg-cyan :foreground ,fg-main)))
+            `(lin-green-override-fg ((t :background ,bg-green :foreground ,fg-main)))
+            `(lin-magenta-override-fg ((t :background ,bg-magenta :foreground ,fg-main)))
+            `(lin-red-override-fg ((t :background ,bg-red :foreground ,fg-main)))
+            `(lin-yellow-override-fg ((t :background ,bg-yellow :foreground ,fg-main)))
+
+            `(line-number-current-line ((t :inherit bold :background ,bg-accent :foreground ,fg-accent)))
 
             `(magit-diff-context-highlight ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
             `(magit-diff-file-heading ((t :inherit bold :foreground ,fg-accent)))
