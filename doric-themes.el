@@ -36,6 +36,7 @@
 ;;; Code:
 
 (require 'seq)
+(require 'color)
 (eval-when-compile (require 'subr-x))
 
 (defconst doric-themes-light-themes
@@ -1307,6 +1308,14 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
      (lambda (face)
        (backquote (list ',face (list (list t ,@attributes)))))
      faces)))
+
+(defun doric-themes-adjust-value (hex-rgb percentage)
+  "Adjust value of HEX-RGB colour by PERCENTAGE."
+  (pcase-let* ((`(,r ,g ,b) (color-name-to-rgb hex-rgb))
+               (fn (if (color-dark-p (list r g b))
+                       #'color-lighten-name
+                     #'color-darken-name)))
+    (funcall fn hex-rgb percentage)))
 
 ;;;###autoload
 (defmacro doric-themes-define-theme (name background-mode &optional description)
