@@ -1420,13 +1420,13 @@ default a generic text that mentions the BACKGROUND-MODE."
 
             ,@(doric-themes-prepare-faces doric-themes-diff-added-faces :background 'bg-green :foreground 'fg-green)
             ,@(doric-themes-prepare-faces doric-themes-diff-added-faces-foreground-only :foreground 'fg-green)
-            ,@(doric-themes-prepare-faces doric-themes-diff-added-refine-faces :inherit ''bold)
+            ,@(doric-themes-prepare-faces doric-themes-diff-added-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-green 10))
             ,@(doric-themes-prepare-faces doric-themes-diff-changed-faces :background 'bg-yellow :foreground 'fg-yellow)
             ,@(doric-themes-prepare-faces doric-themes-diff-changed-faces-foreground-only :foreground 'fg-yellow)
-            ,@(doric-themes-prepare-faces doric-themes-diff-changed-refine-faces :inherit ''bold)
+            ,@(doric-themes-prepare-faces doric-themes-diff-changed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-yellow 10))
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces :background 'bg-red :foreground 'fg-red)
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces-foreground-only :foreground 'fg-red)
-            ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold)
+            ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-red 10))
 
             ,@(doric-themes-prepare-faces doric-themes-cite-odd :inherit ''italic :foreground 'fg-accent)
             ,@(doric-themes-prepare-faces doric-themes-cite-even :inherit ''italic :foreground 'fg-shadow-subtle)
