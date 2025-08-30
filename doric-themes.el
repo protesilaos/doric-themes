@@ -1192,14 +1192,22 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(denote-faces-prompt-new-name
     diff-added
     diff-indicator-added
-    ediff-current-diff-B
-    magit-diff-added-highlight
+    magit-diff-added
     magit-diffstat-added
     smerge-lower
     ztreep-diff-model-add-face))
 
-(defconst doric-themes-diff-added-faces-foreground-only
-  '(magit-diff-added))
+(defconst doric-themes-diff-added-highlight-faces
+  '(ediff-current-diff-B
+    magit-diff-added-highlight))
+
+(defconst doric-themes-diff-changed-highlight-faces
+  '(ediff-current-diff-C
+    magit-diff-base-highlight))
+
+(defconst doric-themes-diff-removed-highlight-faces
+  '(ediff-current-diff-A
+    magit-diff-removed-highlight))
 
 (defconst doric-themes-diff-added-refine-faces
   '(diff-refine-added
@@ -1210,12 +1218,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(diff-changed
     diff-changed-unspecified
     diff-indicator-changed
-    ediff-current-diff-C
-    magit-diff-base-highlight
+    magit-diff-base
     smerge-base))
-
-(defconst doric-themes-diff-changed-faces-foreground-only
-  '(magit-diff-base))
 
 (defconst doric-themes-diff-changed-refine-faces
   '(diff-refine-changed
@@ -1226,14 +1230,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(denote-faces-prompt-old-name
     diff-removed
     diff-indicator-removed
-    ediff-current-diff-A
-    magit-diff-removed-highlight
+    magit-diff-removed
     magit-diffstat-removed
     smerge-upper
     ztreep-diff-model-diff-face))
-
-(defconst doric-themes-diff-removed-faces-foreground-only
-  '(magit-diff-removed))
 
 (defconst doric-themes-diff-removed-refine-faces
   '(diff-refine-removed
@@ -1433,14 +1433,14 @@ default a generic text that mentions the BACKGROUND-MODE."
 
             ,@(doric-themes-prepare-faces doric-themes-selection-faces :background 'bg-accent)
 
-            ,@(doric-themes-prepare-faces doric-themes-diff-added-faces :background 'bg-green :foreground 'fg-green)
-            ,@(doric-themes-prepare-faces doric-themes-diff-added-faces-foreground-only :foreground 'fg-green)
+            ,@(doric-themes-prepare-faces doric-themes-diff-added-faces :background '(doric-themes-adjust-value bg-green -10) :foreground 'fg-neutral)
+            ,@(doric-themes-prepare-faces doric-themes-diff-added-highlight-faces :background 'bg-green :foreground 'fg-green)
             ,@(doric-themes-prepare-faces doric-themes-diff-added-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-green 10))
-            ,@(doric-themes-prepare-faces doric-themes-diff-changed-faces :background 'bg-yellow :foreground 'fg-yellow)
-            ,@(doric-themes-prepare-faces doric-themes-diff-changed-faces-foreground-only :foreground 'fg-yellow)
+            ,@(doric-themes-prepare-faces doric-themes-diff-changed-faces :background '(doric-themes-adjust-value bg-yellow -10) :foreground 'fg-neutral)
+            ,@(doric-themes-prepare-faces doric-themes-diff-changed-highlight-faces :background 'bg-yellow :foreground 'fg-yellow)
             ,@(doric-themes-prepare-faces doric-themes-diff-changed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-yellow 10))
-            ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces :background 'bg-red :foreground 'fg-red)
-            ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces-foreground-only :foreground 'fg-red)
+            ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces :background '(doric-themes-adjust-value bg-red -10) :foreground 'fg-neutral)
+            ,@(doric-themes-prepare-faces doric-themes-diff-removed-highlight-faces :background 'bg-red :foreground 'fg-red)
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-red 10))
 
             ,@(doric-themes-prepare-faces doric-themes-cite-odd :inherit ''italic :foreground 'fg-accent)
