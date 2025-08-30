@@ -66,8 +66,8 @@
       (fg-magenta "#e9acbf")
       (fg-cyan "#a0c0d0")
 
-      (bg-red "#5b301f")
-      (bg-green "#34502f")
+      (bg-red "#613229")
+      (bg-green "#325331")
       (bg-yellow "#514e2f")
       (bg-blue "#2a3f5d")
       (bg-magenta "#5a2f40")
