@@ -987,6 +987,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     elfeed-search-unread-title-face
     git-commit-comment-heading
     git-commit-summary
+    line-number-current-line
     log-edit-header
     magit-section-heading
     markdown-metadata-key-face
@@ -1530,8 +1531,6 @@ default a generic text that mentions the BACKGROUND-MODE."
             `(lin-magenta-override-fg ((t :background ,bg-magenta :foreground ,fg-main)))
             `(lin-red-override-fg ((t :background ,bg-red :foreground ,fg-main)))
             `(lin-yellow-override-fg ((t :background ,bg-yellow :foreground ,fg-main)))
-
-            `(line-number-current-line ((t :inherit bold :background ,bg-accent :foreground ,fg-accent)))
 
             `(magit-diff-context-highlight ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
             `(magit-diff-file-heading ((t :inherit bold :foreground ,fg-accent)))
