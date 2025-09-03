@@ -173,8 +173,6 @@ With optional PROMPT string, use it.  Else use a generic prompt."
 ;;;###autoload
 (defun doric-themes-select (theme)
   "Load a Doric THEME using minibuffer completion.
-Disable other themes per `doric-themes-disable-other-themes'.
-
 Run `doric-themes-after-load-theme-hook' after loading the theme."
   (interactive (list (doric-themes-select-prompt)))
   (doric-themes-load-theme theme))
