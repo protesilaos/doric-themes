@@ -299,7 +299,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     avy-lead-face-0
     avy-lead-face-1
     avy-lead-face-2
-    calendar-today
     completions-highlight
     consult-highlight-mark
     consult-highlight-match
@@ -1391,6 +1390,11 @@ default a generic text that mentions the BACKGROUND-MODE."
 
             `(aw-leading-char-face ((t :inherit bold-italic :height 1.5 :foreground ,fg-accent)))
 
+            `(calendar-today
+              ((default :background ,bg-accent :foreground ,fg-main)
+               (((supports :box t))
+                :box (:line-width (-1 . -1) :color ,fg-accent))))
+
             `(company-tooltip ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
 
             `(corfu-default ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
@@ -1576,10 +1580,7 @@ default a generic text that mentions the BACKGROUND-MODE."
             '(org-checkbox ((t :inherit fixed-pitch)))
             `(org-code ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
             `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
-            `(org-date-selected
-              ((default :background ,bg-accent :foreground ,fg-main)
-               (((supports :box t))
-                :box (:line-width (-1 . -1) :color ,fg-accent))))
+            '(org-date-selected ((t :inherit calendar-today)))
             `(org-document-info-keyword ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             `(org-ellipsis (( ))) ; inherits from the heading's color
