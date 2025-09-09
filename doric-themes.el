@@ -385,7 +385,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     company-tooltip-scrollbar-track
     consult-preview-line
     corfu-popupinfo
-    diary
     ediff-even-diff-A
     ediff-even-diff-Ancestor
     ediff-even-diff-B
@@ -672,6 +671,11 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     widget-button-pressed
     woman-addition
     ztreep-node-face))
+
+(defconst doric-themes-bold-accent-foreground-only-faces
+  '(diary
+    magit-diff-file-heading
+    org-imminent-deadline))
 
 (defconst doric-themes-main-foreground-only-faces
   '(border
@@ -1097,6 +1101,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     gnus-group-news-low-empty
     gnus-server-offline
     help-argument-name
+    holiday
     line-number-minor-tick
     magit-branch-current
     magit-cherry-unmatched
@@ -1418,6 +1423,7 @@ default a generic text that mentions the BACKGROUND-MODE."
             ,@(doric-themes-prepare-faces doric-themes-intense-shadow-foreground-only-faces :foreground 'fg-shadow-intense)
             ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-foreground-only-faces :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-accent-foreground-only-faces :foreground 'fg-accent)
+            ,@(doric-themes-prepare-faces doric-themes-bold-accent-foreground-only-faces :inherit ''bold  :foreground 'fg-accent)
             ,@(doric-themes-prepare-faces doric-themes-main-foreground-only-faces :foreground 'fg-main)
 
             ,@(doric-themes-prepare-faces doric-themes-error-foreground-only-faces :inherit ''bold :foreground 'fg-red)
@@ -1509,8 +1515,6 @@ default a generic text that mentions the BACKGROUND-MODE."
                (((class color) (min-colors 88) (background dark))
                 :background "#000000" :foreground "#cab000")))
 
-            `(holiday ((t :inherit bold :background ,bg-shadow-subtle :foreground ,fg-main)))
-
             `(isearch ((t :background ,bg-shadow-intense :foreground ,fg-main)))
             `(isearch-fail ((t :inherit (underline bold))))
             `(isearch-group-1 ((t :background ,bg-accent :foreground ,fg-accent)))
@@ -1535,7 +1539,6 @@ default a generic text that mentions the BACKGROUND-MODE."
             `(lin-yellow-override-fg ((t :background ,bg-yellow :foreground ,fg-main)))
 
             `(magit-diff-context-highlight ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
-            `(magit-diff-file-heading ((t :inherit bold :foreground ,fg-accent)))
             `(magit-diff-file-heading-highlight ((t :inherit magit-diff-file-heading :background ,bg-shadow-subtle)))
             `(magit-diff-file-heading-selection ((t :inherit bold :background ,bg-accent)))
             `(magit-diff-hunk-heading ((t :background ,bg-shadow-subtle)))
@@ -1586,7 +1589,6 @@ default a generic text that mentions the BACKGROUND-MODE."
             `(org-ellipsis (( ))) ; inherits from the heading's color
             '(org-formula ((t :inherit fixed-pitch)))
             `(org-hide ((t :foreground ,bg-main)))
-            `(org-imminent-deadline ((t :inherit bold :foreground ,fg-accent)))
             `(org-indent ((t :inherit (fixed-pitch org-hide))))
             `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             '(org-property-value ((t :inherit fixed-pitch)))
