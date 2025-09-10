@@ -1396,9 +1396,9 @@ default a generic text that mentions the BACKGROUND-MODE."
             `(aw-leading-char-face ((t :inherit bold-italic :height 1.5 :foreground ,fg-accent)))
 
             `(calendar-today
-              ((default :background ,bg-accent :foreground ,fg-main)
+              ((default :foreground ,fg-accent :inverse-video t)
                (((supports :box t))
-                :box (:line-width (-1 . -1) :color ,fg-accent))))
+                :box (:line-width (-1 . -1) :color ,fg-main))))
 
             `(company-tooltip ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
 
