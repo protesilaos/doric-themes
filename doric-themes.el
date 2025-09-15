@@ -303,10 +303,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     consult-highlight-mark
     consult-highlight-match
     consult-preview-insertion
-    custom-button-mouse
-    custom-button-pressed
-    custom-button-pressed-unraised
-    custom-button-unraised
     header-line-highlight
     highlight
     hl-line
@@ -332,7 +328,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     company-tooltip-selection
     company-tooltip-scrollbar-thumb
     corfu-current
-    custom-button
     eww-form-file
     eww-form-submit
     gnus-summary-cancelled
@@ -1405,6 +1400,22 @@ default a generic text that mentions the BACKGROUND-MODE."
               `(company-tooltip ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
 
               `(corfu-default ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+
+              `(custom-button
+                ((default :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
+                 (((supports :box t))
+                  :box (:line-width 1 :color ,border :style released-button))
+                 (t :underline ,border)))
+              `(custom-button-mouse
+                ((default :background ,bg-accent :foreground ,fg-accent)
+                 (((supports :box t))
+                  :box (:line-width 1 :color ,border :style released-button))
+                 (t :underline ,border)))
+              `(custom-button-pressed
+                ((default :background ,bg-main :foreground ,fg-accent)
+                 (((supports :box t))
+                  :box (:line-width 1 :color ,border :style pressed-button))
+                 (t :underline ,border)))
 
               '(devdocs-code-block ((t :inherit fixed-pitch)))
 
