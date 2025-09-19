@@ -1402,17 +1402,17 @@ default a generic text that mentions the BACKGROUND-MODE."
               `(corfu-default ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
 
               `(custom-button
-                ((default :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
+                ((default :inherit variable-pitch :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
                  (((supports :box t))
                   :box (:line-width 1 :color ,border :style released-button))
                  (t :underline ,border)))
               `(custom-button-mouse
-                ((default :background ,bg-accent :foreground ,fg-accent)
+                ((default :inherit variable-pitch :background ,bg-accent :foreground ,fg-accent)
                  (((supports :box t))
                   :box (:line-width 1 :color ,border :style released-button))
                  (t :underline ,border)))
               `(custom-button-pressed
-                ((default :background ,bg-main :foreground ,fg-accent)
+                ((default :inherit variable-pitch :background ,bg-main :foreground ,fg-accent)
                  (((supports :box t))
                   :box (:line-width 1 :color ,border :style pressed-button))
                  (t :underline ,border)))
