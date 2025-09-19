@@ -1601,6 +1601,16 @@ default a generic text that mentions the BACKGROUND-MODE."
               `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
               `(org-ellipsis (( ))) ; inherits from the heading's color
               '(org-formula ((t :inherit fixed-pitch)))
+
+              `(org-habit-alert-face ((t :background ,(doric-themes-adjust-value "#ffff00" 10) :foreground "black")))
+              `(org-habit-alert-future-face ((t :background ,(doric-themes-adjust-value "#ffff00" 50) :foreground "white")))
+              `(org-habit-clear-face ((t :background ,(doric-themes-adjust-value "#0000dd" 10) :foreground "white")))
+              `(org-habit-clear-future-face ((t :background ,(doric-themes-adjust-value "#0000dd" 50) :foreground "white")))
+              `(org-habit-overdue-face ((t :background ,(doric-themes-adjust-value "#dd0000" 10) :foreground "white")))
+              `(org-habit-overdue-future-face ((t :background ,(doric-themes-adjust-value "#dd0000" 50) :foreground "black")))
+              `(org-habit-ready-face ((t :background ,(doric-themes-adjust-value "#00bb00" 10) :foreground "white")))
+              `(org-habit-ready-future-face ((t :background ,(doric-themes-adjust-value "#00bb00" 50) :foreground "white")))
+
               `(org-hide ((t :foreground ,bg-main)))
               `(org-indent ((t :inherit (fixed-pitch org-hide))))
               `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
