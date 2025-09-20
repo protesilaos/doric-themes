@@ -1196,15 +1196,21 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     ztreep-diff-model-add-face))
 
 (defconst doric-themes-diff-added-highlight-faces
-  '(ediff-current-diff-B
+  '(diff-hl-insert
+    diff-hl-dired-insert
+    ediff-current-diff-B
     magit-diff-added-highlight))
 
 (defconst doric-themes-diff-changed-highlight-faces
-  '(ediff-current-diff-C
+  '(diff-hl-change
+    diff-hl-dired-change
+    ediff-current-diff-C
     magit-diff-base-highlight))
 
 (defconst doric-themes-diff-removed-highlight-faces
-  '(ediff-current-diff-A
+  '(diff-hl-delete
+    diff-hl-dired-delete
+    ediff-current-diff-A
     magit-diff-removed-highlight))
 
 (defconst doric-themes-diff-added-refine-faces
