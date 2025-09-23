@@ -1368,6 +1368,9 @@ default a generic text that mentions the BACKGROUND-MODE."
               `(separator-line ((t :underline ,border)))
               `(scroll-bar ((t :background ,bg-main :foreground ,border)))
               `(fill-column-indicator ((t :foreground ,bg-shadow-intense)))
+              `(minibuffer-nonselected
+                ((((supports :strike-through t)) :strike-through t)
+                 (t :inverse-video t)))
               `(tooltip ((t :background ,bg-accent :foreground ,fg-accent)))
               `(tty-menu-disabled-face ((t :background ,bg-accent :foreground ,fg-shadow-subtle)))
               `(tty-menu-enabled-face ((t :background ,bg-accent :foreground ,fg-main)))
