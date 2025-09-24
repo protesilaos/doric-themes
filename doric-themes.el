@@ -705,7 +705,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-lock-negation-char-face
     font-lock-number-face
     font-lock-punctuation-face
-    gnus-header-content
     gnus-server-opened
     gnus-summary-high-undownloaded
     gnus-summary-high-unread
@@ -781,7 +780,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     shortdoc-section
     so-long-mode-line-inactive
     speedbar-file-face
-    substitute-match
     tabulated-list-fake-header
     vc-dir-directory
     vc-dir-file
@@ -816,7 +814,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     consult-async-finished
     consult-async-running
     consult-async-split
-    consult-file
     css-property
     custom-face-tag
     custom-group-subtitle
@@ -857,7 +854,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-lock-regexp-grouping-backslash
     font-lock-regexp-grouping-construct
     geiser-font-lock-repl-prompt
-    git-commit-summary
     gnus-emphasis-bold
     gnus-header-content
     gnus-header-from
