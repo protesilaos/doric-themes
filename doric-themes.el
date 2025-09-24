@@ -764,8 +764,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-archived
     org-default
     org-document-info
-    org-inline-src-block
-    org-latex-and-related
     org-mode-line-clock
     org-scheduled
     org-scheduled-today
