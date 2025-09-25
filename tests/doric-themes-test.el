@@ -46,14 +46,19 @@
     variables)
   "List of symbols with Doric themes variables for face groups.")
 
+(defun dtt-is-member-p (x y elements)
+  "Return non-nil if X and Y are members of ELEMENTS."
+  (and (memq x elements) (memq y elements)))
+
 (ert-deftest dtt-distinct-faces ()
   (should-not
-   (catch 'exit
+   (let ((matches nil))
      (dolist (x dtt-face-groups)
        (dolist (y dtt-face-groups)
-         (unless (eq x y)
+         (unless (or (eq x y) (dtt-is-member-p x y (delete-dups (flatten-list (mapcar #'car matches)))))
            (when-let* ((match (seq-intersection (symbol-value x) (symbol-value y))))
-             (throw 'exit (list x y match)))))))))
+             (push (cons (cons x y) match) matches)))))
+     matches)))
 
 (provide 'doric-themes-test)
 ;;; doric-themes-test.el ends here
