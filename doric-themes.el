@@ -399,11 +399,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     menu
     message-separator
     mu4e-region-code
-    notmuch-crypto-decryption
-    notmuch-crypto-signature-bad
-    notmuch-crypto-signature-good
-    notmuch-crypto-signature-good-key
-    notmuch-crypto-signature-unknown
     org-agenda-clocking
     org-agenda-diary
     org-agenda-restriction-lock
@@ -982,6 +977,11 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-section-heading
     markdown-metadata-key-face
     message-header-name
+    notmuch-crypto-decryption
+    notmuch-crypto-signature-bad
+    notmuch-crypto-signature-good
+    notmuch-crypto-signature-good-key
+    notmuch-crypto-signature-unknown
     org-agenda-structure
     package-help-section-name))
 
