@@ -271,7 +271,7 @@ respectively."
      "Variant"
      '((?d "dark" "Load a random dark theme")
        (?l "light" "Load a random light theme"))
-     "Limit to the dark or light subset of the Ef themes collection."))))
+     "Limit to the dark or light subset of the Doric themes collection."))))
 
 ;;;###autoload
 (defun doric-themes-load-random (&optional variant)
