@@ -1333,8 +1333,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 ;;;###autoload
 (defmacro doric-themes-define-theme (name background-mode &optional description)
   "Define theme with NAME and `light' or `dark' BACKGROUND-MODE.
-With optional DESCRIPTION use it to describe the theme, otherwise
-default a generic text that mentions the BACKGROUND-MODE."
+With optional DESCRIPTION, use it to describe the theme, otherwise
+default to a generic text that mentions the BACKGROUND-MODE."
   (declare (indent 0))
   (unless (memq background-mode '(light dark))
     (error "The BACKGROUND-MODE must be either `light' or `dark'"))
@@ -1596,7 +1596,7 @@ default a generic text that mentions the BACKGROUND-MODE."
               `(org-block ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
               `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral :extend t)))
               `(org-block-end-line ((t :inherit org-block-begin-line)))
-              '(org-checkbox ((t :inherit fixed-pitch)))
+              '(org-checkbox ((t :inherit (fixed-pitch bold))))
               `(org-code ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
               `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
               '(org-date-selected ((t :inherit calendar-today)))
@@ -1618,7 +1618,7 @@ default a generic text that mentions the BACKGROUND-MODE."
               `(org-indent ((t :inherit (fixed-pitch org-hide))))
               `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
               '(org-property-value ((t :inherit fixed-pitch)))
-              '(org-quote ((t :inherit org-block)))
+              '(org-quote ((t :inherit (italic org-block))))
               `(org-verbatim ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
               '(org-verse ((t :inherit org-block)))
               `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
@@ -1674,7 +1674,7 @@ default a generic text that mentions the BACKGROUND-MODE."
               `(whitespace-missing-newline-at-eof ((t :foreground ,bg-shadow-intense)))
               `(whitespace-newline ((t :foreground ,bg-shadow-intense)))
               `(whitespace-space ((t :foreground ,bg-shadow-intense)))
-              
+
               `(whitespace-space-before-tab ((t :foreground ,bg-shadow-intense)))
               `(whitespace-tab ((t :foreground ,bg-shadow-intense)))))
            (custom-theme-set-variables
