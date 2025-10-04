@@ -1333,8 +1333,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 ;;;###autoload
 (defmacro doric-themes-define-theme (name background-mode &optional description)
   "Define theme with NAME and `light' or `dark' BACKGROUND-MODE.
-With optional DESCRIPTION use it to describe the theme, otherwise
-default a generic text that mentions the BACKGROUND-MODE."
+With optional DESCRIPTION, use it to describe the theme, otherwise
+default to a generic text that mentions the BACKGROUND-MODE."
   (declare (indent 0))
   (unless (memq background-mode '(light dark))
     (error "The BACKGROUND-MODE must be either `light' or `dark'"))
