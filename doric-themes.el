@@ -1674,7 +1674,7 @@ default a generic text that mentions the BACKGROUND-MODE."
               `(whitespace-missing-newline-at-eof ((t :foreground ,bg-shadow-intense)))
               `(whitespace-newline ((t :foreground ,bg-shadow-intense)))
               `(whitespace-space ((t :foreground ,bg-shadow-intense)))
-              
+
               `(whitespace-space-before-tab ((t :foreground ,bg-shadow-intense)))
               `(whitespace-tab ((t :foreground ,bg-shadow-intense)))))
            (custom-theme-set-variables
