@@ -1596,7 +1596,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(org-block ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
               `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral :extend t)))
               `(org-block-end-line ((t :inherit org-block-begin-line)))
-              '(org-checkbox ((t :inherit fixed-pitch)))
+              '(org-checkbox ((t :inherit (fixed-pitch bold))))
               `(org-code ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
               `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
               '(org-date-selected ((t :inherit calendar-today)))
