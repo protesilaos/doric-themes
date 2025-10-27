@@ -1679,6 +1679,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(whitespace-tab ((t :foreground ,bg-shadow-intense)))))
            (custom-theme-set-variables
             ',name
+            '(elisp-fontify-semantically nil)
             `(flymake-error-bitmap '(flymake-double-exclamation-mark doric-themes-prominent-error))
             `(flymake-warning-bitmap '(exclamation-mark doric-themes-prominent-warning))
             `(flymake-note-bitmap '(exclamation-mark doric-themes-prominent-note))
