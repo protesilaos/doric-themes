@@ -1679,12 +1679,12 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(whitespace-tab ((t :foreground ,bg-shadow-intense)))))
            (custom-theme-set-variables
             ',name
+            '(diff-font-lock-syntax nil)
             '(elisp-fontify-semantically nil)
-            `(flymake-error-bitmap '(flymake-double-exclamation-mark doric-themes-prominent-error))
-            `(flymake-warning-bitmap '(exclamation-mark doric-themes-prominent-warning))
-            `(flymake-note-bitmap '(exclamation-mark doric-themes-prominent-note))
             '(frame-background-mode ',background-mode)
-            '(diff-font-lock-syntax nil))
+            `(flymake-note-bitmap '(exclamation-mark doric-themes-prominent-note))
+            `(flymake-warning-bitmap '(exclamation-mark doric-themes-prominent-warning))
+            `(flymake-error-bitmap '(flymake-double-exclamation-mark doric-themes-prominent-error)))
            ,@(unless theme-exists-p
                (list `(provide-theme ',name)))))
     (error "No palette found for `%s'" name)))
