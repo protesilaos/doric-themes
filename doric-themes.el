@@ -1241,7 +1241,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-error-foreground-only-faces
   '(TeX-error-description-error
     dired-broken-symlink
-    error))
+    error
+    ert-test-result-unexpected))
 
 (defconst doric-themes-warning-foreground-only-faces
   '(TeX-error-description-warning
@@ -1253,6 +1254,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-success-foreground-only-faces
   '(TeX-error-description-help
     TeX-error-description-tex-said
+    ert-test-result-expected
     success))
 
 (defconst doric-themes-error-underline-faces
