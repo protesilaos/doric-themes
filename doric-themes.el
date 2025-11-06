@@ -380,6 +380,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     company-tooltip-scrollbar-track
     consult-preview-line
     corfu-popupinfo
+    edebug-enabled-breakpoint
     ediff-even-diff-A
     ediff-even-diff-Ancestor
     ediff-even-diff-B
@@ -490,6 +491,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diredfl-read-priv
     diredfl-tagged-autofile-name
     diredfl-write-priv
+    edebug-disabled-breakpoint
     elfeed-search-title-face
     epa-validity-disabled
     eshell-ls-unreadable
