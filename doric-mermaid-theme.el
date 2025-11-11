@@ -48,7 +48,7 @@
       (border "#9580aa")
 
       (bg-shadow-subtle "#423c55")
-      (fg-shadow-subtle "#a196b8")
+      (fg-shadow-subtle "#aea6c3")
 
       (bg-neutral "#574b67")
       (fg-neutral "#d8d0e6")
