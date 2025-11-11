@@ -66,12 +66,12 @@
       (fg-magenta "#700d50")
       (fg-cyan "#005355")
 
-      (bg-red "#eac0bf")
-      (bg-green "#bde0c2")
-      (bg-yellow "#f0f0b0")
-      (bg-blue "#c4cfe8")
-      (bg-magenta "#eec2e6")
-      (bg-cyan "#c1ebe4"))
+      (bg-red "#e0c0c4")
+      (bg-green "#aadecb")
+      (bg-yellow "#e2e0ac")
+      (bg-blue "#bcd0ef")
+      (bg-magenta "#dfc2e9")
+      (bg-cyan "#b2d7e0"))
   "Palette of `doric-siren' theme.")
 
   (doric-themes-define-theme doric-siren light "Minimalist theme with light blue-grey background and marine hues"))
