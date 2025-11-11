@@ -53,6 +53,7 @@
 (defconst doric-themes-dark-themes
   '(doric-dark
     doric-fire
+    doric-mermaid
     doric-obsidian
     doric-pine
     doric-plum
