@@ -42,7 +42,7 @@
     (require 'doric-themes))
 
   (defvar doric-mermaid-palette
-    '((cursor "#c0acf0")
+    '((cursor "#e08ca0")
       (bg-main "#3a2f48")
       (fg-main "#dde0f8")
       (border "#9580aa")
