@@ -43,14 +43,14 @@
 
   (defvar doric-mermaid-palette
     '((cursor "#e08ca0")
-      (bg-main "#3a2f48")
+      (bg-main "#2a2f48")
       (fg-main "#dde0f8")
       (border "#757a90")
 
-      (bg-shadow-subtle "#423c55")
+      (bg-shadow-subtle "#3c3e55")
       (fg-shadow-subtle "#aea6c3")
 
-      (bg-neutral "#574b67")
+      (bg-neutral "#4c4f67")
       (fg-neutral "#d8d0e6")
 
       (bg-shadow-intense "#424381")
