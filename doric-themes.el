@@ -1400,7 +1400,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(aw-leading-char-face ((t :inherit bold-italic :height 1.5 :foreground ,fg-accent)))
 
               `(calendar-today
-                ((default :foreground ,fg-accent :inverse-video t)
+                ((default :foreground ,fg-main :inverse-video t)
                  (((supports :box t))
                   :box (:line-width (-1 . -1) :color ,fg-main))))
 
@@ -1603,7 +1603,10 @@ default to a generic text that mentions the BACKGROUND-MODE."
               '(org-checkbox ((t :inherit (fixed-pitch bold))))
               `(org-code ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
               `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
-              '(org-date-selected ((t :inherit calendar-today)))
+              `(org-date-selected
+                ((default :foreground ,fg-accent :inverse-video t)
+                 (((supports :box t))
+                  :box (:line-width (-1 . -1) :color ,fg-main))))
               `(org-document-info-keyword ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
               `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
               `(org-ellipsis (( ))) ; inherits from the heading's color
