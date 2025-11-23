@@ -1093,7 +1093,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diff-function
     diff-index
     elfeed-search-tag-face
-    elisp-shorthand-font-lock-face
     epa-string
     font-latex-doctex-documentation-face
     font-latex-doctex-preprocessor-face
@@ -1247,7 +1246,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diff-changed-unspecified
     diff-indicator-changed
     magit-diff-base
-    transient-argument
     smerge-base))
 
 (defconst doric-themes-diff-changed-highlight-faces
