@@ -1039,11 +1039,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     smerge-markers
     tab-line-tab-modified
     transient-key
-    transient-key-exit
-    transient-key-recurse
-    transient-key-return
-    transient-key-stack
-    transient-key-stay
     vertico-group-title))
 
 (defconst doric-themes-italic-faces
@@ -1665,6 +1660,13 @@ default to a generic text that mentions the BACKGROUND-MODE."
               '(telega-webpage-preformatted ((t :inherit fixed-pitch)))
 
               '(textsec-suspicious (( )))
+
+              `(transient-key-exit ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-red)))
+              `(transient-key-noop ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+              `(transient-key-recurse ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-main)))
+              `(transient-key-return ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-yellow)))
+              `(transient-key-stack ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-blue)))
+              `(transient-key-stay ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-green)))
 
               `(vc-edited-state ((t :inherit italic)))
               `(vc-locally-added-state ((t :inherit italic)))
