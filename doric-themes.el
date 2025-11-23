@@ -1323,7 +1323,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(flycheck-info
     flymake-note))
 
-(defconst doric-themes-cite-odd
+(defconst doric-themes-cite-odd-faces
   '(gnus-cite-1
     gnus-cite-3
     gnus-cite-5
@@ -1337,7 +1337,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     mu4e-cited-5-face
     mu4e-cited-7-face))
 
-(defconst doric-themes-cite-even
+(defconst doric-themes-cite-even-faces
   '(gnus-cite-2
     gnus-cite-4
     gnus-cite-6
@@ -1507,8 +1507,8 @@ default to a generic text that mentions the BACKGROUND-MODE."
               ,@(doric-themes-prepare-faces doric-themes-diff-removed-highlight-faces :background 'bg-red :foreground 'fg-red)
               ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-red 10))
 
-              ,@(doric-themes-prepare-faces doric-themes-cite-odd :inherit ''italic :foreground 'fg-accent)
-              ,@(doric-themes-prepare-faces doric-themes-cite-even :inherit ''italic :foreground 'fg-shadow-subtle)
+              ,@(doric-themes-prepare-faces doric-themes-cite-odd-faces :inherit ''italic :foreground 'fg-accent)
+              ,@(doric-themes-prepare-faces doric-themes-cite-even-faces :inherit ''italic :foreground 'fg-shadow-subtle)
 
               ,@(doric-themes-prepare-faces doric-themes-mark-select-faces :inherit ''bold-italic :background 'bg-accent :foreground 'fg-main)
               ,@(doric-themes-prepare-faces doric-themes-mark-delete-faces :inherit ''bold-italic :background 'bg-shadow-intense :foreground 'fg-main)
