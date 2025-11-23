@@ -1349,6 +1349,18 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     mu4e-cited-4-face
     mu4e-cited-6-face))
 
+(defconst doric-themes-mark-select-faces
+  '(dired-marked
+    diredfl-flag-mark
+    diredfl-flag-mark-line
+    ibuffer-marked))
+
+(defconst doric-themes-mark-delete-faces
+  '(dired-flagged
+    diredfl-deletion
+    diredfl-deletion-file-name
+    ibuffer-deletion))
+
 (defun doric-themes-prepare-faces (&rest faces-and-attributes)
   "Set faces to their respective attributes in FACES-AND-ATTRIBUTES."
   (pcase-let ((`(,faces . ,attributes) faces-and-attributes))
@@ -1459,14 +1471,6 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(diff-hunk-header ((t :inherit bold :background ,bg-shadow-subtle)))
               `(diff-function ((t :background ,bg-shadow-subtle)))
 
-              `(dired-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
-              `(dired-flagged ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
-
-              `(diredfl-deletion ((t :inherit dired-mark)))
-              `(diredfl-deletion-file-name ((t :inherit dired-flagged)))
-              `(diredfl-flag-mark ((t :inherit dired-mark)))
-              `(diredfl-flag-mark-line ((t :inherit dired-marked)))
-
               ,@(doric-themes-prepare-faces doric-themes-intense-shadow-faces :background 'bg-shadow-intense :foreground 'fg-shadow-intense)
               ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-faces :background 'bg-shadow-subtle :foreground 'fg-shadow-subtle)
               ,@(doric-themes-prepare-faces doric-themes-intense-shadow-foreground-only-faces :foreground 'fg-shadow-intense)
@@ -1505,6 +1509,9 @@ default to a generic text that mentions the BACKGROUND-MODE."
 
               ,@(doric-themes-prepare-faces doric-themes-cite-odd :inherit ''italic :foreground 'fg-accent)
               ,@(doric-themes-prepare-faces doric-themes-cite-even :inherit ''italic :foreground 'fg-shadow-subtle)
+
+              ,@(doric-themes-prepare-faces doric-themes-mark-select-faces :inherit ''bold-italic :background 'bg-accent :foreground 'fg-main)
+              ,@(doric-themes-prepare-faces doric-themes-mark-delete-faces :inherit ''bold-italic :background 'bg-shadow-intense :foreground 'fg-main)
 
               '(elisp-binding-variable (( )))
               '(elisp-charset (( )))
@@ -1578,9 +1585,6 @@ default to a generic text that mentions the BACKGROUND-MODE."
                   :background "#ffffff" :foreground "#806f00")
                  (((class color) (min-colors 88) (background dark))
                   :background "#000000" :foreground "#cab000")))
-
-              `(ibuffer-deletion ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
-              `(ibuffer-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
 
               `(isearch ((t :background ,bg-shadow-intense :foreground ,fg-main)))
               `(isearch-fail ((t :inherit (underline bold))))
