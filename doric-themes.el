@@ -1247,10 +1247,12 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(TeX-error-description-error
     dired-broken-symlink
     error
-    ert-test-result-unexpected))
+    ert-test-result-unexpected
+    flymake-error-fringe))
 
 (defconst doric-themes-warning-foreground-only-faces
   '(TeX-error-description-warning
+    flymake-warning-fringe
     font-latex-warning-face
     font-lock-escape-facex
     font-lock-warning-face
@@ -1260,6 +1262,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(TeX-error-description-help
     TeX-error-description-tex-said
     ert-test-result-expected
+    flymake-note-fringe
     success))
 
 (defconst doric-themes-error-underline-faces
