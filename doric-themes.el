@@ -334,7 +334,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     eldoc-highlight-function-argument
     eww-form-file
     eww-form-submit
+    geiser-font-lock-autodoc-current-arg
     gnus-summary-cancelled
+    lsp-signature-highlight-function-argument
     magit-blame-highlight
     magit-diff-lines-boundary
     region
