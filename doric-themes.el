@@ -1159,6 +1159,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     transient-nonstandard-key
     which-key-special-key-face))
 
+(defconst doric-themes-underline-emphasis-subtle-faces
+  '(eglot-highlight-symbol-face
+    elisp-variable-at-point))
+
 (defconst doric-themes-underline-link-faces
   '(browse-url-button
     button
@@ -1465,6 +1469,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               ,@(doric-themes-prepare-faces doric-themes-italic-faces :inherit ''italic :foreground 'fg-shadow-subtle)
               ,@(doric-themes-prepare-faces doric-themes-underline-link-faces :inherit ''underline :foreground 'fg-accent)
               ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-faces :inherit ''(underline italic) :foreground 'fg-shadow-subtle)
+              ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-subtle-faces :underline 'border)
 
               ,@(doric-themes-prepare-faces doric-themes-selection-faces :background 'bg-accent)
 
