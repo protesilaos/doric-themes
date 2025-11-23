@@ -305,6 +305,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     consult-highlight-mark
     consult-highlight-match
     consult-preview-insertion
+    elisp-symbol-at-mouse
     header-line-highlight
     highlight
     hl-line
@@ -361,10 +362,14 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     display-time-date-and-time
     ediff-current-diff-Ancestor
     elfeed-search-date-face
+    elisp-defmacro
+    elisp-defun
+    elisp-function
     epa-field-body
     epa-field-name
     eshell-ls-readonly
     font-lock-function-name-face
+    font-lock-function-call-face
     haskell-constructor-face
     mm-uu-extract
     magit-log-author
@@ -397,6 +402,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     ediff-odd-diff-Ancestor
     ediff-odd-diff-B
     ediff-odd-diff-C
+    elisp-unknown-call
     eww-form-checkbox
     eww-form-select
     eww-form-textarea
@@ -697,6 +703,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diredfl-compressed-file-name
     diredfl-file-name
     diredfl-number
+    elisp-completion-category-definition
+    elisp-feature
     epa-mark
     epa-validity-low
     epa-validity-medium
@@ -836,6 +844,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     elfeed-log-error-level-face
     elfeed-log-info-level-face
     elfeed-log-warn-level-face
+    elisp-macro
+    elisp-special-form
     erc-prompt-face
     eshell-ls-archive
     eshell-ls-backup
@@ -978,6 +988,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(dired-header
     diredfl-dir-heading
     elfeed-search-unread-title-face
+    elisp-throw-tag
     git-commit-comment-heading
     git-commit-summary
     line-number-current-line
@@ -1013,6 +1024,20 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diff-file-header
     dired-warning
     elfeed-search-filter-face
+    elisp-ampersand
+    elisp-condition
+    elisp-defcharset
+    elisp-defcoding
+    elisp-defface
+    elisp-deficon
+    elisp-defoclosure
+    elisp-function-property-declaration
+    elisp-major-mode-name
+    elisp-nnoo-backend
+    elisp-rx
+    elisp-shorthand-font-lock-face
+    elisp-slot
+    elisp-symbol-role-definition
     eww-invalid-certificate
     font-lock-builtin-face
     font-lock-preprocessor-face
@@ -1128,6 +1153,13 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     which-key-local-map-description-face
     woman-italic
     ztreep-node-count-children-face))
+
+(defconst doric-themes-italic-only-faces
+  '(elisp-bound-variable
+    elisp-defvar
+    elisp-shadowed-variable
+    font-lock-variable-name-face
+    font-lock-variable-use-face))
 
 (defconst doric-themes-underline-emphasis-faces
   '(company-echo-common
@@ -1258,6 +1290,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 
 (defconst doric-themes-warning-foreground-only-faces
   '(TeX-error-description-warning
+    elisp-non-local-exit
+    elisp-warning-type
     flymake-warning-fringe
     font-latex-warning-face
     font-lock-escape-facex
@@ -1452,6 +1486,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               ,@(doric-themes-prepare-faces doric-themes-bold-intense-faces :inherit ''bold :foreground 'fg-main)
               ,@(doric-themes-prepare-faces doric-themes-bold-italic-faces :inherit ''bold-italic :foreground 'fg-shadow-subtle)
               ,@(doric-themes-prepare-faces doric-themes-italic-faces :inherit ''italic :foreground 'fg-shadow-subtle)
+              ,@(doric-themes-prepare-faces doric-themes-italic-only-faces :inherit ''italic)
               ,@(doric-themes-prepare-faces doric-themes-underline-link-faces :inherit ''underline :foreground 'fg-accent)
               ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-faces :inherit ''(underline italic) :foreground 'fg-shadow-subtle)
               ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-subtle-faces :underline 'border)
@@ -1471,12 +1506,28 @@ default to a generic text that mentions the BACKGROUND-MODE."
               ,@(doric-themes-prepare-faces doric-themes-cite-odd :inherit ''italic :foreground 'fg-accent)
               ,@(doric-themes-prepare-faces doric-themes-cite-even :inherit ''italic :foreground 'fg-shadow-subtle)
 
+              '(elisp-binding-variable (( )))
+              '(elisp-charset (( )))
+              '(elisp-coding (( )))
+              '(elisp-completion-category (( )))
+              '(elisp-constant (( )))
+              '(elisp-face (( )))
+              '(elisp-free-variable (( )))
+              '(elisp-group (( )))
+              '(elisp-icon (( )))
+              '(elisp-oclosure (( )))
+              '(elisp-shadowing-variable (( )))
+              '(elisp-special-variable-declaration (( )))
+              '(elisp-symbol-role (( )))
+              '(elisp-theme (( )))
+              '(elisp-thing (( )))
+              '(elisp-type (( )))
+              '(elisp-widget-type (( )))
 
               '(embark-keybinding ((t :inherit (fixed-pitch bold-italic))))
 
               `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
               `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
-              `(font-lock-variable-name-face  ((t :inherit italic)))
 
               ;; The :inverse-video prevents hl-line-mode from
               ;; overriding the background.  Such an override really
@@ -1690,8 +1741,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
            (custom-theme-set-variables
             ',name
             '(diff-font-lock-syntax nil)
-            '(elisp-fontify-semantically nil)
-            '(frame-background-mode ',background-mode)
+            '(frame-background-mode ',background-mode))
            ,@(unless theme-exists-p
                (list `(provide-theme ',name)))))
     (error "No palette found for `%s'" name)))
