@@ -331,6 +331,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     company-tooltip-selection
     company-tooltip-scrollbar-thumb
     corfu-current
+    eldoc-highlight-function-argument
     eww-form-file
     eww-form-submit
     gnus-summary-cancelled
@@ -1134,7 +1135,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     completions-first-difference
     consult-preview-match
     custom-visibility
-    eldoc-highlight-function-argument
     font-latex-underline-face
     gnus-emphasis-highlight-words
     lazy-highlight
