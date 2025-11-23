@@ -336,6 +336,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     eww-form-file
     eww-form-submit
     geiser-font-lock-autodoc-current-arg
+    git-gutter:unchanged
     gnus-summary-cancelled
     lsp-signature-highlight-function-argument
     magit-blame-highlight
@@ -407,6 +408,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     eww-form-select
     eww-form-textarea
     eww-form-text
+    git-gutter:separator
     header-line
     magit-blame-heading
     magit-blame-margin
@@ -1227,13 +1229,11 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     smerge-lower
     ztreep-diff-model-add-face))
 
-;; TODO 2025-11-23 06:09 +0200: Check git-gutter and related.  I
-;; cannot do it now because I have no Internet to install the
-;; package...
 (defconst doric-themes-diff-added-highlight-faces
   '(diff-hl-insert
     diff-hl-dired-insert
     ediff-current-diff-B
+    git-gutter:added
     magit-diff-added-highlight))
 
 (defconst doric-themes-diff-added-refine-faces
@@ -1252,6 +1252,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(diff-hl-change
     diff-hl-dired-change
     ediff-current-diff-C
+    git-gutter:modified
     magit-diff-base-highlight))
 
 (defconst doric-themes-diff-changed-refine-faces
@@ -1272,6 +1273,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(diff-hl-delete
     diff-hl-dired-delete
     ediff-current-diff-A
+    git-gutter:deleted
     magit-diff-removed-highlight))
 
 (defconst doric-themes-diff-removed-refine-faces
