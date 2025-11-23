@@ -339,6 +339,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     lsp-signature-highlight-function-argument
     magit-blame-highlight
     magit-diff-lines-boundary
+    org-agenda-clocking
     region
     show-paren-match
     speedbar-separator-face
@@ -407,7 +408,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     menu
     message-separator
     mu4e-region-code
-    org-agenda-clocking
     org-agenda-diary
     org-agenda-restriction-lock
     org-clock-overlay
