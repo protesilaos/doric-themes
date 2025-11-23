@@ -322,6 +322,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     tab-bar-tab-highlight
     tab-line-highlight
     transient-enabled-suffix
+    transient-value
     vertico-current))
 
 (defconst doric-themes-intense-shadow-faces
@@ -338,7 +339,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     region
     show-paren-match
     speedbar-separator-face
-    substitute-match))
+    substitute-match
+    transient-argument))
 
 (defconst doric-themes-intense-shadow-foreground-only-faces
   '(calendar-weekday-header
@@ -1184,7 +1186,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-diff-added
     magit-diffstat-added
     smerge-lower
-    transient-value
     ztreep-diff-model-add-face))
 
 (defconst doric-themes-diff-added-highlight-faces
