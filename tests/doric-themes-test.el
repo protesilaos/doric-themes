@@ -34,17 +34,43 @@
 (require 'ert)
 (require 'doric-themes)
 
-(defvar dtt-face-groups
-  (let ((variables nil))
-    (mapatoms
-     (lambda (symbol)
-       (when-let* ((_ (not (symbol-function symbol)))
-                   (string (symbol-name symbol))
-                   (_ (and (string-match-p "\\`doric-themes-.+faces" string)
-                           (not (string-match-p "\\`doric-themes-test" string)))))
-         (push symbol variables))))
-    variables)
-  "List of symbols with Doric themes variables for face groups.")
+(defvar dtt-face-bundles
+  '(doric-themes-selection-faces
+    doric-themes-intense-shadow-faces
+    doric-themes-intense-shadow-foreground-only-faces
+    doric-themes-subtle-shadow-faces
+    doric-themes-subtle-shadow-foreground-only-faces
+    doric-themes-accent-foreground-only-faces
+    doric-themes-bold-accent-foreground-only-faces
+    doric-themes-main-foreground-only-faces
+    doric-themes-bold-faces
+    doric-themes-bold-intense-faces
+    doric-themes-bold-italic-faces
+    doric-themes-italic-faces
+    doric-themes-italic-only-faces
+    doric-themes-underline-emphasis-faces
+    doric-themes-underline-emphasis-subtle-faces
+    doric-themes-underline-link-faces
+    doric-themes-diff-added-faces
+    doric-themes-diff-added-highlight-faces
+    doric-themes-diff-added-refine-faces
+    doric-themes-diff-changed-faces
+    doric-themes-diff-changed-highlight-faces
+    doric-themes-diff-changed-refine-faces
+    doric-themes-diff-removed-faces
+    doric-themes-diff-removed-highlight-faces
+    doric-themes-diff-removed-refine-faces
+    doric-themes-error-foreground-only-faces
+    doric-themes-warning-foreground-only-faces
+    doric-themes-success-foreground-only-faces
+    doric-themes-error-underline-faces
+    doric-themes-warning-underline-faces
+    doric-themes-success-underline-faces
+    doric-themes-cite-odd-faces
+    doric-themes-cite-even-faces
+    doric-themes-mark-select-faces
+    doric-themes-mark-delete-faces)
+  "List of symbols with Doric themes variables for face bundles.")
 
 (defun dtt-is-member-p (x y elements)
   "Return non-nil if X and Y are members of ELEMENTS."
@@ -53,8 +79,8 @@
 (ert-deftest dtt-distinct-faces ()
   (should-not
    (let ((matches nil))
-     (dolist (x dtt-face-groups)
-       (dolist (y dtt-face-groups)
+     (dolist (x dtt-face-bundles)
+       (dolist (y dtt-face-bundles)
          (unless (or (eq x y) (dtt-is-member-p x y (delete-dups (flatten-list (mapcar #'car matches)))))
            (when-let* ((match (seq-intersection (symbol-value x) (symbol-value y))))
              (push (cons (cons x y) match) matches)))))
