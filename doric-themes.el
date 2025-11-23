@@ -659,7 +659,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     proced-sess
     speedbar-directory-face
     tab-line-close-highlight
-    transient-value
     which-key-command-description-face
     widget-button
     widget-button-pressed
@@ -953,8 +952,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     telega-chat-prompt
     texinfo-heading
     transient-heading
-    transient-mismatched-key
-    transient-nonstandard-key
     trashed-directory
     vc-conflict-state
     vc-dir-header
@@ -1157,7 +1154,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     rcirc-track-nick
     show-paren-mismatch
     speedbar-selected-face
-    transient-argument
+    transient-mismatched-key
+    transient-nonstandard-key
     which-key-special-key-face))
 
 (defconst doric-themes-underline-link-faces
@@ -1191,6 +1189,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-diff-added
     magit-diffstat-added
     smerge-lower
+    transient-value
     ztreep-diff-model-add-face))
 
 (defconst doric-themes-diff-added-highlight-faces
@@ -1221,6 +1220,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diff-changed-unspecified
     diff-indicator-changed
     magit-diff-base
+    transient-argument
     smerge-base))
 
 (defconst doric-themes-diff-changed-refine-faces
