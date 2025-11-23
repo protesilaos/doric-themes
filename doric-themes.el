@@ -1464,6 +1464,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
                  (((supports :box t))
                   :box (:line-width 1 :color ,border :style pressed-button))
                  (t :underline ,border)))
+              `(custom-button-pressed-unraised ((t :foreground ,fg-accent :underline ,border)))
 
               '(devdocs-code-block ((t :inherit fixed-pitch)))
 
