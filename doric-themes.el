@@ -1190,6 +1190,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     smerge-lower
     ztreep-diff-model-add-face))
 
+;; TODO 2025-11-23 06:09 +0200: Check git-gutter and related.  I
+;; cannot do it now because I have no Internet to install the
+;; package...
 (defconst doric-themes-diff-added-highlight-faces
   '(diff-hl-insert
     diff-hl-dired-insert
