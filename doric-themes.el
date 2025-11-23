@@ -879,6 +879,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     gnus-summary-normal-ticked
     grep-heading
     help-for-help-header
+    ibuffer-filter-group-name
+    ibuffer-title
     icomplete-first-match
     indium-repl-prompt-face
     info-header-node
@@ -1538,6 +1540,9 @@ default to a generic text that mentions the BACKGROUND-MODE."
                   :background "#ffffff" :foreground "#806f00")
                  (((class color) (min-colors 88) (background dark))
                   :background "#000000" :foreground "#cab000")))
+
+              `(ibuffer-deletion ((t :inherit bold-italic :background ,bg-shadow-intense :foreground ,fg-main)))
+              `(ibuffer-marked ((t :inherit bold-italic :background ,bg-accent :foreground ,fg-main)))
 
               `(isearch ((t :background ,bg-shadow-intense :foreground ,fg-main)))
               `(isearch-fail ((t :inherit (underline bold))))
