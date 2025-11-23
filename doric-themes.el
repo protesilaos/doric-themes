@@ -1315,21 +1315,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     mu4e-cited-4-face
     mu4e-cited-6-face))
 
-(defgroup doric-themes-faces ()
-  "Faces defined by the Doric themes."
-  :group 'doric-themes
-  :link '(url-link :tag "Sample pictures" "https://protesilaos.com/emacs/doric-themes-pictures")
-  :prefix "doric-themes-"
-  :tag "Doric themes Faces")
-
-(dolist (scope '(note warning error))
-  (custom-declare-face
-   (intern (format "doric-themes-prominent-%s" scope))
-   nil (format "Prominent notification of type %s." scope)
-   :package-version '(doric-themes . "0.4.0")
-   :version "30.1"
-   :group 'doric-themes-faces))
-
 (defun doric-themes-prepare-faces (&rest faces-and-attributes)
   "Set faces to their respective attributes in FACES-AND-ATTRIBUTES."
   (pcase-let ((`(,faces . ,attributes) faces-and-attributes))
@@ -1486,9 +1471,6 @@ default to a generic text that mentions the BACKGROUND-MODE."
               ,@(doric-themes-prepare-faces doric-themes-cite-odd :inherit ''italic :foreground 'fg-accent)
               ,@(doric-themes-prepare-faces doric-themes-cite-even :inherit ''italic :foreground 'fg-shadow-subtle)
 
-              `(doric-themes-prominent-error ((t :background ,bg-red :foreground ,fg-red)))
-              `(doric-themes-prominent-warning ((t :background ,bg-yellow :foreground ,fg-yellow)))
-              `(doric-themes-prominent-note ((t :background ,bg-cyan :foreground ,fg-cyan)))
 
               '(embark-keybinding ((t :inherit (fixed-pitch bold-italic))))
 
@@ -1710,9 +1692,6 @@ default to a generic text that mentions the BACKGROUND-MODE."
             '(diff-font-lock-syntax nil)
             '(elisp-fontify-semantically nil)
             '(frame-background-mode ',background-mode)
-            `(flymake-note-bitmap '(exclamation-mark doric-themes-prominent-note))
-            `(flymake-warning-bitmap '(exclamation-mark doric-themes-prominent-warning))
-            `(flymake-error-bitmap '(flymake-double-exclamation-mark doric-themes-prominent-error)))
            ,@(unless theme-exists-p
                (list `(provide-theme ',name)))))
     (error "No palette found for `%s'" name)))
