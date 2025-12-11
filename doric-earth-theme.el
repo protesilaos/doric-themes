@@ -4,7 +4,7 @@
 
 ;; Author: Protesilaos Stavrou <info@protesilaos.com>
 ;; Maintainer: Protesilaos Stavrou <info@protesilaos.com>
-;; URL: https://github.com/protesilaos/ef-themes
+;; URL: https://github.com/protesilaos/doric-themes
 ;; Keywords: faces, theme, accessibility
 
 ;; This file is NOT part of GNU Emacs.
