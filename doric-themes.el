@@ -814,7 +814,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     shr-sliced-image
     shr-strike-through
     shr-sup
-    shr-text
     shortdoc-section
     so-long-mode-line-inactive
     speedbar-file-face
