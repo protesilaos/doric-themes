@@ -811,10 +811,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     proced-memory-medium-usage
     proced-user
     sgml-namespace
-    shr-abbreviation
-    shr-sliced-image
-    shr-strike-through
-    shr-sup
     shortdoc-section
     speedbar-file-face
     tabulated-list-fake-header
