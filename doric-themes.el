@@ -136,24 +136,49 @@ This is used by the commands `doric-themes-toggle',
            (doric-themes--list-known-themes))))
 
 (defun doric-themes--annotate-theme (theme)
-  "Return completion annotation for THEME."
+  "Return description of THEME ."
   (when-let* ((symbol (intern-soft theme))
-              (doc-string (get symbol 'theme-documentation)))
-    (format " -- %s" (propertize (car (split-string doc-string "\\.")) 'face 'completions-annotations))))
-
-(defun doric-themes--completion-table (category candidates)
-  "Pass appropriate metadata CATEGORY to completion CANDIDATES."
-  (lambda (string pred action)
-    (if (eq action 'metadata)
-        `(metadata (category . ,category))
-      (complete-with-action action candidates string pred))))
-
-(defun doric-themes--completion-table-candidates ()
-  "Render `doric-themes--list-known-themes' as completion with theme category."
-  (doric-themes--completion-table 'theme (doric-themes--list-known-themes)))
+              (properties (get symbol 'theme-properties))
+              (doc-string (or (get symbol 'theme-documentation)
+                              (plist-get properties :doric-documentation))))
+    (format " %s"
+            (propertize (concat "-- " (car (split-string doc-string "\\.")))
+                        'face 'completions-annotations))))
 
 (defvar doric-themes-select-theme-history nil
   "Minibuffer history of `doric-themes-select-prompt'.")
+
+(defun doric-themes--group-themes (theme transform)
+  "Group THEME by its background for minibuffer completion.
+If TRANSFORM is non-nil, return THEME as-is."
+  (let ((symbol (intern-soft theme)))
+    (cond
+     (transform
+      theme)
+     ((eq symbol (doric-themes--current-theme))
+      "Current")
+     ((when-let* ((properties (get symbol 'theme-properties))
+                  (background (plist-get properties :background-mode)))
+        (capitalize (format "%s" background)))))))
+
+(defun doric-themes--display-sort (themes)
+  "Put the current theme before other THEMES for minibuffer completion."
+  (let* ((current (doric-themes--current-theme))
+         (current-theme-p (lambda (theme) (eq (intern-soft theme) current))))
+    (nconc
+     (seq-filter current-theme-p themes)
+     (seq-remove current-theme-p themes))))
+
+(defun doric-themes--completion-table (themes)
+  "Pass appropriate metadata to THEMES for minibuffer completion."
+  (lambda (string pred action)
+    (if (eq action 'metadata)
+        (list 'metadata
+              (cons 'category 'theme)
+              (cons 'annotation-function #'doric-themes--annotate-theme)
+              (cons 'group-function #'doric-themes--group-themes)
+              (cons 'display-sort-function #'doric-themes--display-sort))
+      (complete-with-action action themes string pred))))
 
 (defun doric-themes-select-prompt (&optional prompt)
   "Minibuffer prompt to select a Doric theme.
@@ -162,7 +187,7 @@ With optional PROMPT string, use it.  Else use a generic prompt."
     (intern
      (completing-read
       (or prompt "Select Doric theme: ")
-      (doric-themes--completion-table-candidates)
+      (doric-themes--completion-table (doric-themes--list-known-themes))
       nil t nil 'doric-themes-select-theme-history))))
 
 (defun doric-themes-load-theme (theme)
@@ -1392,7 +1417,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
                (list `(custom-declare-theme
                        ',name 'doric-themes
                        ,(or description (format "Minimalist %s theme." background-mode))
-                       (list :kind 'color-scheme :background-mode ',background-mode :family 'doric))))
+                       (list :kind 'color-scheme :background-mode ',background-mode :family 'doric :doric-documentation ,description))))
            (let ,palette
              (custom-theme-set-faces
               ',name
