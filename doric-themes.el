@@ -647,6 +647,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     proced-interruptible-sleep-status-code
     proced-mem
     shadow
+    so-long-mode-line-inactive
     tab-bar-tab-group-inactive
     tab-bar-tab-ungrouped
     transient-inactive-argument
@@ -815,7 +816,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     shr-strike-through
     shr-sup
     shortdoc-section
-    so-long-mode-line-inactive
     speedbar-file-face
     tabulated-list-fake-header
     vc-dir-directory
