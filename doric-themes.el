@@ -1306,7 +1306,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     dired-broken-symlink
     error
     ert-test-result-unexpected
-    flymake-error-fringe))
+    flymake-error-fringe
+    whitespace-line
+    whitespace-space-after-tab
+    whitespace-space-before-tab))
 
 (defconst doric-themes-warning-foreground-only-faces
   '(TeX-error-description-warning
@@ -1752,17 +1755,15 @@ default to a generic text that mentions the BACKGROUND-MODE."
 
               '(which-key-key-face ((t :inherit (fixed-pitch bold-italic))))
 
-              `(whitespace-big-indent ((t :foreground ,bg-shadow-intense)))
+              `(whitespace-big-indent ((t :background ,bg-shadow-intense)))
               `(whitespace-empty ((t :foreground ,bg-shadow-intense)))
               `(whitespace-hspace ((t :foreground ,bg-shadow-intense)))
               `(whitespace-indentation ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-line ((t :foreground ,bg-shadow-intense)))
               `(whitespace-missing-newline-at-eof ((t :foreground ,bg-shadow-intense)))
               `(whitespace-newline ((t :foreground ,bg-shadow-intense)))
               `(whitespace-space ((t :foreground ,bg-shadow-intense)))
-
-              `(whitespace-space-before-tab ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-tab ((t :foreground ,bg-shadow-intense)))))
+              `(whitespace-tab ((t :foreground ,bg-shadow-intense)))
+              `(whitespace-trailing ((t :background ,bg-shadow-intense)))))
            (custom-theme-set-variables
             ',name
             '(diff-font-lock-syntax nil)
