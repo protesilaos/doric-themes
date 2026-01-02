@@ -1311,6 +1311,11 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     whitespace-space-after-tab
     whitespace-space-before-tab))
 
+(defconst doric-themes-error-background-faces
+  '(magit-diff-whitespace-warning
+    trailing-whitespace
+    whitespace-trailing))
+
 (defconst doric-themes-warning-foreground-only-faces
   '(TeX-error-description-warning
     elisp-non-local-exit
@@ -1509,6 +1514,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               ,@(doric-themes-prepare-faces doric-themes-error-underline-faces :underline '(list :style 'wave :color fg-red))
               ,@(doric-themes-prepare-faces doric-themes-warning-underline-faces :underline '(list :style 'wave :color fg-yellow))
               ,@(doric-themes-prepare-faces doric-themes-success-underline-faces :underline '(list :style 'wave :color fg-cyan))
+              ,@(doric-themes-prepare-faces doric-themes-error-background-faces :background '(doric-themes-adjust-value bg-red 30))
 
               ,@(doric-themes-prepare-faces doric-themes-bold-faces :inherit ''bold :foreground 'fg-shadow-intense)
               ,@(doric-themes-prepare-faces doric-themes-bold-intense-faces :inherit ''bold :foreground 'fg-main)
@@ -1762,8 +1768,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(whitespace-missing-newline-at-eof ((t :foreground ,bg-shadow-intense)))
               `(whitespace-newline ((t :foreground ,bg-shadow-intense)))
               `(whitespace-space ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-tab ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-trailing ((t :background ,bg-shadow-intense)))))
+              `(whitespace-tab ((t :foreground ,bg-shadow-intense)))))
            (custom-theme-set-variables
             ',name
             '(diff-font-lock-syntax nil)

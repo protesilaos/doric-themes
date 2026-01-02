@@ -61,6 +61,7 @@
     doric-themes-diff-removed-highlight-faces
     doric-themes-diff-removed-refine-faces
     doric-themes-error-foreground-only-faces
+    doric-themes-error-background-faces
     doric-themes-warning-foreground-only-faces
     doric-themes-success-foreground-only-faces
     doric-themes-error-underline-faces
