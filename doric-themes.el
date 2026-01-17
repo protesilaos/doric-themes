@@ -321,12 +321,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 ;;;; Face customisations
 
 (defconst doric-themes-selection-faces
-  '(avy-goto-char-timer-face
-    avy-lead-face
-    avy-lead-face-0
-    avy-lead-face-1
-    avy-lead-face-2
-    completions-highlight
+  '(completions-highlight
     consult-highlight-mark
     consult-highlight-match
     consult-preview-insertion
@@ -352,7 +347,12 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     vertico-current))
 
 (defconst doric-themes-intense-shadow-faces
-  '(blink-matching-paren-offscreen
+  '(avy-goto-char-timer-face
+    avy-lead-face
+    avy-lead-face-0
+    avy-lead-face-1
+    avy-lead-face-2
+    blink-matching-paren-offscreen
     company-template-field
     company-tooltip-selection
     company-tooltip-scrollbar-thumb
