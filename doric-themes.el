@@ -1729,6 +1729,22 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(reb-match-2 ((t :background ,bg-accent :foreground ,fg-accent)))
               `(reb-match-3 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
 
+              ;; NOTE 2025-10-24: All the faces of `ruler-mode' need to inherit
+              ;; from `default' to yield the expected results.  Otherwise the
+              ;; ruler is shorter.  I am not sure what is happening, but it
+              ;; seems important.  Its default face definitions also inherit
+              ;; from `default' and then from `ruler-mode-default'.
+              `(ruler-mode-column-number ((t :inherit default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+              `(ruler-mode-comment-column ((t :inherit default :foreground ,fg-green)))
+              `(ruler-mode-current-column ((t :inherit default :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
+              `(ruler-mode-default ((t :inherit default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+              `(ruler-mode-fill-column ((t :inherit default :foreground ,fg-green)))
+              `(ruler-mode-fringes ((t :inherit default :foreground ,fg-shadow-subtle)))
+              `(ruler-mode-goal-column ((t :inherit default :foreground ,fg-green)))
+              `(ruler-mode-margins ((t :inherit default :foreground ,bg-main)))
+              `(ruler-mode-pad ((t :inherit default :background ,bg-accent :foreground ,fg-accent)))
+              `(ruler-mode-tab-stop ((t :inherit default :foreground ,fg-yellow)))
+
               `(spacious-padding-line-active ((t :foreground ,fg-accent)))
               `(spacious-padding-line-inactive ((t :foreground ,bg-accent)))
               `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
