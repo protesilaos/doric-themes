@@ -1763,6 +1763,13 @@ default to a generic text that mentions the BACKGROUND-MODE."
 
               '(textsec-suspicious (( )))
 
+              `(tmr-mode-line-active ((t :inherit bold)))
+              `(tmr-mode-line-soon ((t :inherit bold :foreground ,fg-yellow)))
+              `(tmr-mode-line-urgent ((t :inherit bold :foreground ,fg-red)))
+              `(tmr-tabulated-end-time ((t :foreground ,fg-red)))
+              `(tmr-tabulated-remaining-time ((t :foreground ,fg-yellow)))
+              `(tmr-tabulated-start-time ((t :foreground ,fg-cyan)))
+
               `(transient-key-exit ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-red)))
               `(transient-key-noop ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
               `(transient-key-recurse ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-main)))
