@@ -1414,7 +1414,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
   (unless (memq background-mode '(light dark))
     (error "The BACKGROUND-MODE must be either `light' or `dark'"))
   (if-let* ((palette (symbol-value (intern (format "%s-palette" name)))))
-      (let ((theme-exists-p (custom-theme-p name)))
+      (let ((theme-exists-p (get name 'theme-feature)))
         `(progn
            ,@(unless theme-exists-p
                (list `(custom-declare-theme
