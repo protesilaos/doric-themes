@@ -1540,8 +1540,8 @@ default to a generic text that mentions the BACKGROUND-MODE."
               ,@(doric-themes-prepare-faces doric-themes-cite-odd-faces :inherit ''italic :foreground 'fg-accent)
               ,@(doric-themes-prepare-faces doric-themes-cite-even-faces :inherit ''italic :foreground 'fg-shadow-subtle)
 
-              ,@(doric-themes-prepare-faces doric-themes-mark-select-faces :inherit ''bold-italic :background 'bg-accent :foreground 'fg-main)
-              ,@(doric-themes-prepare-faces doric-themes-mark-delete-faces :inherit ''bold-italic :background 'bg-shadow-intense :foreground 'fg-main)
+              ,@(doric-themes-prepare-faces doric-themes-mark-delete-faces :inherit ''bold-italic :background 'bg-red :foreground 'fg-red)
+              ,@(doric-themes-prepare-faces doric-themes-mark-select-faces :inherit ''bold-italic :background 'bg-green :foreground 'fg-green)
 
               '(elisp-binding-variable (( )))
               '(elisp-charset (( )))
