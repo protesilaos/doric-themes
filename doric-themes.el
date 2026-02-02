@@ -449,7 +449,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     tab-bar
     tab-line
     transient-disabled-suffix
-    trashed-restored
     tool-bar
     vc-dir-status-ignored
     widget-documentation
@@ -1381,13 +1380,15 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(dired-marked
     diredfl-flag-mark
     diredfl-flag-mark-line
-    ibuffer-marked))
+    ibuffer-marked
+    trashed-marked))
 
 (defconst doric-themes-mark-delete-faces
   '(dired-flagged
     diredfl-deletion
     diredfl-deletion-file-name
-    ibuffer-deletion))
+    ibuffer-deletion
+    trashed-deleted))
 
 (defun doric-themes-prepare-faces (&rest faces-and-attributes)
   "Set faces to their respective attributes in FACES-AND-ATTRIBUTES."
@@ -1776,6 +1777,8 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(transient-key-return ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-yellow)))
               `(transient-key-stack ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-blue)))
               `(transient-key-stay ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-green)))
+
+              `(trashed-restored ((t :inherit bold-italic :background ,bg-yellow :foreground ,fg-yellow)))
 
               `(vc-edited-state ((t :inherit italic)))
               `(vc-locally-added-state ((t :inherit italic)))
