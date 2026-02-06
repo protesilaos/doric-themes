@@ -42,7 +42,7 @@
     (require 'doric-themes))
 
   (defvar doric-jade-palette
-    '((cursor "#00a073")
+    '((cursor "#00a093")
       (bg-main "#e2f0c9")
       (fg-main "#25311f")
       (border "#98a09a")
