@@ -629,10 +629,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-tree-no-match-date-face
     notmuch-tree-no-match-face
     org-agenda-dimmed-todo-face
-    org-agenda-done
     org-column
-    org-done
-    org-headline-done
     org-special-keyword
     org-tag
     org-time-grid
@@ -687,10 +684,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-search-matching-authors
     notmuch-tree-match-author-face
     notmuch-search-flagged-face
-    org-headline-todo
     org-scheduled-previously
     org-table-row
-    org-todo
     org-warning
     package-status-installed
     proced-pgrp
@@ -947,8 +942,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     mode-line-buffer-id
     mode-line-emphasis
     org-agenda-date
-    org-checkbox-statistics-done
-    org-checkbox-statistics-todo
     org-document-title
     org-level-1
     org-level-2
@@ -1308,6 +1301,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     error
     ert-test-result-unexpected
     flymake-error-fringe
+    org-checkbox-statistics-todo
+    org-headline-todo
+    org-todo
     whitespace-line
     whitespace-space-after-tab
     whitespace-space-before-tab))
@@ -1332,6 +1328,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     TeX-error-description-tex-said
     ert-test-result-expected
     flymake-note-fringe
+    org-agenda-done
+    org-checkbox-statistics-done
+    org-done
+    org-headline-done
     success))
 
 (defconst doric-themes-error-underline-faces
