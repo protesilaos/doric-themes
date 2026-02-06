@@ -930,12 +930,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-signature-good
     magit-tag
     Man-overstrike
-    markdown-header-face-1
-    markdown-header-face-2
-    markdown-header-face-3
-    markdown-header-face-4
-    markdown-header-face-5
-    markdown-header-face-6
     message-header-subject
     message-header-to
     minibuffer-prompt
@@ -943,26 +937,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     mode-line-emphasis
     org-agenda-date
     org-document-title
-    org-level-1
-    org-level-2
-    org-level-3
-    org-level-4
-    org-level-5
-    org-level-6
-    org-level-7
-    org-level-8
-    org-list-dt
-    org-table-header
-    org-tag-group
-    org-target
-    outline-1
-    outline-2
-    outline-3
-    outline-4
-    outline-5
-    outline-6
-    outline-7
-    outline-8
     proced-emacs-pid
     proced-sort-header
     rcirc-prompt
@@ -1010,6 +984,12 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     line-number-current-line
     log-edit-header
     magit-section-heading
+    markdown-header-face-1
+    markdown-header-face-2
+    markdown-header-face-3
+    markdown-header-face-4
+    markdown-header-face-5
+    markdown-header-face-6
     markdown-metadata-key-face
     message-header-name
     notmuch-crypto-decryption
@@ -1018,6 +998,26 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-crypto-signature-good-key
     notmuch-crypto-signature-unknown
     org-agenda-structure
+    org-level-1
+    org-level-2
+    org-level-3
+    org-level-4
+    org-level-5
+    org-level-6
+    org-level-7
+    org-level-8
+    org-list-dt
+    org-table-header
+    org-tag-group
+    org-target
+    outline-1
+    outline-2
+    outline-3
+    outline-4
+    outline-5
+    outline-6
+    outline-7
+    outline-8
     package-help-section-name))
 
 (defconst doric-themes-bold-italic-faces
