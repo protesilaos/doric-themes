@@ -51,6 +51,7 @@
     doric-themes-underline-emphasis-faces
     doric-themes-underline-emphasis-subtle-faces
     doric-themes-underline-link-faces
+    doric-themes-underline-subtle-shadow-faces
     doric-themes-diff-added-faces
     doric-themes-diff-added-highlight-faces
     doric-themes-diff-added-refine-faces

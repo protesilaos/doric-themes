@@ -1217,14 +1217,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     denote-faces-link
     denote-faces-query-link
     dictionary-reference-face
-    dired-symlink
-    diredfl-symlink
-    eshell-ls-symlink
     info-node
     info-xref
-    info-xref-visited
     link
-    link-visited
     marginalia-file-priv-link
     org-cite
     org-cite-key
@@ -1233,6 +1228,13 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     package-name
     rcirc-url
     shr-link))
+
+(defconst doric-themes-underline-subtle-shadow-faces
+  '(dired-symlink
+    diredfl-symlink
+    eshell-ls-symlink
+    info-xref-visited
+    link-visited))
 
 (defconst doric-themes-diff-added-faces
   '(denote-faces-prompt-new-name
@@ -1525,6 +1527,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               ,@(doric-themes-prepare-faces doric-themes-italic-faces :inherit ''italic :foreground 'fg-shadow-subtle)
               ,@(doric-themes-prepare-faces doric-themes-italic-only-faces :inherit ''italic)
               ,@(doric-themes-prepare-faces doric-themes-underline-link-faces :inherit ''underline :foreground 'fg-accent)
+              ,@(doric-themes-prepare-faces doric-themes-underline-subtle-shadow-faces :inherit ''underline :foreground 'fg-shadow-subtle)
               ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-faces :inherit ''(underline italic) :foreground 'fg-shadow-subtle)
               ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-subtle-faces :underline 'border)
 
