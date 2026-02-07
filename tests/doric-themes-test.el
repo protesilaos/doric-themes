@@ -65,6 +65,7 @@
     doric-themes-error-background-faces
     doric-themes-warning-foreground-only-faces
     doric-themes-success-foreground-only-faces
+    doric-themes-success-background-faces
     doric-themes-error-underline-faces
     doric-themes-warning-underline-faces
     doric-themes-success-underline-faces
