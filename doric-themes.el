@@ -957,7 +957,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     so-long-mode-line-active
     telega-chat-prompt
     texinfo-heading
-    transient-heading
     trashed-directory
     vc-conflict-state
     vc-dir-header
@@ -1016,7 +1015,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     outline-6
     outline-7
     outline-8
-    package-help-section-name))
+    package-help-section-name
+    transient-heading))
 
 (defconst doric-themes-bold-italic-faces
   '(appt-notification
