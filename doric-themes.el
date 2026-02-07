@@ -1341,6 +1341,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(flycheck-error
     flyspell-incorrect
     flymake-error
+    notmuch-tag-deleted
     writegood-duplicates-face))
 
 (defconst doric-themes-warning-underline-faces
@@ -1680,10 +1681,6 @@ default to a generic text that mentions the BACKGROUND-MODE."
                 ((default :inherit bold :background ,bg-shadow-subtle)
                  (((supports :overline t))
                   :overline ,fg-shadow-subtle)))
-              `(notmuch-tag-deleted
-                ((default  :inverse-video t)
-                 (((supports :box t))
-                  :box (:line-width (5 . -1) :style flat-button))))
 
               `(org-agenda-date-weekend ((t :inherit (bold shadow))))
               `(org-agenda-date-today ((t :inherit (underline org-agenda-date))))
