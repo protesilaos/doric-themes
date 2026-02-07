@@ -978,7 +978,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diredfl-dir-heading
     elfeed-search-unread-title-face
     elisp-throw-tag
-    git-commit-comment-heading
     git-commit-summary
     line-number-current-line
     log-edit-header
@@ -1060,6 +1059,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     git-commit-comment-action
     git-commit-comment-branch-remote
     git-commit-comment-branch-local
+    git-commit-comment-heading
     gnus-emphasis-bold-italic
     gnus-server-denied
     ibuffer-locked-buffer
