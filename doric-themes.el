@@ -1233,7 +1233,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diredfl-symlink
     eshell-ls-symlink
     info-xref-visited
-    link-visited))
+    link-visited
+    org-agenda-structure-filter))
 
 (defconst doric-themes-diff-added-faces
   '(denote-faces-prompt-new-name
