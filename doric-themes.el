@@ -703,6 +703,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-bold-accent-foreground-only-faces
   '(diary
     magit-diff-file-heading
+    org-agenda-structure
     org-imminent-deadline
     notmuch-tag-unread))
 
@@ -934,7 +935,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     minibuffer-prompt
     mode-line-buffer-id
     mode-line-emphasis
-    org-agenda-date
     org-document-title
     proced-emacs-pid
     proced-sort-header
@@ -995,7 +995,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-crypto-signature-good
     notmuch-crypto-signature-good-key
     notmuch-crypto-signature-unknown
-    org-agenda-structure
+    org-agenda-date
     org-level-1
     org-level-2
     org-level-3
