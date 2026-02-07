@@ -60,7 +60,7 @@
       (fg-accent "#2f6920")
 
       (fg-red "#990020")
-      (fg-green "#006710")
+      (fg-green "#006740")
       (fg-yellow "#706000")
       (fg-blue "#003370")
       (fg-magenta "#782050")
