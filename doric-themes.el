@@ -973,7 +973,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     ztreep-header-face))
 
 (defconst doric-themes-bold-intense-faces
-  '(dired-header
+  '(change-log-list
+    dired-header
     diredfl-dir-heading
     elfeed-search-unread-title-face
     elisp-throw-tag
@@ -1022,7 +1023,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(appt-notification
     aw-key-face
     change-log-conditionals
-    change-log-list
     comint-highlight-input
     compilation-error
     completions-group-title
