@@ -704,6 +704,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(diary
     magit-diff-file-heading
     org-agenda-structure
+    org-document-title
     org-imminent-deadline
     notmuch-tag-unread))
 
@@ -935,7 +936,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     minibuffer-prompt
     mode-line-buffer-id
     mode-line-emphasis
-    org-document-title
     proced-emacs-pid
     proced-sort-header
     rcirc-prompt
