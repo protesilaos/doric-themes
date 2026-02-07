@@ -703,7 +703,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-bold-accent-foreground-only-faces
   '(diary
     magit-diff-file-heading
-    org-imminent-deadline))
+    org-imminent-deadline
+    notmuch-tag-unread))
 
 (defconst doric-themes-main-foreground-only-faces
   '(border
@@ -788,8 +789,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     next-error-message
     nobreak-hyphen
     nobreak-space
-    notmuch-tag-unread
-    notmuch-tag-flagged
     org-agenda-current-time
     org-agenda-filter-category
     org-agenda-filter-effort
@@ -1323,6 +1322,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-latex-warning-face
     font-lock-escape-facex
     font-lock-warning-face
+    notmuch-tag-flagged
     warning))
 
 (defconst doric-themes-success-foreground-only-faces
