@@ -1676,7 +1676,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
                  (t :underline ,border)))
 
               `(notmuch-message-summary-face
-                ((default :background ,bg-shadow-subtle)
+                ((default :inherit bold :background ,bg-shadow-subtle)
                  (((supports :overline t))
                   :overline ,fg-shadow-subtle)))
 
