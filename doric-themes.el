@@ -1072,6 +1072,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     marginalia-file-priv-dir
     marginalia-key
     message-mml
+    org-macro
     org-mode-line-clock-overrun
     package-status-avail-obso
     package-status-disabled
@@ -1150,7 +1151,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-agenda-structure-secondary
     org-inline-src-block
     org-latex-and-related
-    org-macro
     org-priority
     package-description
     rcirc-dim-nick
