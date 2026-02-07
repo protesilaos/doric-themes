@@ -443,7 +443,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     menu
     message-separator
     mu4e-region-code
-    org-agenda-diary
     org-agenda-restriction-lock
     org-clock-overlay
     secondary-selection
@@ -1148,6 +1147,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-wash-cited-text
     org-agenda-calendar-event
     org-agenda-calendar-sexp
+    org-agenda-diary
     org-agenda-structure-secondary
     org-inline-src-block
     org-latex-and-related
