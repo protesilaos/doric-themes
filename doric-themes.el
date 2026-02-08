@@ -1003,7 +1003,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-level-6
     org-level-7
     org-level-8
-    org-list-dt
     org-table-header
     org-tag-group
     org-target
@@ -1699,6 +1698,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
                  (((supports :box t))
                   :box (:line-width (-1 . -1) :color ,fg-main))))
               `(org-document-info-keyword ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+              `(org-list-dt ((t :inherit bold)))
               `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
               `(org-ellipsis (( ))) ; inherits from the heading's color
               '(org-formula ((t :inherit fixed-pitch)))
