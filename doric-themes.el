@@ -1319,6 +1319,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(TeX-error-description-warning
     elisp-non-local-exit
     elisp-warning-type
+    emacs-news-does-not-need-documentation
     flymake-warning-fringe
     font-latex-warning-face
     font-lock-escape-facex
@@ -1329,6 +1330,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-success-foreground-only-faces
   '(TeX-error-description-help
     TeX-error-description-tex-said
+    emacs-news-is-documented
     ert-test-result-expected
     flymake-note-fringe
     org-agenda-done
