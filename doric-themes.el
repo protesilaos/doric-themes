@@ -1812,6 +1812,25 @@ default to a generic text that mentions the BACKGROUND-MODE."
                (list `(provide-theme ',name)))))
     (error "No palette found for `%s'" name)))
 
+(defun doric-themes--with-colors-subr (&rest body)
+  "Evaluate BODY for `doric-themes-with-colors'."
+  (condition-case data
+      (when-let* ((theme (doric-themes--current-theme))
+                  (palette-symbol (intern-soft (format "%s-palette" theme)))
+                  (_ (boundp palette-symbol))
+                  (palette (symbol-value palette-symbol)))
+        (eval
+         `(let (,@palette)
+            ,body)))
+    (error (message "Error in doric-themes-with-colors: %s" data))))
+
+;;;###autoload
+(defmacro doric-themes-with-colors (&rest body)
+  "Evaluate BODY with current Doric theme's palette `let' bound."
+  (declare (indent 0))
+  `(doric-themes--with-colors-subr
+    (lambda () ,@body)))
+
 ;;;; Add themes from package to path
 
 ;;;###autoload
