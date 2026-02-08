@@ -337,7 +337,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     markdown-highlighting-face
     mode-line-highlight
     next-error
-    org-dispatcher-highlight
     proced-marked
     pulse-highlight-start-face
     rectangle-preview
@@ -1697,6 +1696,17 @@ default to a generic text that mentions the BACKGROUND-MODE."
                 ((default :foreground ,fg-accent :inverse-video t)
                  (((supports :box t))
                   :box (:line-width (-1 . -1) :color ,fg-main))))
+              ;; NOTE 2026-02-08: Adapted from my `modus-themes'.
+              ;;
+              ;; NOTE 2024-03-17: Normally we do not want to add this padding
+              ;; with the :box, but I do it here because the keys are otherwise
+              ;; very hard to read.  The square brackets around them are not
+              ;; colored, which is what is causing the problem.
+              `(org-dispatcher-highlight
+                ((default :inherit bold :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
+                 (((supports :box t))
+                  :box (:line-width 2 :style flat-button)))
+                 (t :underline ,border))
               `(org-document-info-keyword ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
               `(org-list-dt ((t :inherit bold)))
               `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
