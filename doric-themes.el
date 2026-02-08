@@ -400,7 +400,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-lock-function-call-face
     haskell-constructor-face
     mm-uu-extract
-    magit-log-author
     magit-log-date
     marginalia-date
     message-header-cc
@@ -505,6 +504,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     breadcrumb-face
     calendar-weekend-header
     change-log-email
+    change-log-name
     compilation-column-number
     compilation-line-number
     consult-grep-context
@@ -553,6 +553,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     line-number
     magit-diff-context
     magit-log-graph
+    magit-log-author
     marginalia-documentation
     marginalia-file-name
     marginalia-file-priv-no
@@ -828,7 +829,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     breadcrumb-project-leaf-face
     buffer-menu-buffer
     calendar-month-header
-    change-log-name
     change-log-file
     circe-prompt-face
     comint-highlight-prompt
