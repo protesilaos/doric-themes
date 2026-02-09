@@ -343,8 +343,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     speedbar-highlight-face
     tab-bar-tab-highlight
     tab-line-highlight
-    transient-enabled-suffix
-    transient-value
     vertico-current))
 
 (defconst doric-themes-intense-shadow-faces
@@ -371,8 +369,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     region
     show-paren-match
     speedbar-separator-face
-    substitute-match
-    transient-argument))
+    substitute-match))
 
 (defconst doric-themes-intense-shadow-foreground-only-faces
   '(calendar-weekday-header
@@ -447,7 +444,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     show-paren-match-expression
     tab-bar
     tab-line
-    transient-disabled-suffix
     tool-bar
     vc-dir-status-ignored
     widget-documentation
@@ -1241,6 +1237,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-diff-added
     magit-diffstat-added
     smerge-lower
+    transient-enabled-suffix
     ztreep-diff-model-add-face))
 
 (defconst doric-themes-diff-added-highlight-faces
@@ -1260,7 +1257,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     diff-changed-unspecified
     diff-indicator-changed
     magit-diff-base
-    smerge-base))
+    smerge-base
+    transient-value))
 
 (defconst doric-themes-diff-changed-highlight-faces
   '(diff-hl-change
@@ -1272,7 +1270,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-diff-changed-refine-faces
   '(diff-refine-changed
     ediff-fine-diff-C
-    smerge-refined-changed))
+    smerge-refined-changed
+    transient-argument))
 
 (defconst doric-themes-diff-removed-faces
   '(denote-faces-prompt-old-name
@@ -1281,6 +1280,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-diff-removed
     magit-diffstat-removed
     smerge-upper
+    transient-disabled-suffix
     ztreep-diff-model-diff-face))
 
 (defconst doric-themes-diff-removed-highlight-faces
