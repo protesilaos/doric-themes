@@ -398,11 +398,11 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-lock-function-name-face
     font-lock-function-call-face
     haskell-constructor-face
-    mm-uu-extract
     magit-log-date
     marginalia-date
     message-header-cc
     message-header-other
+    mm-uu-extract
     notmuch-search-date
     org-agenda-calendar-daterange
     org-agenda-column-dateline
