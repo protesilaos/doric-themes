@@ -1725,7 +1725,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(org-hide ((t :foreground ,bg-main)))
               `(org-indent ((t :inherit (fixed-pitch org-hide))))
               `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
-              '(org-property-value ((t :inherit fixed-pitch)))
+              `(org-property-value ((t :inherit fixed-pitch :foreground ,fg-accent)))
               '(org-quote ((t :inherit (italic org-block))))
               `(org-verbatim ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
               '(org-verse ((t :inherit org-block)))
