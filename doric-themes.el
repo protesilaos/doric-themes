@@ -624,6 +624,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-tree-no-match-date-face
     notmuch-tree-no-match-face
     org-agenda-dimmed-todo-face
+    org-agenda-calendar-event
+    org-agenda-calendar-sexp
+    org-agenda-diary
     org-column
     org-special-keyword
     org-tag
@@ -1139,9 +1142,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     markdown-blockquote-face
     markdown-inline-code-face
     notmuch-wash-cited-text
-    org-agenda-calendar-event
-    org-agenda-calendar-sexp
-    org-agenda-diary
     org-agenda-structure-secondary
     org-inline-src-block
     org-latex-and-related
