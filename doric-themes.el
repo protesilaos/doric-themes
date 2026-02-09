@@ -701,6 +701,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 
 (defconst doric-themes-bold-accent-foreground-only-faces
   '(diary
+    magit-branch-local
+    magit-branch-remote
+    magit-branch-remote-head
+    magit-branch-upstream
     magit-diff-file-heading
     org-agenda-structure
     org-document-title
@@ -920,10 +924,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     info-title-4
     keycast-command
     log-edit-summary
-    magit-branch-local
-    magit-branch-remote
-    magit-branch-remote-head
-    magit-branch-upstream
     magit-mode-line-process
     magit-process-ok
     magit-signature-good
@@ -979,6 +979,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     git-commit-summary
     line-number-current-line
     log-edit-header
+    magit-branch-current
     magit-section-heading
     markdown-header-face-1
     markdown-header-face-2
@@ -1132,7 +1133,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     help-argument-name
     holiday
     line-number-minor-tick
-    magit-branch-current
     magit-cherry-unmatched
     magit-signature-error
     magit-signature-expired
