@@ -792,11 +792,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     next-error-message
     nobreak-hyphen
     nobreak-space
-    org-agenda-current-time
-    org-agenda-filter-category
-    org-agenda-filter-effort
-    org-agenda-filter-regexp
-    org-agenda-filter-tags
     org-archived
     org-default
     org-document-info
@@ -992,7 +987,12 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-crypto-signature-good
     notmuch-crypto-signature-good-key
     notmuch-crypto-signature-unknown
+    org-agenda-current-time
     org-agenda-date
+    org-agenda-filter-category
+    org-agenda-filter-effort
+    org-agenda-filter-regexp
+    org-agenda-filter-tags
     org-level-1
     org-level-2
     org-level-3
