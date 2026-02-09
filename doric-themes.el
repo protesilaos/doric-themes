@@ -623,7 +623,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-tree-match-tag-face
     notmuch-tree-no-match-date-face
     notmuch-tree-no-match-face
-    org-agenda-dimmed-todo-face
     org-agenda-calendar-event
     org-agenda-calendar-sexp
     org-agenda-diary
@@ -1069,6 +1068,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     marginalia-file-priv-dir
     marginalia-key
     message-mml
+    org-agenda-dimmed-todo-face
     org-macro
     org-mode-line-clock-overrun
     package-status-avail-obso
