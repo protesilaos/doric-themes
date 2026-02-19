@@ -33,6 +33,7 @@
 
 ;;; Code:
 
+;;;###theme-autoload
 (eval-and-compile
   (unless (and (fboundp 'require-theme)
                load-file-name
