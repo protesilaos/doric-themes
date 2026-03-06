@@ -56,6 +56,7 @@
   '(doric-copper
     doric-dark
     doric-fire
+    doric-magma
     doric-mermaid
     doric-obsidian
     doric-pine
