@@ -43,6 +43,7 @@
   '(doric-almond
     doric-beach
     doric-cherry
+    doric-coral
     doric-earth
     doric-jade
     doric-light
