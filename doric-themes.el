@@ -63,6 +63,7 @@
     doric-pine
     doric-plum
     doric-valley
+    doric-walnut
     doric-water)
   "Dark themes.")
 
