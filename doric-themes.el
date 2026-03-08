@@ -376,8 +376,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     substitute-match))
 
 (defconst doric-themes-intense-shadow-foreground-only-faces
-  '(calendar-weekday-header
-    change-log-date
+  '(change-log-date
     denote-faces-date
     denote-faces-day
     denote-faces-hour
@@ -968,7 +967,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     ztreep-header-face))
 
 (defconst doric-themes-bold-intense-faces
-  '(change-log-list
+  '(calendar-weekday-header
+    change-log-list
     dired-header
     diredfl-dir-heading
     elfeed-search-unread-title-face
