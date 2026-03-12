@@ -435,6 +435,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     eww-form-text
     git-gutter:separator
     header-line
+    header-line-inactive
     magit-blame-heading
     magit-blame-margin
     match
