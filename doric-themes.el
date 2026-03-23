@@ -344,6 +344,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     proced-marked
     pulse-highlight-start-face
     rectangle-preview
+    shr-selected-link
     speedbar-highlight-face
     tab-bar-tab-highlight
     tab-line-highlight
@@ -446,6 +447,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-clock-overlay
     secondary-selection
     show-paren-match-expression
+    shr-mark
     tab-bar
     tab-line
     tool-bar
