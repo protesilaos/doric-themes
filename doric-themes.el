@@ -169,6 +169,7 @@ If TRANSFORM is non-nil, return THEME as-is."
 
 (defun doric-themes--display-sort (themes)
   "Put the current theme before other THEMES for minibuffer completion."
+  (setq themes (sort themes #'string-lessp))
   (let* ((current (doric-themes--current-theme))
          (current-theme-p (lambda (theme) (eq (intern-soft theme) current))))
     (nconc
