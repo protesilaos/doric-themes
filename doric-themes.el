@@ -1303,12 +1303,26 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     ediff-fine-diff-A
     smerge-refined-removed))
 
+(defconst doric-themes-error-background-faces
+  '(flycheck-fringe-error
+    flymake-error-fringe
+    magit-diff-whitespace-warning
+    trailing-whitespace
+    whitespace-trailing))
+
+(defconst doric-themes-warning-background-faces
+  '(flycheck-fringe-warning
+    flymake-warning-fringe))
+
+(defconst doric-themes-success-background-faces
+  '(flycheck-fringe-info
+    flymake-note-fringe))
+
 (defconst doric-themes-error-foreground-only-faces
   '(TeX-error-description-error
     dired-broken-symlink
     error
     ert-test-result-unexpected
-    flymake-error-fringe
     org-checkbox-statistics-todo
     org-headline-todo
     org-todo
@@ -1316,17 +1330,11 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     whitespace-space-after-tab
     whitespace-space-before-tab))
 
-(defconst doric-themes-error-background-faces
-  '(magit-diff-whitespace-warning
-    trailing-whitespace
-    whitespace-trailing))
-
 (defconst doric-themes-warning-foreground-only-faces
   '(TeX-error-description-warning
     elisp-non-local-exit
     elisp-warning-type
     emacs-news-does-not-need-documentation
-    flymake-warning-fringe
     font-latex-warning-face
     font-lock-escape-facex
     font-lock-warning-face
@@ -1338,7 +1346,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     TeX-error-description-tex-said
     emacs-news-is-documented
     ert-test-result-expected
-    flymake-note-fringe
     org-agenda-done
     org-checkbox-statistics-done
     org-done
@@ -1531,7 +1538,9 @@ default to a generic text that mentions the BACKGROUND-MODE."
               ,@(doric-themes-prepare-faces doric-themes-error-underline-faces :underline '(list :style 'wave :color fg-red))
               ,@(doric-themes-prepare-faces doric-themes-warning-underline-faces :underline '(list :style 'wave :color fg-yellow))
               ,@(doric-themes-prepare-faces doric-themes-success-underline-faces :underline '(list :style 'wave :color fg-cyan))
-              ,@(doric-themes-prepare-faces doric-themes-error-background-faces :background '(doric-themes-adjust-value bg-red 30))
+              ,@(doric-themes-prepare-faces doric-themes-error-background-faces :background 'bg-red)
+              ,@(doric-themes-prepare-faces doric-themes-warning-background-faces :background 'bg-yellow)
+              ,@(doric-themes-prepare-faces doric-themes-success-background-faces :background 'bg-green)
 
               ,@(doric-themes-prepare-faces doric-themes-bold-faces :inherit ''bold :foreground 'fg-shadow-intense)
               ,@(doric-themes-prepare-faces doric-themes-bold-intense-faces :inherit ''bold :foreground 'fg-main)
