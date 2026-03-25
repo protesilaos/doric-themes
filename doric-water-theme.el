@@ -68,7 +68,7 @@
 
       (bg-red "#602638")
       (bg-green "#104c3a")
-      (bg-yellow "#50442f")
+      (bg-yellow "#54482f")
       (bg-blue "#323a6b")
       (bg-magenta "#5a2855")
       (bg-cyan "#2f495f"))
