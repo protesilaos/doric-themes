@@ -1,5 +1,5 @@
 #+title: Contrast ratio values of the Doric themes
-#+author: Protesilaos Stavrou (https://protesilaos.com)
+#+author: Protesilaos (https://protesilaos.com)
 #+startup: content indent
 
 Evaluate this snippet. Then update a table by typing =C-c C-c= with
