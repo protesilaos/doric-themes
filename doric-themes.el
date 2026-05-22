@@ -323,7 +323,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   (let* ((themes (doric-themes--minus-current variant))
          (match (or (nth (random (length themes)) themes) (car themes))))
     (doric-themes-load-theme match)
-    (message "Match `%s'" (propertize (symbol-name match) 'face 'bold))))
+    (message "Loaded `%s'" (propertize (symbol-name match) 'face 'bold))))
 
 ;;;; Face customisations
 
