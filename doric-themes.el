@@ -630,9 +630,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     notmuch-tree-match-tag-face
     notmuch-tree-no-match-date-face
     notmuch-tree-no-match-face
-    org-agenda-calendar-event
-    org-agenda-calendar-sexp
-    org-agenda-diary
     org-column
     org-special-keyword
     org-tag
@@ -1175,7 +1172,10 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     elisp-defvar
     elisp-shadowed-variable
     font-lock-variable-name-face
-    font-lock-variable-use-face))
+    font-lock-variable-use-face
+    org-agenda-calendar-event
+    org-agenda-calendar-sexp
+    org-agenda-diary))
 
 (defconst doric-themes-underline-emphasis-faces
   '(company-echo-common
