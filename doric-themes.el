@@ -50,6 +50,7 @@
     doric-marble
     doric-oak
     doric-siren
+    doric-tiger
     doric-wind)
   "Light themes.")
 
@@ -57,6 +58,7 @@
   '(doric-copper
     doric-dark
     doric-fire
+    doric-lion
     doric-magma
     doric-mermaid
     doric-obsidian
