@@ -957,6 +957,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     trashed-directory
     vc-conflict-state
     vc-dir-header
+    vc-dir-key-binding-hint-label
     vc-dir-status-warning
     vc-locked-state
     vc-missing-state
