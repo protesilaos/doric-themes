@@ -638,12 +638,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-time-grid
     org-upcoming-deadline
     org-upcoming-distant-deadline
-    package-status-available
-    package-status-built-in
-    package-status-dependency
-    package-status-external
-    package-status-from-source
-    package-status-new
     proced-executable
     proced-interruptible-sleep-status-code
     proced-mem
@@ -803,6 +797,12 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     org-mode-line-clock
     org-scheduled
     org-scheduled-today
+    package-status-available
+    package-status-built-in
+    package-status-dependency
+    package-status-external
+    package-status-from-source
+    package-status-new
     proced-cpu
     proced-mark
     proced-memory-low-usage
