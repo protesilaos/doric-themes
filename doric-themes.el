@@ -790,7 +790,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     mouse-drag-and-drop-region
     next-error-message
     nobreak-hyphen
-    nobreak-space
     org-archived
     org-default
     org-document-info
@@ -1212,7 +1211,8 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 
 (defconst doric-themes-underline-emphasis-subtle-faces
   '(eglot-highlight-symbol-face
-    elisp-variable-at-point))
+    elisp-variable-at-point
+    nobreak-space))
 
 (defconst doric-themes-underline-link-faces
   '(browse-url-button
