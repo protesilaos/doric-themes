@@ -5,7 +5,7 @@
 ;; Author: Protesilaos <info@protesilaos.com>
 ;; Maintainer: Protesilaos <info@protesilaos.com>
 ;; URL: https://github.com/protesilaos/doric-themes
-;; Version: 1.1.0
+;; Version: 1.2.0
 ;; Package-Requires: ((emacs "29.1"))
 ;; Keywords: faces, theme, accessibility
 
