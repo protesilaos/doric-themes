@@ -130,7 +130,8 @@ This is used by the commands `doric-themes-toggle',
 (defun doric-themes--enable-themes ()
   "Enable the Doric themes."
   (dolist (theme doric-themes-collection)
-    (load-theme theme :no-confirm :no-enable)))
+    (unless (memq theme custom-known-themes)
+      (load-theme theme :no-confirm :no-enable))))
 
 (defun doric-themes--list-known-themes ()
   "Return list of `custom-known-themes' matching `doric-themes--doric-p'."
