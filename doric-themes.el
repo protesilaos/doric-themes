@@ -191,12 +191,11 @@ If TRANSFORM is non-nil, return THEME as-is."
 (defun doric-themes-select-prompt (&optional prompt)
   "Minibuffer prompt to select a Doric theme.
 With optional PROMPT string, use it.  Else use a generic prompt."
-  (let ((completion-extra-properties `(:annotation-function ,#'doric-themes--annotate-theme)))
-    (intern
-     (completing-read
-      (or prompt "Select Doric theme: ")
-      (doric-themes--completion-table (doric-themes--list-known-themes))
-      nil t nil 'doric-themes-select-theme-history))))
+  (intern
+   (completing-read
+    (or prompt "Select Doric theme: ")
+    (doric-themes--completion-table (doric-themes--list-known-themes))
+    nil t nil 'doric-themes-select-theme-history)))
 
 (defun doric-themes-load-theme (theme)
   "Load THEME while disabling other themes and return THEME."
