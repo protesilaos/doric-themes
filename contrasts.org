@@ -334,6 +334,28 @@ C1 and C2 are color values written in hexadecimal RGB."
 :CUSTOM_ID: h:dark-themes
 :END:
 
+** Doric Borage
+:PROPERTIES:
+:CUSTOM_ID: h:doric-borage
+:END:
+
+|                   |         | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |
+| Name              |         | #3a2e3f |          #42394c |   ##4c4760 |           #425639 |   #583d49 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-main           | #eed0c7 |    8.82 |             7.54 |      14.48 |              5.52 |      6.65 |
+| fg-shadow-subtle  | #a690c9 |    4.54 |             3.88 |       7.45 |              2.84 |      3.42 |
+| fg-neutral        | #c8c4d7 |    7.51 |             6.42 |      12.33 |              4.70 |      5.66 |
+| fg-shadow-intense | #afc487 |    6.74 |             5.76 |      11.07 |              4.22 |      5.08 |
+| fg-accent         | #dfa487 |    5.97 |             5.10 |       9.80 |              3.74 |      4.50 |
+|-------------------+---------+---------+------------------+------------+-------------------+-----------|
+| fg-red            | #eed0c7 |    8.82 |             7.54 |      14.48 |              5.52 |      6.65 |
+| fg-green          | #eca28f |    6.17 |             5.27 |      10.13 |              3.86 |      4.65 |
+| fg-yellow         | #b9d0aa |    7.71 |             6.59 |      12.67 |              4.83 |      5.81 |
+| fg-blue           | #c0b060 |    5.86 |             5.01 |       9.62 |              3.67 |      4.42 |
+| fg-magenta        | #9fbfe7 |    6.75 |             5.77 |      11.08 |              4.23 |      5.09 |
+| fg-cyan           | #e9acbf |    6.77 |             5.79 |      11.12 |              4.24 |      5.10 |
+#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f
+
 ** Doric Copper
 :PROPERTIES:
 :CUSTOM_ID: h:doric-copper
