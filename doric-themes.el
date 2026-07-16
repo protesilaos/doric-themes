@@ -47,6 +47,7 @@
     doric-earth
     doric-jade
     doric-light
+    doric-lilac
     doric-marble
     doric-oak
     doric-siren
