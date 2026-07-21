@@ -545,7 +545,6 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     font-latex-string-face
     font-latex-verbatim-face
     font-lock-string-face
-    gnus-header-name
     gnus-splash
     gnus-summary-high-ancient
     gnus-summary-high-read
@@ -978,6 +977,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     elfeed-search-unread-title-face
     elisp-throw-tag
     git-commit-summary
+    gnus-header-name
     line-number-current-line
     log-edit-header
     magit-branch-current
