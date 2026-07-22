@@ -1262,6 +1262,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-diff-added-refine-faces
   '(diff-refine-added
     ediff-fine-diff-B
+    magit-diff-added-indicator
     smerge-refined-added))
 
 (defconst doric-themes-diff-changed-faces
@@ -1283,6 +1284,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
   '(diff-refine-changed
     ediff-fine-diff-C
     smerge-refined-changed
+    magit-diff-base-indicator
     transient-argument))
 
 (defconst doric-themes-diff-removed-faces
@@ -1305,6 +1307,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
 (defconst doric-themes-diff-removed-refine-faces
   '(diff-refine-removed
     ediff-fine-diff-A
+    magit-diff-removed-indicator
     smerge-refined-removed))
 
 (defconst doric-themes-error-background-faces
