@@ -585,6 +585,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     message-header-newsgroups
     message-header-xheader
     mu4e-header-face
+    mu4e-thread-fold-face
     nerd-icons-blue
     nerd-icons-blue-alt
     nerd-icons-completion-dir-face
@@ -1708,8 +1709,6 @@ default to a generic text that mentions the BACKGROUND-MODE."
                  (((supports :box t))
                   :box ,border)
                  (t :underline ,border)))
-
-              `(mu4e-thread-fold-face ((t :foreground ,border)))
 
               `(notmuch-message-summary-face
                 ((default :inherit bold :background ,bg-shadow-subtle)
