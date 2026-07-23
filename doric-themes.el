@@ -1709,6 +1709,8 @@ default to a generic text that mentions the BACKGROUND-MODE."
                   :box ,border)
                  (t :underline ,border)))
 
+              `(mu4e-thread-fold-face ((t :foreground ,border)))
+
               `(notmuch-message-summary-face
                 ((default :inherit bold :background ,bg-shadow-subtle)
                  (((supports :overline t))
