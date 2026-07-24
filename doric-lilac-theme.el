@@ -42,7 +42,7 @@
     (require 'doric-themes))
 
   (defvar doric-lilac-palette
-    '((cursor "#a07f50")
+    '((cursor "#906f20")
       (bg-main "#f2f0e7")
       (fg-main "#1a3530")
       (border "#8f9373")
