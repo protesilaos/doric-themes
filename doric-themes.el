@@ -976,6 +976,7 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     change-log-list
     dired-header
     diredfl-dir-heading
+    elfeed-search-unread-count-face
     elfeed-search-unread-title-face
     elisp-throw-tag
     git-commit-summary
