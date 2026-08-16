@@ -1658,6 +1658,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
               `(isearch-group-1 ((t :background ,bg-accent :foreground ,fg-accent)))
               `(isearch-group-2 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
               `(query-replace ((t :inherit isearch)))
+              `(query-replace-preview ((t :inherit (bold isearch))))
 
               '(help-key-binding ((t :inherit (fixed-pitch bold-italic))))
 
