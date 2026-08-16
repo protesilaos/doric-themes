@@ -48,7 +48,7 @@
       (border "#7a787f")
 
       (bg-shadow-subtle "#484040")
-      (fg-shadow-subtle "#afa497")
+      (fg-shadow-subtle "#af9a97")
 
       (bg-neutral "#554f52")
       (fg-neutral "#d9cfbe")
@@ -62,9 +62,9 @@
       (fg-red "#eca28f")
       (fg-green "#b9d0aa")
       (fg-yellow "#c0b060")
-      (fg-blue "#9fbfe7")
+      (fg-blue "#9fb8e7")
       (fg-magenta "#e9acbf")
-      (fg-cyan "#a0c0d0")
+      (fg-cyan "#a0c0c0")
 
       (bg-red "#613229")
       (bg-green "#325331")
