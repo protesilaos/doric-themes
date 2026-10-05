@@ -258,10 +258,10 @@ Run `doric-themes-after-load-theme-hook' after loading the theme."
         (if (eq (car custom-enabled-themes) one)
             (doric-themes-load-theme two)
           (doric-themes-load-theme one)))
-    (doric-themes-load-theme
-     (doric-themes-select-prompt
-      (concat "Set two `doric-themes-to-toggle'; "
-              "switching to theme selection for now: ")))))
+    (when-let* ((selection (doric-themes-select-prompt
+                            (concat "Set two `doric-themes-to-toggle'; "
+                                    "switching to theme selection for now: "))))
+      (doric-themes-load-theme selection))))
 
 (defun doric-themes--rotate (themes)
   "Rotate THEMES rightward such that the car is moved to the end."
