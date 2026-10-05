@@ -201,7 +201,8 @@ If TRANSFORM is non-nil, return THEME as-is."
 (defun doric-themes-select-prompt (&optional prompt)
   "Minibuffer prompt to select a Doric theme.
 With optional PROMPT string, use it.  Else use a generic prompt."
-  (let ((default (car doric-themes-select-theme-history)))
+  (let ((default (or (doric-themes--current-theme :as-string)
+                     (car doric-themes-select-theme-history))))
     (intern
      (completing-read
       (format-prompt (or prompt "Select Doric theme") default)
