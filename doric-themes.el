@@ -156,11 +156,10 @@ With optional AS-STRING, return a string."
   "Return description of THEME ."
   (when-let* ((symbol (intern-soft theme))
               (properties (get symbol 'theme-properties))
-              (doc-string (or (get symbol 'theme-documentation)
-                              (plist-get properties :doric-documentation))))
-    (format " %s"
-            (propertize (concat "-- " (car (split-string doc-string "\\.")))
-                        'face 'completions-annotations))))
+              (docstring (or (get symbol 'theme-documentation) (plist-get properties :doric-documentation)))
+              (docstring-parts (split-string docstring "\\."))
+              (docstring-first (car docstring-parts)))
+    (format " %s" (propertize (concat "-- " docstring-first) 'face 'completions-annotations))))
 
 (defvar doric-themes-select-theme-history nil
   "Minibuffer history of `doric-themes-select-prompt'.")
