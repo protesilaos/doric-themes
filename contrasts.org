@@ -38,6 +38,49 @@ C1 and C2 are color values written in hexadecimal RGB."
 (defalias #'Λ #'modus-themes-contrast)
 #+end_src
 
+This helps create a new table. Better this way than write a keyboard
+macro each time:
+
+#+begin_src emacs-lisp
+(defun prot/doric-themes-prepare-contrast-table ()
+  "Prepare contrast table for the current Doric theme."
+  (interactive)
+  (unless (string-match-p "doric.*theme.el\\'" buffer-file-name)
+    (error "Call this inside of a Doric theme file"))
+  (let* ((fn (lambda (strings)
+               (save-excursion
+                 (let ((collection nil))
+                   (goto-char (point-min))
+                   (dolist (bg strings)
+                     (re-search-forward bg)
+                     (re-search-forward "#[0-9a-f]\\{,6\\}")
+                     (push (match-string-no-properties 0) collection))
+                   (nreverse collection)))))
+         (background-strings '("bg-main" "bg-shadow-subtle" "bg-neutral" "bg-shadow-intense" "bg-accent"))
+         (foreground-strings '( "fg-main" "fg-shadow-subtle" "fg-neutral" "fg-shadow-intense" "fg-accent"
+                                "fg-red" "fg-green" "fg-yellow" "fg-blue" "fg-magenta" "fg-cyan"))
+         (backgrounds (funcall fn background-strings))
+         (foregrounds (funcall fn foreground-strings))
+         (index 0))
+    (with-temp-buffer
+      (insert "| | | bg-main | bg-shadow-subtle | bg-neutral | bg-shadow-intense | bg-accent |\n")
+      (insert (format "| Name | | %s | %s | %s | %s | %s |\n"
+                      (nth 0 backgrounds)
+                      (nth 1 backgrounds)
+                      (nth 2 backgrounds)
+                      (nth 3 backgrounds)
+                      (nth 4 backgrounds)))
+      (insert "|-\n")
+      (dolist (name foreground-strings)
+        (insert (format "| %s | %s |\n" name (nth index foregrounds)))
+        (setq index (+ index 1))
+        (when (= index 5)
+          (insert "|-\n")))
+      (insert "#+TBLFM: $3='(Λ $2 @2$3);%.2f :: $4='(Λ $2 @2$4);%.2f :: $5='(Λ $2 @2$5);%.2f :: $6='(Λ $2 @2$6);%.2f :: $7='(Λ $2 @2$7);%.2f\n")
+      (kill-new (buffer-string)))
+    (message "Copied contrast table for %s" (file-name-nondirectory buffer-file-name))))
+#+end_src
+
 * Light themes
 :PROPERTIES:
 :CUSTOM_ID: h:light-themes
