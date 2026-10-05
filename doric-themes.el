@@ -49,6 +49,7 @@
     doric-light
     doric-lilac
     doric-marble
+    doric-meadow
     doric-oak
     doric-siren
     doric-tiger
@@ -63,6 +64,7 @@
     doric-lion
     doric-magma
     doric-mermaid
+    doric-mountain
     doric-obsidian
     doric-pine
     doric-plum
