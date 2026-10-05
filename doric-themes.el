@@ -208,9 +208,20 @@ With optional PROMPT string, use it.  Else use a generic prompt."
       (doric-themes--completion-table (doric-themes--list-known-themes))
       nil t nil 'doric-themes-select-theme-history default))))
 
+(defun doric-themes--disable-themes (themes)
+  "Disable THEMES per `doric-themes-disable-other-themes'."
+  (mapc #'disable-theme themes))
+
+(defun doric-themes--get-color-schemes ()
+  "Return `custom-enabled-themes' of :kind `color-scheme'."
+  (seq-filter
+   (lambda (theme)
+     (eq (plist-get (get theme 'theme-properties) :kind) 'color-scheme))
+   custom-enabled-themes))
+
 (defun doric-themes-load-theme (theme)
   "Load THEME while disabling other themes and return THEME."
-  (mapc #'disable-theme custom-enabled-themes)
+  (doric-themes--disable-themes (doric-themes--get-color-schemes))
   (load-theme theme :no-confirm)
   (run-hooks 'doric-themes-after-load-theme-hook)
   theme)
