@@ -743,9 +743,9 @@ Run `doric-themes-after-load-theme-hook' after loading a theme."
     magit-branch-remote-head
     magit-branch-upstream
     magit-diff-file-heading
+    notmuch-tag-unread
     org-document-title
-    org-imminent-deadline
-    notmuch-tag-unread))
+    org-imminent-deadline))
 
 (defconst doric-themes-main-foreground-only-faces
   '(border
