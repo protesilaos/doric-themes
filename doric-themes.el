@@ -142,10 +142,15 @@ This is used by the commands `doric-themes-toggle',
   (doric-themes--enable-themes)
   (seq-filter #'doric-themes--doric-p custom-known-themes))
 
-(defun doric-themes--current-theme ()
-  "Return first enabled Doric theme."
-  (car (or (doric-themes--list-enabled-themes)
-           (doric-themes--list-known-themes))))
+(defun doric-themes--current-theme (&optional as-string)
+  "Return first enabled Doric theme.
+With optional AS-STRING, return a string."
+  (when-let* ((match (or (doric-themes--list-enabled-themes)
+                         (doric-themes--enable-themes)))
+              (first (car match)))
+    (if as-string
+        (symbol-name first)
+      first)))
 
 (defun doric-themes--annotate-theme (theme)
   "Return description of THEME ."
