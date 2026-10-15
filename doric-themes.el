@@ -1520,422 +1520,419 @@ default to a generic text that mentions the BACKGROUND-MODE."
   (unless (memq background-mode '(light dark))
     (error "The BACKGROUND-MODE must be either `light' or `dark'"))
   (if-let* ((palette (symbol-value (intern (format "%s-palette" name)))))
-      (let ((theme-exists-p (get name 'theme-feature)))
-        `(progn
-           ,@(unless theme-exists-p
-               (list `(custom-declare-theme
-                       ',name 'doric-themes
-                       ,(or description (format "Minimalist %s theme." background-mode))
-                       (list :kind 'color-scheme :background-mode ',background-mode :family 'doric :doric-documentation ,description))))
-           (let ,palette
-             (custom-theme-set-faces
-              ',name
-              `(default ((t :background ,bg-main :foreground ,fg-main)))
-              `(fringe ((t :background unspecified :foreground ,fg-accent)))
-              `(cursor ((t :background ,cursor)))
-
-              '(bold ((t :weight bold)))
-              '(italic ((t :slant italic)))
-              '(bold-italic ((t :weight bold :slant italic)))
-              '(underline ((t :underline t)))
-              `(internal-border ((t :foreground ,border)))
-              `(vertical-border ((t :foreground ,border)))
-              `(separator-line ((t :underline ,border)))
-              `(scroll-bar ((t :background ,bg-main :foreground ,border)))
-              `(fill-column-indicator ((t :foreground ,bg-shadow-intense)))
-              `(minibuffer-nonselected ((t :inverse-video t)))
-              `(tooltip ((t :background ,bg-accent :foreground ,fg-accent)))
-              `(tty-menu-disabled-face ((t :background ,bg-accent :foreground ,fg-shadow-subtle)))
-              `(tty-menu-enabled-face ((t :background ,bg-accent :foreground ,fg-main)))
-              `(tty-menu-selected-face ((t :background ,fg-main :foreground ,bg-main)))
-              `(read-multiple-choice-face ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-main :inverse-video t)))
-              `(show-paren-match ((t :inherit error :background ,bg-shadow-subtle :foreground ,fg-magenta)))
-
-              '(adoc-meta-face ((t :inherit fixed-pitch)))
-              '(adoc-meta-hide-face ((t :inherit fixed-pitch)))
-              '(adoc-secondary-text-face ((t :inherit fixed-pitch)))
-              '(adoc-table-face ((t :inherit fixed-pitch)))
-
-              `(ansi-color-bright-black ((t :background "gray30" :foreground "gray30")))
-              `(ansi-color-black ((t :background "black" :foreground "black")))
-              `(ansi-color-bright-white ((t :background "white" :foreground "white")))
-              `(ansi-color-white ((t :background "gray70" :foreground "gray70")))
-              `(ansi-color-bright-red ((t :background ,fg-red :foreground ,fg-red)))
-              `(ansi-color-red ((t :background ,fg-red :foreground ,fg-red)))
-              `(ansi-color-bright-green ((t :background ,fg-green :foreground ,fg-green)))
-              `(ansi-color-green ((t :background ,fg-green :foreground ,fg-green)))
-              `(ansi-color-bright-yellow ((t :background ,fg-yellow :foreground ,fg-yellow)))
-              `(ansi-color-yellow ((t :background ,fg-yellow :foreground ,fg-yellow)))
-              `(ansi-color-bright-blue ((t :background ,fg-blue :foreground ,fg-blue)))
-              `(ansi-color-blue ((t :background ,fg-blue :foreground ,fg-blue)))
-              `(ansi-color-bright-magenta ((t :background ,fg-magenta :foreground ,fg-magenta)))
-              `(ansi-color-magenta ((t :background ,fg-magenta :foreground ,fg-magenta)))
-              `(ansi-color-bright-cyan ((t :background ,fg-cyan :foreground ,fg-cyan)))
-              `(ansi-color-cyan ((t :background ,fg-cyan :foreground ,fg-cyan)))
-
-              `(aw-leading-char-face ((t :inherit bold-italic :height 1.5 :foreground ,fg-accent)))
-
-              `(calendar-today
-                ((default :foreground ,fg-main :inverse-video t)
-                 (((supports :box t))
-                  :box (:line-width (-1 . -1) :color ,fg-main))))
-
-              `(company-tooltip ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
-
-              `(completion-preview ((t :foreground ,fg-shadow-subtle)))
-              `(completion-preview-common ((t :inherit completion-preview :underline t)))
-              `(completion-preview-exact ((t :inherit (bold completion-preview) :underline t)))
-
-              `(corfu-default ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
-
-              `(custom-button
-                ((default :inherit variable-pitch :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
-                 (((supports :box t))
-                  :box (:line-width 1 :color ,border :style released-button))
-                 (t :underline ,border)))
-              `(custom-button-mouse
-                ((default :inherit variable-pitch :background ,bg-accent :foreground ,fg-accent)
-                 (((supports :box t))
-                  :box (:line-width 1 :color ,border :style released-button))
-                 (t :underline ,border)))
-              `(custom-button-pressed
-                ((default :inherit variable-pitch :background ,bg-main :foreground ,fg-accent)
-                 (((supports :box t))
-                  :box (:line-width 1 :color ,border :style pressed-button))
-                 (t :underline ,border)))
-              `(custom-button-pressed-unraised ((t :foreground ,fg-accent :underline ,border)))
-
-              '(devdocs-code-block ((t :inherit fixed-pitch)))
-
-              '(diff-header (( )))
-              `(diff-hunk-header ((t :inherit bold :background ,bg-shadow-subtle)))
-              `(diff-function ((t :background ,bg-shadow-subtle)))
-
-              ,@(doric-themes-prepare-faces doric-themes-intense-shadow-faces :background 'bg-shadow-intense :foreground 'fg-shadow-intense)
-              ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-faces :background 'bg-shadow-subtle :foreground 'fg-shadow-subtle)
-              ,@(doric-themes-prepare-faces doric-themes-intense-shadow-foreground-only-faces :foreground 'fg-shadow-intense)
-              ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-foreground-only-faces :foreground 'fg-shadow-subtle)
-              ,@(doric-themes-prepare-faces doric-themes-accent-foreground-only-faces :foreground 'fg-accent)
-              ,@(doric-themes-prepare-faces doric-themes-bold-accent-foreground-only-faces :inherit ''bold  :foreground 'fg-accent)
-              ,@(doric-themes-prepare-faces doric-themes-main-foreground-only-faces :foreground 'fg-main)
-
-              ,@(doric-themes-prepare-faces doric-themes-error-foreground-only-faces :inherit ''bold :foreground 'fg-red)
-              ,@(doric-themes-prepare-faces doric-themes-warning-foreground-only-faces :inherit ''bold :foreground 'fg-yellow)
-              ,@(doric-themes-prepare-faces doric-themes-success-foreground-only-faces :inherit ''bold :foreground 'fg-green)
-              ,@(doric-themes-prepare-faces doric-themes-error-underline-faces :underline '(list :style 'wave :color fg-red))
-              ,@(doric-themes-prepare-faces doric-themes-warning-underline-faces :underline '(list :style 'wave :color fg-yellow))
-              ,@(doric-themes-prepare-faces doric-themes-success-underline-faces :underline '(list :style 'wave :color fg-cyan))
-              ,@(doric-themes-prepare-faces doric-themes-error-background-faces :background 'bg-red)
-              ,@(doric-themes-prepare-faces doric-themes-warning-background-faces :background 'bg-yellow)
-              ,@(doric-themes-prepare-faces doric-themes-success-background-faces :background 'bg-green)
-
-              ,@(doric-themes-prepare-faces doric-themes-bold-faces :inherit ''bold :foreground 'fg-shadow-intense)
-              ,@(doric-themes-prepare-faces doric-themes-bold-intense-faces :inherit ''bold :foreground 'fg-main)
-              ,@(doric-themes-prepare-faces doric-themes-bold-italic-faces :inherit ''bold-italic :foreground 'fg-shadow-subtle)
-              ,@(doric-themes-prepare-faces doric-themes-italic-faces :inherit ''italic :foreground 'fg-shadow-subtle)
-              ,@(doric-themes-prepare-faces doric-themes-italic-only-faces :inherit ''italic)
-              ,@(doric-themes-prepare-faces doric-themes-underline-link-faces :inherit ''underline :foreground 'fg-accent)
-              ,@(doric-themes-prepare-faces doric-themes-underline-subtle-shadow-faces :inherit ''underline :foreground 'fg-shadow-subtle)
-              ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-faces :inherit ''(underline italic) :foreground 'fg-shadow-subtle)
-              ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-subtle-faces :underline 'border)
-
-              ,@(doric-themes-prepare-faces doric-themes-selection-faces :background 'bg-accent)
-
-              ,@(doric-themes-prepare-faces doric-themes-diff-added-faces :background '(doric-themes-adjust-value bg-green -10) :foreground 'fg-neutral)
-              ,@(doric-themes-prepare-faces doric-themes-diff-added-highlight-faces :background 'bg-green :foreground 'fg-green)
-              ,@(doric-themes-prepare-faces doric-themes-diff-added-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-green 10))
-              ,@(doric-themes-prepare-faces doric-themes-diff-changed-faces :background '(doric-themes-adjust-value bg-yellow -10) :foreground 'fg-neutral)
-              ,@(doric-themes-prepare-faces doric-themes-diff-changed-highlight-faces :background 'bg-yellow :foreground 'fg-yellow)
-              ,@(doric-themes-prepare-faces doric-themes-diff-changed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-yellow 10))
-              ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces :background '(doric-themes-adjust-value bg-red -10) :foreground 'fg-neutral)
-              ,@(doric-themes-prepare-faces doric-themes-diff-removed-highlight-faces :background 'bg-red :foreground 'fg-red)
-              ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-red 10))
-
-              ,@(doric-themes-prepare-faces doric-themes-cite-odd-faces :inherit ''italic :foreground 'fg-accent)
-              ,@(doric-themes-prepare-faces doric-themes-cite-even-faces :inherit ''italic :foreground 'fg-shadow-subtle)
-
-              ,@(doric-themes-prepare-faces doric-themes-mark-delete-faces :inherit ''bold-italic :background 'bg-red :foreground 'fg-red)
-              ,@(doric-themes-prepare-faces doric-themes-mark-select-faces :inherit ''bold-italic :background 'bg-green :foreground 'fg-green)
-
-              '(elisp-binding-variable (( )))
-              '(elisp-charset (( )))
-              '(elisp-coding (( )))
-              '(elisp-completion-category (( )))
-              '(elisp-constant (( )))
-              '(elisp-face (( )))
-              '(elisp-free-variable (( )))
-              '(elisp-group (( )))
-              '(elisp-icon (( )))
-              '(elisp-oclosure (( )))
-              '(elisp-shadowing-variable (( )))
-              '(elisp-special-variable-declaration (( )))
-              '(elisp-symbol-role (( )))
-              '(elisp-theme (( )))
-              '(elisp-thing (( )))
-              '(elisp-type (( )))
-              '(elisp-widget-type (( )))
-
-              '(embark-keybinding ((t :inherit (fixed-pitch bold-italic))))
-
-              `(erc-notice-face ((t :inherit italic :foreground ,fg-accent)))
-
-              `(flymake-eol-information-face ((t :inherit italic :height 0.9)))
-              `(flymake-error-echo-at-eol ((t :inherit italic :foreground ,fg-red :height 0.9)))
-              `(flymake-note-echo-at-eol ((t :inherit italic :foreground ,fg-green :height 0.9)))
-              `(flymake-warning-echo-at-eol ((t :inherit italic :foreground ,fg-yellow :height 0.9)))
-
-              `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
-              `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
-
-              ;; The :inverse-video prevents hl-line-mode from
-              ;; overriding the background.  Such an override really
-              ;; defeats the purpose of setting those highlights.
-              '(hi-aquamarine
-                ((default :inverse-video t)
-                 (((class color) (min-colors 88) (background light))
-                  :background "#ffffff" :foreground "#227f8f")
-                 (((class color) (min-colors 88) (background dark))
-                  :background "#000000" :foreground "#56abcc")))
-              '(hi-black-b ((t :inverse-video t)))
-              `(hi-black-hb ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle :inverse-video t)))
-              '(hi-blue
-                ((default :inverse-video t)
-                 (((class color) (min-colors 88) (background light))
-                  :background "#ffffff" :foreground "#4360bd")
-                 (((class color) (min-colors 88) (background dark))
-                  :background "#000000" :foreground "#9abcef")))
-              '(hi-blue-b ((t :inherit (bold hi-blue))))
-              '(hi-green
-                ((default :inverse-video t)
-                 (((class color) (min-colors 88) (background light))
-                  :background "#ffffff" :foreground "#407820")
-                 (((class color) (min-colors 88) (background dark))
-                  :background "#000000" :foreground "#76bd46")))
-              '(hi-green-b ((t :inherit (bold hi-green))))
-              '(hi-pink
-                ((default :inverse-video t)
-                 (((class color) (min-colors 88) (background light))
-                  :background "#ffffff" :foreground "#ad507a")
-                 (((class color) (min-colors 88) (background dark))
-                  :background "#000000" :foreground "#ef92bf")))
-              '(hi-red-b
-                ((default :inverse-video t)
-                 (((class color) (min-colors 88) (background light))
-                  :background "#ffffff" :foreground "#990000")
-                 (((class color) (min-colors 88) (background dark))
-                  :background "#000000" :foreground "#dd6060")))
-              '(hi-salmon
-                ((default :inverse-video t)
-                 (((class color) (min-colors 88) (background light))
-                  :background "#ffffff" :foreground "#9f654a")
-                 (((class color) (min-colors 88) (background dark))
-                  :background "#000000" :foreground "#e0aa80")))
-              '(hi-yellow
-                ((default :inverse-video t)
-                 (((class color) (min-colors 88) (background light))
-                  :background "#ffffff" :foreground "#806f00")
-                 (((class color) (min-colors 88) (background dark))
-                  :background "#000000" :foreground "#cab000")))
-
-              `(isearch ((t :background ,bg-shadow-intense :foreground ,fg-main)))
-              `(isearch-fail ((t :inherit (underline bold))))
-              `(isearch-group-1 ((t :background ,bg-accent :foreground ,fg-accent)))
-              `(isearch-group-2 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
-              `(query-replace ((t :inherit isearch)))
-
-              `(help-key-binding ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-main)))
-
-              `(keycast-key ((t :inherit bold-italic :background ,fg-shadow-intense :foreground ,bg-main)))
-
-              `(lin-blue ((t :background ,bg-blue)))
-              `(lin-cyan ((t :background ,bg-cyan)))
-              `(lin-green ((t :background ,bg-green)))
-              `(lin-magenta ((t :background ,bg-magenta)))
-              `(lin-purple ((t :background ,(doric-themes-adjust-value bg-magenta 5))))
-              `(lin-red ((t :background ,bg-red)))
-              `(lin-orange ((t :background ,(doric-themes-adjust-value bg-red 5))))
-              `(lin-yellow ((t :background ,bg-yellow)))
-              `(lin-slate ((t :background ,bg-neutral)))
-              `(lin-blue-override-fg ((t :background ,bg-blue :foreground ,fg-main)))
-              `(lin-cyan-override-fg ((t :background ,bg-cyan :foreground ,fg-main)))
-              `(lin-green-override-fg ((t :background ,bg-green :foreground ,fg-main)))
-              `(lin-magenta-override-fg ((t :background ,bg-magenta :foreground ,fg-main)))
-              `(lin-purple-override-fg ((t :background ,(doric-themes-adjust-value bg-magenta 5) :foreground ,fg-main)))
-              `(lin-red-override-fg ((t :background ,bg-red :foreground ,fg-main)))
-              `(lin-orange-override-fg ((t :background ,(doric-themes-adjust-value bg-red 5) :foreground ,fg-main)))
-              `(lin-yellow-override-fg ((t :background ,bg-yellow :foreground ,fg-main)))
-              `(lin-slate-override-fg ((t :background ,bg-neutral :foreground ,fg-main)))
-
-              `(magit-diff-context-highlight ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
-              `(magit-diff-file-heading-highlight ((t :inherit magit-diff-file-heading :background ,bg-shadow-subtle)))
-              `(magit-diff-file-heading-selection ((t :inherit bold :background ,bg-accent)))
-              `(magit-diff-hunk-heading ((t :background ,bg-shadow-subtle)))
-              `(magit-diff-hunk-heading-highlight ((t :inherit bold :background ,bg-neutral)))
-              `(magit-diff-hunk-heading-selection ((t :inherit bold :background ,bg-accent)))
-              `(magit-diff-lines-heading ((t :background ,fg-shadow-subtle :foreground ,bg-main)))
-              `(magit-section-heading-selection ((t :inherit bold :background ,bg-accent)))
-              `(magit-section-highlight ((t :background ,bg-shadow-subtle)))
-
-              `(markdown-code-face ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
-              `(markdown-language-keyword-face ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral)))
-              `(markdown-table-face ((t :inherit fixed-pitch :foreground ,fg-accent)))
-
-              '(markup-meta-face ((t :inherit fixed-pitch)))
-              '(markup-replacement-face ((t :inherit fixed-pitch)))
-
-              `(mode-line
-                ((default :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
-                 (((supports :box t))
-                  :box ,border)
-                 (t :underline ,border)))
-
-              `(mode-line-active ((t :inherit mode-line)))
-              `(mode-line-inactive
-                ((default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)
-                 (((supports :box t))
-                  :box ,border)
-                 (t :underline ,border)))
-
-              `(notmuch-message-summary-face
-                ((default :inherit bold :background ,bg-shadow-subtle)
-                 (((supports :overline t))
-                  :overline ,fg-shadow-subtle)))
-
-              `(org-agenda-date-weekend ((t :inherit (bold shadow))))
-              `(org-agenda-date-today ((t :inherit (underline org-agenda-date))))
-              `(org-agenda-date-weekend-today ((t :inherit (underline org-agenda-date-weekend))))
-
-              `(org-block ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
-              `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral :extend t)))
-              `(org-block-end-line ((t :inherit org-block-begin-line)))
-              '(org-checkbox ((t :inherit (fixed-pitch bold))))
-              `(org-code ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-intense)))
-              `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
-              `(org-date-selected
-                ((default :foreground ,fg-accent :inverse-video t)
-                 (((supports :box t))
-                  :box (:line-width (-1 . -1) :color ,fg-main))))
-              ;; NOTE 2026-02-08: Adapted from my `modus-themes'.
-              ;;
-              ;; NOTE 2024-03-17: Normally we do not want to add this padding
-              ;; with the :box, but I do it here because the keys are otherwise
-              ;; very hard to read.  The square brackets around them are not
-              ;; colored, which is what is causing the problem.
-              `(org-dispatcher-highlight
-                ((default :inherit bold :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
-                 (((supports :box t))
-                  :box (:line-width 2 :style flat-button)))
-                 (t :underline ,border))
-              `(org-document-info-keyword ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
-              `(org-list-dt ((t :inherit bold)))
-              `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
-              `(org-ellipsis (( ))) ; inherits from the heading's color
-              '(org-formula ((t :inherit fixed-pitch)))
-
-              `(org-habit-alert-face ((t :background ,(doric-themes-adjust-value "#ffff00" 10) :foreground "black")))
-              `(org-habit-alert-future-face ((t :background ,(doric-themes-adjust-value "#ffff00" 50) :foreground "white")))
-              `(org-habit-clear-face ((t :background ,(doric-themes-adjust-value "#0000dd" 10) :foreground "white")))
-              `(org-habit-clear-future-face ((t :background ,(doric-themes-adjust-value "#0000dd" 50) :foreground "white")))
-              `(org-habit-overdue-face ((t :background ,(doric-themes-adjust-value "#dd0000" 10) :foreground "white")))
-              `(org-habit-overdue-future-face ((t :background ,(doric-themes-adjust-value "#dd0000" 50) :foreground "black")))
-              `(org-habit-ready-face ((t :background ,(doric-themes-adjust-value "#00bb00" 10) :foreground "white")))
-              `(org-habit-ready-future-face ((t :background ,(doric-themes-adjust-value "#00bb00" 50) :foreground "white")))
-
-              `(org-hide ((t :foreground ,bg-main)))
-              `(org-indent ((t :inherit (fixed-pitch org-hide))))
-              `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
-              `(org-property-value ((t :inherit fixed-pitch :foreground ,fg-accent)))
-              '(org-quote ((t :inherit (italic org-block))))
-              `(org-verbatim ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
-              '(org-verse ((t :inherit org-block)))
-              `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
-
-              `(pulsar-blue ((t :background ,bg-blue)))
-              `(pulsar-cyan ((t :background ,bg-cyan)))
-              `(pulsar-green ((t :background ,bg-green)))
-              `(pulsar-magenta ((t :background ,bg-magenta)))
-              `(pulsar-red ((t :background ,bg-red)))
-              `(pulsar-yellow ((t :background ,bg-yellow)))
-
-              '(rcirc-monospace-text ((t :inherit fixed-pitch)))
-              '(rcirc-server ((t :inherit font-lock-comment-face)))
-
-              `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
-              `(reb-match-1 ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
-              `(reb-match-2 ((t :background ,bg-accent :foreground ,fg-accent)))
-              `(reb-match-3 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
-
-              ;; NOTE 2025-10-24: All the faces of `ruler-mode' need to inherit
-              ;; from `default' to yield the expected results.  Otherwise the
-              ;; ruler is shorter.  I am not sure what is happening, but it
-              ;; seems important.  Its default face definitions also inherit
-              ;; from `default' and then from `ruler-mode-default'.
-              `(ruler-mode-column-number ((t :inherit default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
-              `(ruler-mode-comment-column ((t :inherit default :foreground ,fg-green)))
-              `(ruler-mode-current-column ((t :inherit default :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
-              `(ruler-mode-default ((t :inherit default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
-              `(ruler-mode-fill-column ((t :inherit default :foreground ,fg-green)))
-              `(ruler-mode-fringes ((t :inherit default :foreground ,fg-shadow-subtle)))
-              `(ruler-mode-goal-column ((t :inherit default :foreground ,fg-green)))
-              `(ruler-mode-margins ((t :inherit default :foreground ,bg-main)))
-              `(ruler-mode-pad ((t :inherit default :background ,bg-accent :foreground ,fg-accent)))
-              `(ruler-mode-tab-stop ((t :inherit default :foreground ,fg-yellow)))
-
-              `(spacious-padding-line-active ((t :foreground ,fg-accent)))
-              `(spacious-padding-line-inactive ((t :foreground ,bg-accent)))
-              `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
-              `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
-
-              `(tab-bar-tab ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
-              `(tab-bar-tab-inactive ((t :background ,bg-neutral :foreground ,fg-neutral)))
-
-              `(tab-line-tab ((t :inherit tab-line-tab-current)))
-              `(tab-line-tab-current ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
-              `(tab-line-tab-inactive ((t :background ,bg-neutral :foreground ,fg-neutral)))
-              `(tab-line-tab-inactive-alternate ((t :inherit tab-line-tab-inactive)))
-
-              '(telega-webpage-fixed ((t :inherit fixed-pitch)))
-              '(telega-webpage-preformatted ((t :inherit fixed-pitch)))
-
-              '(textsec-suspicious (( )))
-
-              `(tmr-mode-line-active ((t :inherit bold)))
-              `(tmr-mode-line-soon ((t :inherit bold :foreground ,fg-yellow)))
-              `(tmr-mode-line-urgent ((t :inherit bold :foreground ,fg-red)))
-              `(tmr-tabulated-end-time ((t :foreground ,fg-red)))
-              `(tmr-tabulated-remaining-time ((t :foreground ,fg-yellow)))
-              `(tmr-tabulated-start-time ((t :foreground ,fg-cyan)))
-
-              `(transient-key-exit ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-red)))
-              `(transient-key-noop ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
-              `(transient-key-recurse ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-main)))
-              `(transient-key-return ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-yellow)))
-              `(transient-key-stack ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-blue)))
-              `(transient-key-stay ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-green)))
-
-              `(trashed-restored ((t :inherit bold-italic :background ,bg-yellow :foreground ,fg-yellow)))
-
-              `(vc-edited-state ((t :inherit italic)))
-              `(vc-locally-added-state ((t :inherit italic)))
-
-              '(vtable ((t :inherit fixed-pitch)))
-
-              '(which-key-key-face ((t :inherit (fixed-pitch bold-italic))))
-
-              `(whitespace-big-indent ((t :background ,bg-shadow-intense)))
-              `(whitespace-empty ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-hspace ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-indentation ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-missing-newline-at-eof ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-newline ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-space ((t :foreground ,bg-shadow-intense)))
-              `(whitespace-tab ((t :foreground ,bg-shadow-intense)))))
-           (custom-theme-set-variables
+      `(progn
+         (custom-declare-theme
+          ',name 'doric-themes
+          ,(or description (format "Minimalist %s theme." background-mode))
+          (list :kind 'color-scheme :background-mode ',background-mode :family 'doric :doric-documentation ,description))
+         (let ,palette
+           (custom-theme-set-faces
             ',name
-            '(diff-font-lock-syntax nil)
-            '(frame-background-mode ',background-mode))
-           ,@(unless theme-exists-p
-               (list `(provide-theme ',name)))))
+            `(default ((t :background ,bg-main :foreground ,fg-main)))
+            `(fringe ((t :background unspecified :foreground ,fg-accent)))
+            `(cursor ((t :background ,cursor)))
+
+            '(bold ((t :weight bold)))
+            '(italic ((t :slant italic)))
+            '(bold-italic ((t :weight bold :slant italic)))
+            '(underline ((t :underline t)))
+            `(internal-border ((t :foreground ,border)))
+            `(vertical-border ((t :foreground ,border)))
+            `(separator-line ((t :underline ,border)))
+            `(scroll-bar ((t :background ,bg-main :foreground ,border)))
+            `(fill-column-indicator ((t :foreground ,bg-shadow-intense)))
+            `(minibuffer-nonselected ((t :inverse-video t)))
+            `(tooltip ((t :background ,bg-accent :foreground ,fg-accent)))
+            `(tty-menu-disabled-face ((t :background ,bg-accent :foreground ,fg-shadow-subtle)))
+            `(tty-menu-enabled-face ((t :background ,bg-accent :foreground ,fg-main)))
+            `(tty-menu-selected-face ((t :background ,fg-main :foreground ,bg-main)))
+            `(read-multiple-choice-face ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-main :inverse-video t)))
+            `(show-paren-match ((t :inherit error :background ,bg-shadow-subtle :foreground ,fg-magenta)))
+
+            '(adoc-meta-face ((t :inherit fixed-pitch)))
+            '(adoc-meta-hide-face ((t :inherit fixed-pitch)))
+            '(adoc-secondary-text-face ((t :inherit fixed-pitch)))
+            '(adoc-table-face ((t :inherit fixed-pitch)))
+
+            `(ansi-color-bright-black ((t :background "gray30" :foreground "gray30")))
+            `(ansi-color-black ((t :background "black" :foreground "black")))
+            `(ansi-color-bright-white ((t :background "white" :foreground "white")))
+            `(ansi-color-white ((t :background "gray70" :foreground "gray70")))
+            `(ansi-color-bright-red ((t :background ,fg-red :foreground ,fg-red)))
+            `(ansi-color-red ((t :background ,fg-red :foreground ,fg-red)))
+            `(ansi-color-bright-green ((t :background ,fg-green :foreground ,fg-green)))
+            `(ansi-color-green ((t :background ,fg-green :foreground ,fg-green)))
+            `(ansi-color-bright-yellow ((t :background ,fg-yellow :foreground ,fg-yellow)))
+            `(ansi-color-yellow ((t :background ,fg-yellow :foreground ,fg-yellow)))
+            `(ansi-color-bright-blue ((t :background ,fg-blue :foreground ,fg-blue)))
+            `(ansi-color-blue ((t :background ,fg-blue :foreground ,fg-blue)))
+            `(ansi-color-bright-magenta ((t :background ,fg-magenta :foreground ,fg-magenta)))
+            `(ansi-color-magenta ((t :background ,fg-magenta :foreground ,fg-magenta)))
+            `(ansi-color-bright-cyan ((t :background ,fg-cyan :foreground ,fg-cyan)))
+            `(ansi-color-cyan ((t :background ,fg-cyan :foreground ,fg-cyan)))
+
+            `(aw-leading-char-face ((t :inherit bold-italic :height 1.5 :foreground ,fg-accent)))
+
+            `(calendar-today
+              ((default :foreground ,fg-main :inverse-video t)
+               (((supports :box t))
+                :box (:line-width (-1 . -1) :color ,fg-main))))
+
+            `(company-tooltip ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+
+            `(completion-preview ((t :foreground ,fg-shadow-subtle)))
+            `(completion-preview-common ((t :inherit completion-preview :underline t)))
+            `(completion-preview-exact ((t :inherit (bold completion-preview) :underline t)))
+
+            `(corfu-default ((t :inherit fixed-pitch :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+
+            `(custom-button
+              ((default :inherit variable-pitch :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
+               (((supports :box t))
+                :box (:line-width 1 :color ,border :style released-button))
+               (t :underline ,border)))
+            `(custom-button-mouse
+              ((default :inherit variable-pitch :background ,bg-accent :foreground ,fg-accent)
+               (((supports :box t))
+                :box (:line-width 1 :color ,border :style released-button))
+               (t :underline ,border)))
+            `(custom-button-pressed
+              ((default :inherit variable-pitch :background ,bg-main :foreground ,fg-accent)
+               (((supports :box t))
+                :box (:line-width 1 :color ,border :style pressed-button))
+               (t :underline ,border)))
+            `(custom-button-pressed-unraised ((t :foreground ,fg-accent :underline ,border)))
+
+            '(devdocs-code-block ((t :inherit fixed-pitch)))
+
+            '(diff-header (( )))
+            `(diff-hunk-header ((t :inherit bold :background ,bg-shadow-subtle)))
+            `(diff-function ((t :background ,bg-shadow-subtle)))
+
+            ,@(doric-themes-prepare-faces doric-themes-intense-shadow-faces :background 'bg-shadow-intense :foreground 'fg-shadow-intense)
+            ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-faces :background 'bg-shadow-subtle :foreground 'fg-shadow-subtle)
+            ,@(doric-themes-prepare-faces doric-themes-intense-shadow-foreground-only-faces :foreground 'fg-shadow-intense)
+            ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-foreground-only-faces :foreground 'fg-shadow-subtle)
+            ,@(doric-themes-prepare-faces doric-themes-accent-foreground-only-faces :foreground 'fg-accent)
+            ,@(doric-themes-prepare-faces doric-themes-bold-accent-foreground-only-faces :inherit ''bold  :foreground 'fg-accent)
+            ,@(doric-themes-prepare-faces doric-themes-main-foreground-only-faces :foreground 'fg-main)
+
+            ,@(doric-themes-prepare-faces doric-themes-error-foreground-only-faces :inherit ''bold :foreground 'fg-red)
+            ,@(doric-themes-prepare-faces doric-themes-warning-foreground-only-faces :inherit ''bold :foreground 'fg-yellow)
+            ,@(doric-themes-prepare-faces doric-themes-success-foreground-only-faces :inherit ''bold :foreground 'fg-green)
+            ,@(doric-themes-prepare-faces doric-themes-error-underline-faces :underline '(list :style 'wave :color fg-red))
+            ,@(doric-themes-prepare-faces doric-themes-warning-underline-faces :underline '(list :style 'wave :color fg-yellow))
+            ,@(doric-themes-prepare-faces doric-themes-success-underline-faces :underline '(list :style 'wave :color fg-cyan))
+            ,@(doric-themes-prepare-faces doric-themes-error-background-faces :background 'bg-red)
+            ,@(doric-themes-prepare-faces doric-themes-warning-background-faces :background 'bg-yellow)
+            ,@(doric-themes-prepare-faces doric-themes-success-background-faces :background 'bg-green)
+
+            ,@(doric-themes-prepare-faces doric-themes-bold-faces :inherit ''bold :foreground 'fg-shadow-intense)
+            ,@(doric-themes-prepare-faces doric-themes-bold-intense-faces :inherit ''bold :foreground 'fg-main)
+            ,@(doric-themes-prepare-faces doric-themes-bold-italic-faces :inherit ''bold-italic :foreground 'fg-shadow-subtle)
+            ,@(doric-themes-prepare-faces doric-themes-italic-faces :inherit ''italic :foreground 'fg-shadow-subtle)
+            ,@(doric-themes-prepare-faces doric-themes-italic-only-faces :inherit ''italic)
+            ,@(doric-themes-prepare-faces doric-themes-underline-link-faces :inherit ''underline :foreground 'fg-accent)
+            ,@(doric-themes-prepare-faces doric-themes-underline-subtle-shadow-faces :inherit ''underline :foreground 'fg-shadow-subtle)
+            ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-faces :inherit ''(underline italic) :foreground 'fg-shadow-subtle)
+            ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-subtle-faces :underline 'border)
+
+            ,@(doric-themes-prepare-faces doric-themes-selection-faces :background 'bg-accent)
+
+            ,@(doric-themes-prepare-faces doric-themes-diff-added-faces :background '(doric-themes-adjust-value bg-green -10) :foreground 'fg-neutral)
+            ,@(doric-themes-prepare-faces doric-themes-diff-added-highlight-faces :background 'bg-green :foreground 'fg-green)
+            ,@(doric-themes-prepare-faces doric-themes-diff-added-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-green 10))
+            ,@(doric-themes-prepare-faces doric-themes-diff-changed-faces :background '(doric-themes-adjust-value bg-yellow -10) :foreground 'fg-neutral)
+            ,@(doric-themes-prepare-faces doric-themes-diff-changed-highlight-faces :background 'bg-yellow :foreground 'fg-yellow)
+            ,@(doric-themes-prepare-faces doric-themes-diff-changed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-yellow 10))
+            ,@(doric-themes-prepare-faces doric-themes-diff-removed-faces :background '(doric-themes-adjust-value bg-red -10) :foreground 'fg-neutral)
+            ,@(doric-themes-prepare-faces doric-themes-diff-removed-highlight-faces :background 'bg-red :foreground 'fg-red)
+            ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-red 10))
+
+            ,@(doric-themes-prepare-faces doric-themes-cite-odd-faces :inherit ''italic :foreground 'fg-accent)
+            ,@(doric-themes-prepare-faces doric-themes-cite-even-faces :inherit ''italic :foreground 'fg-shadow-subtle)
+
+            ,@(doric-themes-prepare-faces doric-themes-mark-delete-faces :inherit ''bold-italic :background 'bg-red :foreground 'fg-red)
+            ,@(doric-themes-prepare-faces doric-themes-mark-select-faces :inherit ''bold-italic :background 'bg-green :foreground 'fg-green)
+
+            '(elisp-binding-variable (( )))
+            '(elisp-charset (( )))
+            '(elisp-coding (( )))
+            '(elisp-completion-category (( )))
+            '(elisp-constant (( )))
+            '(elisp-face (( )))
+            '(elisp-free-variable (( )))
+            '(elisp-group (( )))
+            '(elisp-icon (( )))
+            '(elisp-oclosure (( )))
+            '(elisp-shadowing-variable (( )))
+            '(elisp-special-variable-declaration (( )))
+            '(elisp-symbol-role (( )))
+            '(elisp-theme (( )))
+            '(elisp-thing (( )))
+            '(elisp-type (( )))
+            '(elisp-widget-type (( )))
+
+            '(embark-keybinding ((t :inherit (fixed-pitch bold-italic))))
+
+            `(erc-notice-face ((t :inherit italic :foreground ,fg-accent)))
+
+            `(flymake-eol-information-face ((t :inherit italic :height 0.9)))
+            `(flymake-error-echo-at-eol ((t :inherit italic :foreground ,fg-red :height 0.9)))
+            `(flymake-note-echo-at-eol ((t :inherit italic :foreground ,fg-green :height 0.9)))
+            `(flymake-warning-echo-at-eol ((t :inherit italic :foreground ,fg-yellow :height 0.9)))
+
+            `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
+            `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
+
+            ;; The :inverse-video prevents hl-line-mode from
+            ;; overriding the background.  Such an override really
+            ;; defeats the purpose of setting those highlights.
+            '(hi-aquamarine
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#227f8f")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#56abcc")))
+            '(hi-black-b ((t :inverse-video t)))
+            `(hi-black-hb ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle :inverse-video t)))
+            '(hi-blue
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#4360bd")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#9abcef")))
+            '(hi-blue-b ((t :inherit (bold hi-blue))))
+            '(hi-green
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#407820")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#76bd46")))
+            '(hi-green-b ((t :inherit (bold hi-green))))
+            '(hi-pink
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#ad507a")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#ef92bf")))
+            '(hi-red-b
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#990000")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#dd6060")))
+            '(hi-salmon
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#9f654a")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#e0aa80")))
+            '(hi-yellow
+              ((default :inverse-video t)
+               (((class color) (min-colors 88) (background light))
+                :background "#ffffff" :foreground "#806f00")
+               (((class color) (min-colors 88) (background dark))
+                :background "#000000" :foreground "#cab000")))
+
+            `(isearch ((t :background ,bg-shadow-intense :foreground ,fg-main)))
+            `(isearch-fail ((t :inherit (underline bold))))
+            `(isearch-group-1 ((t :background ,bg-accent :foreground ,fg-accent)))
+            `(isearch-group-2 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
+            `(query-replace ((t :inherit isearch)))
+
+            `(help-key-binding ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-main)))
+
+            `(keycast-key ((t :inherit bold-italic :background ,fg-shadow-intense :foreground ,bg-main)))
+
+            `(lin-blue ((t :background ,bg-blue)))
+            `(lin-cyan ((t :background ,bg-cyan)))
+            `(lin-green ((t :background ,bg-green)))
+            `(lin-magenta ((t :background ,bg-magenta)))
+            `(lin-purple ((t :background ,(doric-themes-adjust-value bg-magenta 5))))
+            `(lin-red ((t :background ,bg-red)))
+            `(lin-orange ((t :background ,(doric-themes-adjust-value bg-red 5))))
+            `(lin-yellow ((t :background ,bg-yellow)))
+            `(lin-slate ((t :background ,bg-neutral)))
+            `(lin-blue-override-fg ((t :background ,bg-blue :foreground ,fg-main)))
+            `(lin-cyan-override-fg ((t :background ,bg-cyan :foreground ,fg-main)))
+            `(lin-green-override-fg ((t :background ,bg-green :foreground ,fg-main)))
+            `(lin-magenta-override-fg ((t :background ,bg-magenta :foreground ,fg-main)))
+            `(lin-purple-override-fg ((t :background ,(doric-themes-adjust-value bg-magenta 5) :foreground ,fg-main)))
+            `(lin-red-override-fg ((t :background ,bg-red :foreground ,fg-main)))
+            `(lin-orange-override-fg ((t :background ,(doric-themes-adjust-value bg-red 5) :foreground ,fg-main)))
+            `(lin-yellow-override-fg ((t :background ,bg-yellow :foreground ,fg-main)))
+            `(lin-slate-override-fg ((t :background ,bg-neutral :foreground ,fg-main)))
+
+            `(magit-diff-context-highlight ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+            `(magit-diff-file-heading-highlight ((t :inherit magit-diff-file-heading :background ,bg-shadow-subtle)))
+            `(magit-diff-file-heading-selection ((t :inherit bold :background ,bg-accent)))
+            `(magit-diff-hunk-heading ((t :background ,bg-shadow-subtle)))
+            `(magit-diff-hunk-heading-highlight ((t :inherit bold :background ,bg-neutral)))
+            `(magit-diff-hunk-heading-selection ((t :inherit bold :background ,bg-accent)))
+            `(magit-diff-lines-heading ((t :background ,fg-shadow-subtle :foreground ,bg-main)))
+            `(magit-section-heading-selection ((t :inherit bold :background ,bg-accent)))
+            `(magit-section-highlight ((t :background ,bg-shadow-subtle)))
+
+            `(markdown-code-face ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
+            `(markdown-language-keyword-face ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral)))
+            `(markdown-table-face ((t :inherit fixed-pitch :foreground ,fg-accent)))
+
+            '(markup-meta-face ((t :inherit fixed-pitch)))
+            '(markup-replacement-face ((t :inherit fixed-pitch)))
+
+            `(mode-line
+              ((default :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
+               (((supports :box t))
+                :box ,border)
+               (t :underline ,border)))
+
+            `(mode-line-active ((t :inherit mode-line)))
+            `(mode-line-inactive
+              ((default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)
+               (((supports :box t))
+                :box ,border)
+               (t :underline ,border)))
+
+            `(notmuch-message-summary-face
+              ((default :inherit bold :background ,bg-shadow-subtle)
+               (((supports :overline t))
+                :overline ,fg-shadow-subtle)))
+
+            `(org-agenda-date-weekend ((t :inherit (bold shadow))))
+            `(org-agenda-date-today ((t :inherit (underline org-agenda-date))))
+            `(org-agenda-date-weekend-today ((t :inherit (underline org-agenda-date-weekend))))
+
+            `(org-block ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
+            `(org-block-begin-line ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral :extend t)))
+            `(org-block-end-line ((t :inherit org-block-begin-line)))
+            '(org-checkbox ((t :inherit (fixed-pitch bold))))
+            `(org-code ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-intense)))
+            `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            `(org-date-selected
+              ((default :foreground ,fg-accent :inverse-video t)
+               (((supports :box t))
+                :box (:line-width (-1 . -1) :color ,fg-main))))
+            ;; NOTE 2026-02-08: Adapted from my `modus-themes'.
+            ;;
+            ;; NOTE 2024-03-17: Normally we do not want to add this padding
+            ;; with the :box, but I do it here because the keys are otherwise
+            ;; very hard to read.  The square brackets around them are not
+            ;; colored, which is what is causing the problem.
+            `(org-dispatcher-highlight
+              ((default :inherit bold :background ,bg-shadow-intense :foreground ,fg-shadow-intense)
+               (((supports :box t))
+                :box (:line-width 2 :style flat-button)))
+              (t :underline ,border))
+            `(org-document-info-keyword ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            `(org-list-dt ((t :inherit bold)))
+            `(org-drawer ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            `(org-ellipsis (( ))) ; inherits from the heading's color
+            '(org-formula ((t :inherit fixed-pitch)))
+
+            `(org-habit-alert-face ((t :background ,(doric-themes-adjust-value "#ffff00" 10) :foreground "black")))
+            `(org-habit-alert-future-face ((t :background ,(doric-themes-adjust-value "#ffff00" 50) :foreground "white")))
+            `(org-habit-clear-face ((t :background ,(doric-themes-adjust-value "#0000dd" 10) :foreground "white")))
+            `(org-habit-clear-future-face ((t :background ,(doric-themes-adjust-value "#0000dd" 50) :foreground "white")))
+            `(org-habit-overdue-face ((t :background ,(doric-themes-adjust-value "#dd0000" 10) :foreground "white")))
+            `(org-habit-overdue-future-face ((t :background ,(doric-themes-adjust-value "#dd0000" 50) :foreground "black")))
+            `(org-habit-ready-face ((t :background ,(doric-themes-adjust-value "#00bb00" 10) :foreground "white")))
+            `(org-habit-ready-future-face ((t :background ,(doric-themes-adjust-value "#00bb00" 50) :foreground "white")))
+
+            `(org-hide ((t :foreground ,bg-main)))
+            `(org-indent ((t :inherit (fixed-pitch org-hide))))
+            `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            `(org-property-value ((t :inherit fixed-pitch :foreground ,fg-accent)))
+            '(org-quote ((t :inherit (italic org-block))))
+            `(org-verbatim ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
+            '(org-verse ((t :inherit org-block)))
+            `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
+
+            `(pulsar-blue ((t :background ,bg-blue)))
+            `(pulsar-cyan ((t :background ,bg-cyan)))
+            `(pulsar-green ((t :background ,bg-green)))
+            `(pulsar-magenta ((t :background ,bg-magenta)))
+            `(pulsar-red ((t :background ,bg-red)))
+            `(pulsar-yellow ((t :background ,bg-yellow)))
+
+            '(rcirc-monospace-text ((t :inherit fixed-pitch)))
+            '(rcirc-server ((t :inherit font-lock-comment-face)))
+
+            `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
+            `(reb-match-1 ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+            `(reb-match-2 ((t :background ,bg-accent :foreground ,fg-accent)))
+            `(reb-match-3 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
+
+            ;; NOTE 2025-10-24: All the faces of `ruler-mode' need to inherit
+            ;; from `default' to yield the expected results.  Otherwise the
+            ;; ruler is shorter.  I am not sure what is happening, but it
+            ;; seems important.  Its default face definitions also inherit
+            ;; from `default' and then from `ruler-mode-default'.
+            `(ruler-mode-column-number ((t :inherit default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+            `(ruler-mode-comment-column ((t :inherit default :foreground ,fg-green)))
+            `(ruler-mode-current-column ((t :inherit default :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
+            `(ruler-mode-default ((t :inherit default :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
+            `(ruler-mode-fill-column ((t :inherit default :foreground ,fg-green)))
+            `(ruler-mode-fringes ((t :inherit default :foreground ,fg-shadow-subtle)))
+            `(ruler-mode-goal-column ((t :inherit default :foreground ,fg-green)))
+            `(ruler-mode-margins ((t :inherit default :foreground ,bg-main)))
+            `(ruler-mode-pad ((t :inherit default :background ,bg-accent :foreground ,fg-accent)))
+            `(ruler-mode-tab-stop ((t :inherit default :foreground ,fg-yellow)))
+
+            `(spacious-padding-line-active ((t :foreground ,fg-accent)))
+            `(spacious-padding-line-inactive ((t :foreground ,bg-accent)))
+            `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
+            `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
+
+            `(tab-bar-tab ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
+            `(tab-bar-tab-inactive ((t :background ,bg-neutral :foreground ,fg-neutral)))
+
+            `(tab-line-tab ((t :inherit tab-line-tab-current)))
+            `(tab-line-tab-current ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
+            `(tab-line-tab-inactive ((t :background ,bg-neutral :foreground ,fg-neutral)))
+            `(tab-line-tab-inactive-alternate ((t :inherit tab-line-tab-inactive)))
+
+            '(telega-webpage-fixed ((t :inherit fixed-pitch)))
+            '(telega-webpage-preformatted ((t :inherit fixed-pitch)))
+
+            '(textsec-suspicious (( )))
+
+            `(tmr-mode-line-active ((t :inherit bold)))
+            `(tmr-mode-line-soon ((t :inherit bold :foreground ,fg-yellow)))
+            `(tmr-mode-line-urgent ((t :inherit bold :foreground ,fg-red)))
+            `(tmr-tabulated-end-time ((t :foreground ,fg-red)))
+            `(tmr-tabulated-remaining-time ((t :foreground ,fg-yellow)))
+            `(tmr-tabulated-start-time ((t :foreground ,fg-cyan)))
+
+            `(transient-key-exit ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-red)))
+            `(transient-key-noop ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
+            `(transient-key-recurse ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-main)))
+            `(transient-key-return ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-yellow)))
+            `(transient-key-stack ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-blue)))
+            `(transient-key-stay ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-green)))
+
+            `(trashed-restored ((t :inherit bold-italic :background ,bg-yellow :foreground ,fg-yellow)))
+
+            `(vc-edited-state ((t :inherit italic)))
+            `(vc-locally-added-state ((t :inherit italic)))
+
+            '(vtable ((t :inherit fixed-pitch)))
+
+            '(which-key-key-face ((t :inherit (fixed-pitch bold-italic))))
+
+            `(whitespace-big-indent ((t :background ,bg-shadow-intense)))
+            `(whitespace-empty ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-hspace ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-indentation ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-missing-newline-at-eof ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-newline ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-space ((t :foreground ,bg-shadow-intense)))
+            `(whitespace-tab ((t :foreground ,bg-shadow-intense)))))
+         (custom-theme-set-variables
+          ',name
+          '(diff-font-lock-syntax nil)
+          '(frame-background-mode ',background-mode))
+         (provide-theme ',name))
     (error "No palette found for `%s'" name)))
 
 (defun doric-themes--with-colors-subr (&rest body)
