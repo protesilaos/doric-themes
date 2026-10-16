@@ -1935,7 +1935,6 @@ default to a generic text that mentions the BACKGROUND-MODE."
          (provide-theme ',name))
     (error "No palette found for `%s'" name)))
 
-;; FIXME 2026-10-15: I am getting an error about (void-function \,)
 (defun doric-themes--with-colors-subr (&rest body)
   "Evaluate BODY for `doric-themes-with-colors'."
   (condition-case data
