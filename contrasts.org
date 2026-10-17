@@ -41,7 +41,7 @@ C1 and C2 are color values written in hexadecimal RGB."
 This helps create a new table. Better this way than write a keyboard
 macro each time:
 
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :results output silent
 (defun prot/doric-themes-prepare-contrast-table ()
   "Prepare contrast table for the current Doric theme."
   (interactive)
