@@ -42,7 +42,7 @@
     (require 'doric-themes))
 
   (defvar doric-mountain-palette
-    '((cursor "#b7b0cb")
+    '((cursor "#b7b0eb")
       (bg-main "#383025")
       (fg-main "#e5daa0")
       (border "#7e7479")
