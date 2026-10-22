@@ -61,7 +61,7 @@
 
       (fg-red "#e0a47f")
       (fg-green "#90c08f")
-      (fg-yellow "#b9b56f")
+      (fg-yellow "#d9a55f")
       (fg-blue "#a0b0eb")
       (fg-magenta "#d2a2c0")
       (fg-cyan "#9bc3c3")
