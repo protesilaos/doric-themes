@@ -43,7 +43,7 @@
 
   (defvar doric-meadow-palette
     '((cursor "#705060")
-      (bg-main "#eaf0c0")
+      (bg-main "#eaf0cd")
       (fg-main "#023f2d")
       (border "#8f9373")
 
