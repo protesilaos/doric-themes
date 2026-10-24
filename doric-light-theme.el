@@ -56,8 +56,8 @@
       (bg-shadow-intense "#a0bcd0")
       (fg-shadow-intense "#213067")
 
-      (bg-accent "#d8f1f3")
-      (fg-accent "#084092")
+      (bg-accent-primary "#d8f1f3")
+      (fg-accent-primary "#084092")
 
       (bg-accent-secondary "#bfafa2")
       (fg-accent-secondary "#4a2218")

@@ -1529,7 +1529,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
            (custom-theme-set-faces
             ',name
             `(default ((t :background ,bg-main :foreground ,fg-main)))
-            `(fringe ((t :background unspecified :foreground ,fg-accent)))
+            `(fringe ((t :background unspecified :foreground ,fg-accent-primary)))
             `(cursor ((t :background ,cursor)))
 
             '(bold ((t :weight bold)))
@@ -1542,9 +1542,9 @@ default to a generic text that mentions the BACKGROUND-MODE."
             `(scroll-bar ((t :background ,bg-main :foreground ,border)))
             `(fill-column-indicator ((t :foreground ,bg-shadow-intense)))
             `(minibuffer-nonselected ((t :inverse-video t)))
-            `(tooltip ((t :background ,bg-accent :foreground ,fg-accent)))
-            `(tty-menu-disabled-face ((t :background ,bg-accent :foreground ,fg-shadow-subtle)))
-            `(tty-menu-enabled-face ((t :background ,bg-accent :foreground ,fg-main)))
+            `(tooltip ((t :background ,bg-accent-primary :foreground ,fg-accent-primary)))
+            `(tty-menu-disabled-face ((t :background ,bg-accent-primary :foreground ,fg-shadow-subtle)))
+            `(tty-menu-enabled-face ((t :background ,bg-accent-primary :foreground ,fg-main)))
             `(tty-menu-selected-face ((t :background ,fg-main :foreground ,bg-main)))
             `(read-multiple-choice-face ((t :inherit (fixed-pitch bold-italic) :foreground ,fg-main :inverse-video t)))
             `(show-paren-match ((t :inherit bold :background ,bg-accent-secondary :foreground ,fg-accent-secondary)))
@@ -1571,7 +1571,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
             `(ansi-color-bright-cyan ((t :background ,fg-cyan :foreground ,fg-cyan)))
             `(ansi-color-cyan ((t :background ,fg-cyan :foreground ,fg-cyan)))
 
-            `(aw-leading-char-face ((t :inherit bold-italic :height 1.5 :foreground ,fg-accent)))
+            `(aw-leading-char-face ((t :inherit bold-italic :height 1.5 :foreground ,fg-accent-primary)))
 
             `(calendar-today
               ((default :foreground ,fg-main :inverse-video t)
@@ -1592,16 +1592,16 @@ default to a generic text that mentions the BACKGROUND-MODE."
                 :box (:line-width 1 :color ,border :style released-button))
                (t :underline ,border)))
             `(custom-button-mouse
-              ((default :inherit variable-pitch :background ,bg-accent :foreground ,fg-accent)
+              ((default :inherit variable-pitch :background ,bg-accent-primary :foreground ,fg-accent-primary)
                (((supports :box t))
                 :box (:line-width 1 :color ,border :style released-button))
                (t :underline ,border)))
             `(custom-button-pressed
-              ((default :inherit variable-pitch :background ,bg-main :foreground ,fg-accent)
+              ((default :inherit variable-pitch :background ,bg-main :foreground ,fg-accent-primary)
                (((supports :box t))
                 :box (:line-width 1 :color ,border :style pressed-button))
                (t :underline ,border)))
-            `(custom-button-pressed-unraised ((t :foreground ,fg-accent :underline ,border)))
+            `(custom-button-pressed-unraised ((t :foreground ,fg-accent-primary :underline ,border)))
 
             '(devdocs-code-block ((t :inherit fixed-pitch)))
 
@@ -1613,8 +1613,8 @@ default to a generic text that mentions the BACKGROUND-MODE."
             ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-faces :background 'bg-shadow-subtle :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-intense-shadow-foreground-only-faces :foreground 'fg-shadow-intense)
             ,@(doric-themes-prepare-faces doric-themes-subtle-shadow-foreground-only-faces :foreground 'fg-shadow-subtle)
-            ,@(doric-themes-prepare-faces doric-themes-accent-foreground-only-faces :foreground 'fg-accent)
-            ,@(doric-themes-prepare-faces doric-themes-bold-accent-foreground-only-faces :inherit ''bold  :foreground 'fg-accent)
+            ,@(doric-themes-prepare-faces doric-themes-accent-foreground-only-faces :foreground 'fg-accent-primary)
+            ,@(doric-themes-prepare-faces doric-themes-bold-accent-foreground-only-faces :inherit ''bold  :foreground 'fg-accent-primary)
             ,@(doric-themes-prepare-faces doric-themes-main-foreground-only-faces :foreground 'fg-main)
 
             ,@(doric-themes-prepare-faces doric-themes-error-foreground-only-faces :inherit ''bold :foreground 'fg-red)
@@ -1632,12 +1632,12 @@ default to a generic text that mentions the BACKGROUND-MODE."
             ,@(doric-themes-prepare-faces doric-themes-bold-italic-faces :inherit ''bold-italic :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-italic-faces :inherit ''italic :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-italic-only-faces :inherit ''italic)
-            ,@(doric-themes-prepare-faces doric-themes-underline-link-faces :inherit ''underline :foreground 'fg-accent)
+            ,@(doric-themes-prepare-faces doric-themes-underline-link-faces :inherit ''underline :foreground 'fg-accent-primary)
             ,@(doric-themes-prepare-faces doric-themes-underline-subtle-shadow-faces :inherit ''underline :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-faces :inherit ''(underline italic) :foreground 'fg-shadow-subtle)
             ,@(doric-themes-prepare-faces doric-themes-underline-emphasis-subtle-faces :underline 'border)
 
-            ,@(doric-themes-prepare-faces doric-themes-selection-faces :background 'bg-accent)
+            ,@(doric-themes-prepare-faces doric-themes-selection-faces :background 'bg-accent-primary)
 
             ,@(doric-themes-prepare-faces doric-themes-diff-added-faces :background '(doric-themes-adjust-value bg-green -10) :foreground 'fg-neutral)
             ,@(doric-themes-prepare-faces doric-themes-diff-added-highlight-faces :background 'bg-green :foreground 'fg-green)
@@ -1649,7 +1649,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-highlight-faces :background 'bg-red :foreground 'fg-red)
             ,@(doric-themes-prepare-faces doric-themes-diff-removed-refine-faces :inherit ''bold :background '(doric-themes-adjust-value bg-red 10))
 
-            ,@(doric-themes-prepare-faces doric-themes-cite-odd-faces :inherit ''italic :foreground 'fg-accent)
+            ,@(doric-themes-prepare-faces doric-themes-cite-odd-faces :inherit ''italic :foreground 'fg-accent-primary)
             ,@(doric-themes-prepare-faces doric-themes-cite-even-faces :inherit ''italic :foreground 'fg-shadow-subtle)
 
             ,@(doric-themes-prepare-faces doric-themes-mark-delete-faces :inherit ''bold-italic :background 'bg-red :foreground 'fg-red)
@@ -1675,15 +1675,15 @@ default to a generic text that mentions the BACKGROUND-MODE."
 
             '(embark-keybinding ((t :inherit (fixed-pitch bold-italic))))
 
-            `(erc-notice-face ((t :inherit italic :foreground ,fg-accent)))
+            `(erc-notice-face ((t :inherit italic :foreground ,fg-accent-primary)))
 
             `(flymake-eol-information-face ((t :inherit italic :height 0.9)))
             `(flymake-error-echo-at-eol ((t :inherit italic :foreground ,fg-red :height 0.9)))
             `(flymake-note-echo-at-eol ((t :inherit italic :foreground ,fg-green :height 0.9)))
             `(flymake-warning-echo-at-eol ((t :inherit italic :foreground ,fg-yellow :height 0.9)))
 
-            `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent)))
-            `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent)))
+            `(font-lock-comment-delimiter-face ((t :inherit italic :foreground ,fg-accent-primary)))
+            `(font-lock-comment-face ((t :inherit italic :foreground ,fg-accent-primary)))
 
             ;; The :inverse-video prevents hl-line-mode from
             ;; overriding the background.  Such an override really
@@ -1737,7 +1737,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
 
             `(isearch ((t :background ,bg-shadow-intense :foreground ,fg-main)))
             `(isearch-fail ((t :inherit (underline bold))))
-            `(isearch-group-1 ((t :background ,bg-accent :foreground ,fg-accent)))
+            `(isearch-group-1 ((t :background ,bg-accent-primary :foreground ,fg-accent-primary)))
             `(isearch-group-2 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
             `(query-replace ((t :inherit isearch)))
 
@@ -1766,17 +1766,17 @@ default to a generic text that mentions the BACKGROUND-MODE."
 
             `(magit-diff-context-highlight ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
             `(magit-diff-file-heading-highlight ((t :inherit magit-diff-file-heading :background ,bg-shadow-subtle)))
-            `(magit-diff-file-heading-selection ((t :inherit bold :background ,bg-accent)))
+            `(magit-diff-file-heading-selection ((t :inherit bold :background ,bg-accent-primary)))
             `(magit-diff-hunk-heading ((t :background ,bg-shadow-subtle)))
             `(magit-diff-hunk-heading-highlight ((t :inherit bold :background ,bg-neutral)))
-            `(magit-diff-hunk-heading-selection ((t :inherit bold :background ,bg-accent)))
+            `(magit-diff-hunk-heading-selection ((t :inherit bold :background ,bg-accent-primary)))
             `(magit-diff-lines-heading ((t :background ,fg-shadow-subtle :foreground ,bg-main)))
-            `(magit-section-heading-selection ((t :inherit bold :background ,bg-accent)))
+            `(magit-section-heading-selection ((t :inherit bold :background ,bg-accent-primary)))
             `(magit-section-highlight ((t :background ,bg-shadow-subtle)))
 
             `(markdown-code-face ((t :inherit fixed-pitch :background ,bg-shadow-subtle :extend t)))
             `(markdown-language-keyword-face ((t :inherit fixed-pitch :background ,bg-neutral :foreground ,fg-neutral)))
-            `(markdown-table-face ((t :inherit fixed-pitch :foreground ,fg-accent)))
+            `(markdown-table-face ((t :inherit fixed-pitch :foreground ,fg-accent-primary)))
 
             '(markup-meta-face ((t :inherit fixed-pitch)))
             '(markup-replacement-face ((t :inherit fixed-pitch)))
@@ -1810,7 +1810,7 @@ default to a generic text that mentions the BACKGROUND-MODE."
             `(org-code ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-intense)))
             `(org-column-title ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
             `(org-date-selected
-              ((default :foreground ,fg-accent :inverse-video t)
+              ((default :foreground ,fg-accent-primary :inverse-video t)
                (((supports :box t))
                 :box (:line-width (-1 . -1) :color ,fg-main))))
             ;; NOTE 2026-02-08: Adapted from my `modus-themes'.
@@ -1842,11 +1842,11 @@ default to a generic text that mentions the BACKGROUND-MODE."
             `(org-hide ((t :foreground ,bg-main)))
             `(org-indent ((t :inherit (fixed-pitch org-hide))))
             `(org-meta-line ((t :inherit fixed-pitch :foreground ,fg-shadow-subtle)))
-            `(org-property-value ((t :inherit fixed-pitch :foreground ,fg-accent)))
+            `(org-property-value ((t :inherit fixed-pitch :foreground ,fg-accent-primary)))
             '(org-quote ((t :inherit (italic org-block))))
             `(org-verbatim ((t :inherit (fixed-pitch italic) :foreground ,fg-shadow-subtle)))
             '(org-verse ((t :inherit org-block)))
-            `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent)))
+            `(org-table ((t :inherit fixed-pitch :foreground ,fg-accent-primary)))
 
             `(pulsar-blue ((t :background ,bg-blue)))
             `(pulsar-cyan ((t :background ,bg-cyan)))
@@ -1858,9 +1858,9 @@ default to a generic text that mentions the BACKGROUND-MODE."
             '(rcirc-monospace-text ((t :inherit fixed-pitch)))
             '(rcirc-server ((t :inherit font-lock-comment-face)))
 
-            `(reb-match-0 ((t :background ,bg-accent :foreground ,fg-main)))
+            `(reb-match-0 ((t :background ,bg-accent-primary :foreground ,fg-main)))
             `(reb-match-1 ((t :background ,bg-shadow-subtle :foreground ,fg-shadow-subtle)))
-            `(reb-match-2 ((t :background ,bg-accent :foreground ,fg-accent)))
+            `(reb-match-2 ((t :background ,bg-accent-primary :foreground ,fg-accent-primary)))
             `(reb-match-3 ((t :background ,bg-shadow-intense :foreground ,fg-shadow-intense)))
 
             ;; NOTE 2025-10-24: All the faces of `ruler-mode' need to inherit
@@ -1876,13 +1876,13 @@ default to a generic text that mentions the BACKGROUND-MODE."
             `(ruler-mode-fringes ((t :inherit default :foreground ,fg-shadow-subtle)))
             `(ruler-mode-goal-column ((t :inherit default :foreground ,fg-green)))
             `(ruler-mode-margins ((t :inherit default :foreground ,bg-main)))
-            `(ruler-mode-pad ((t :inherit default :background ,bg-accent :foreground ,fg-accent)))
+            `(ruler-mode-pad ((t :inherit default :background ,bg-accent-primary :foreground ,fg-accent-primary)))
             `(ruler-mode-tab-stop ((t :inherit default :foreground ,fg-yellow)))
 
-            `(spacious-padding-line-active ((t :foreground ,fg-accent)))
-            `(spacious-padding-line-inactive ((t :foreground ,bg-accent)))
-            `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent)))
-            `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent)))
+            `(spacious-padding-line-active ((t :foreground ,fg-accent-primary)))
+            `(spacious-padding-line-inactive ((t :foreground ,bg-accent-primary)))
+            `(spacious-padding-subtle-mode-line-active ((t :foreground ,fg-accent-primary)))
+            `(spacious-padding-subtle-mode-line-inactive ((t :foreground ,bg-accent-primary)))
 
             `(tab-bar-tab ((t :inherit bold :background ,bg-main :foreground ,fg-main)))
             `(tab-bar-tab-inactive ((t :background ,bg-neutral :foreground ,fg-neutral)))
