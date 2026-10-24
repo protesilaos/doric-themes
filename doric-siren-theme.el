@@ -58,6 +58,8 @@
 
       (bg-accent "#dfc1d2")
       (fg-accent "#68203b")
+      (bg-accent-secondary "#a2b17f")
+      (fg-accent-secondary "#2f4519")
 
       (fg-red "#a01010")
       (fg-green "#106710")
