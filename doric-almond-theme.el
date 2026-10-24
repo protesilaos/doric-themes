@@ -59,6 +59,9 @@
       (bg-accent "#fee1ce")
       (fg-accent "#880058")
 
+      (bg-accent-secondary "#bfb4b6")
+      (fg-accent-secondary "#3a3068")
+
       (fg-red "#a00040")
       (fg-green "#006730")
       (fg-yellow "#704000")
